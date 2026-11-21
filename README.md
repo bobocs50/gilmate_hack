@@ -31,6 +31,19 @@ Built in three hours by one person directing AI coding agents.
 
 ---
 
+<p align="center">
+  <img src="docs/screenshots/landing.png" width="100%" alt="Gilmate: type where you want to go">
+</p>
+
+| Choose places on the map | Food is asked once |
+|---|---|
+| <img src="docs/screenshots/choose.png" alt="A place with its photo, what it is, and Yes or No"> | <img src="docs/screenshots/food.png" alt="Where would you like to eat?"> |
+
+| The route, with the real photo of every bench and stop |
+|---|
+| <img src="docs/screenshots/route.png" alt="The final map with a bench's street photo"> |
+
+
 Gilmate is a tour guide for people who find walking hard, and for those who plan for them.
 It asks what you can manage, then builds one walk for the places you chose.
 Every distance, stair, bench and warning comes from map data; what the map does not know is "unknown", never safe.
