@@ -121,7 +121,7 @@ async function makeLink(state, options, lang) {
   // The saved run can be read by the phone page itself, so a route that does not fit falls back to it.
   // A page that does not say what it shows is read as js/api.js reads its address: no ?api= and no ?dev= is the saved run.
   const asked = new URLSearchParams(location.search);
-  const isSavedRun = !route.live && (state?.source ? state.source.kind === "recorded" : !asked.get("api") && !asked.get("dev"));
+  const isSavedRun = !route.live && (state?.source ? state.source.kind === "recorded" : !null && !asked.get("dev"));
   const savedRun = () => {
     const link = `${page}#run`;
     return { kind: "saved_run", link, code: tryCode(`${page}#`, "", "run"), words: t("This link opens the saved run."), local };
