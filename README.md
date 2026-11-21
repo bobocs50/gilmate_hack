@@ -65,46 +65,6 @@ Every distance, stair, bench and warning comes from map data; what the map does 
 
 <img src="img/architecture.png" width="100%" alt="How Gilmate works">
 
-```mermaid
-flowchart TD
-  page["The page: plain HTML, CSS and JavaScript"]
-  subgraph server["ADK agent server"]
-    coordinator["coordinator"]
-    scout["scout: makes the map"]
-    router["router: drafts the walk"]
-    critic["critic: reviews the draft"]
-    companion["companion: answers about a stop"]
-    coordinator --> scout
-    coordinator --> router
-    coordinator --> critic
-    coordinator --> companion
-  end
-  state[("Session state and memory")]
-  guards["Guards: tool policy, screening, grounding, audit log"]
-  tools["Tools: plain Python owns every fact"]
-  subgraph sources["Sources"]
-    tavily["Tavily"]
-    places["Google Places through MCP"]
-    meteo["Open-Meteo"]
-    osm["OpenStreetMap"]
-    photos["Wikimedia Commons and Mapillary"]
-    wiki["Wikidata and Wikipedia"]
-  end
-  page -->|"one JSON message per turn"| coordinator
-  scout --> guards
-  router --> guards
-  critic --> guards
-  companion --> guards
-  guards --> tools
-  tools --> tavily
-  tools --> places
-  tools --> meteo
-  tools --> osm
-  tools --> photos
-  tools --> wiki
-  tools --> state
-  state -->|"read back and drawn"| page
-```
 
 ## Agents
 
