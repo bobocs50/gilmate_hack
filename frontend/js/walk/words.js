@@ -7,6 +7,8 @@ const KO = {
   "Copied": "복사됨",
   "Not copied: select the link instead": "복사하지 못했습니다. 링크를 직접 선택해 주세요",
   "Close": "닫기",
+  "Fold": "접기",
+  "Phone": "휴대폰",
   "The route is in this link.": "경로가 이 링크 안에 들어 있습니다.",
   "This link opens the saved run.": "이 링크는 저장된 실행을 엽니다.",
   "The route is too large for a QR code. Copy the link instead.": "경로가 QR 코드에 담기에는 너무 큽니다. 링크를 복사해 주세요.",

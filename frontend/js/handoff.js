@@ -32,7 +32,7 @@ const QUIET = 4;               // modules of white around the code
  */
 export async function openHandoff(state, options = {}) {
   const host = options.host ?? document.body;
-  for (const old of host.querySelectorAll(".handoff")) old.remove();
+  for (const old of host.querySelectorAll(".handoff, .handoff-pill")) old.remove();
   ensureStyles();
   const lang = setLang(state?.lang ?? state?.language ?? document.documentElement.lang);
 
@@ -42,18 +42,31 @@ export async function openHandoff(state, options = {}) {
   const copyWord = el("span", { role: "status" }, t("Copy link"));
   const copy = el("button", { type: "button", class: "handoff-copy", disabled: true }, copyIcon(), copyWord);
   const close = el("button", { type: "button", class: "handoff-close", "aria-label": t("Close") }, crossIcon());
+  // Folded, the card gives the map back and waits as a small pill at the top right; pressing the pill unfolds it.
+  const fold = el("button", { type: "button", class: "handoff-fold", "aria-label": t("Fold") }, foldIcon());
+  const pill = el("button", { type: "button", class: "handoff-pill", lang, "aria-label": t("Open your route on your phone"), tabindex: "-1" }, qrIcon(), el("span", {}, t("Phone")));
   const card = el("aside", { class: "handoff", role: "dialog", "aria-label": t("Open your route on your phone"), lang },
-    el("div", { class: "handoff-head" }, el("h2", { class: "handoff-title" }, t("Open your route on your phone")), close),
+    el("div", { class: "handoff-head" }, el("h2", { class: "handoff-title" }, t("Open your route on your phone")), el("div", { class: "handoff-tools" }, fold, close)),
     code, written, note, copy);
+  const setFolded = (folded) => {
+    card.toggleAttribute("data-folded", folded);
+    card.inert = folded;
+    pill.toggleAttribute("data-shown", folded);
+    pill.tabIndex = folded ? 0 : -1;
+    (folded ? pill : fold).focus({ preventScroll: true });
+  };
+  fold.addEventListener("click", () => setFolded(true));
+  pill.addEventListener("click", () => setFolded(false));
 
   const onKey = (event) => { if (event.key === "Escape") shut(); };
   function shut() {
     card.remove();
+    pill.remove();
     document.removeEventListener("keydown", onKey);
   }
   close.addEventListener("click", shut);
   document.addEventListener("keydown", onKey);
-  host.append(card);
+  host.append(card, pill);
 
   const made = await makeLink(state, options, lang);
   if (made.link) {
@@ -165,6 +178,17 @@ function copyIcon() {
   return svg("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": "1.8", "stroke-linecap": "round", "stroke-linejoin": "round", "aria-hidden": "true" },
     svg("rect", { x: 9, y: 9, width: 11, height: 11, rx: 2.5 }),
     svg("path", { d: "M5 15V6.5A2.5 2.5 0 0 1 7.5 4H15" }));
+}
+
+function foldIcon() {
+  return svg("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": "1.8", "stroke-linecap": "round", "stroke-linejoin": "round", "aria-hidden": "true" },
+    svg("path", { d: "M14 4h6v6M20 4l-7 7M10 20H4v-6" }));
+}
+
+function qrIcon() {
+  return svg("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": "1.8", "stroke-linejoin": "round", "aria-hidden": "true" },
+    svg("rect", { x: 4, y: 4, width: 6, height: 6, rx: 1 }), svg("rect", { x: 14, y: 4, width: 6, height: 6, rx: 1 }),
+    svg("rect", { x: 4, y: 14, width: 6, height: 6, rx: 1 }), svg("path", { d: "M14 14h2v2h-2zM18 18h2v2h-2zM14 18h1M19 14h1" }));
 }
 
 function crossIcon() {

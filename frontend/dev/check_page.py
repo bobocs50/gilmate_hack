@@ -226,7 +226,7 @@ def walk(page, shots, dev, full=True):
             break
         page.wait_for_timeout(150)
         seen.add(page.inner_text(".guide-line"))
-    page.wait_for_selector("#place-yes", timeout=15000)
+    page.wait_for_selector("#place-yes", state="attached", timeout=15000)
     check(1 <= len(seen) <= 8, f"{label}: the bubble tells the sample's steps one at a time, a handful at most ({sorted(seen)})")
 
     first = places[0]
@@ -305,6 +305,15 @@ def walk(page, shots, dev, full=True):
         check("walk.html" in page.inner_text(".handoff-link") and page.query_selector(".handoff-code svg, .handoff-code canvas, .handoff-code img") is not None,
               f"{label}: Start the route opens the phone handoff with a QR code and the link")
         shots.take("phone-handoff")
+        # The card folds into a small pill at the top right and unfolds again when the pill is pressed.
+        page.click(".handoff-fold")
+        page.wait_for_timeout(300)
+        folded = page.evaluate("() => { const c = document.querySelector('.handoff'); const p = document.querySelector('.handoff-pill'); return [c.hasAttribute('data-folded'), getComputedStyle(c).opacity, p.hasAttribute('data-shown'), p.innerText.trim()]; }")
+        check(folded == [True, "0", True, "Phone"], f"{label}: the phone card folds into a pill that says Phone ({folded})")
+        shots.take("phone-handoff-folded")
+        page.click(".handoff-pill")
+        page.wait_for_timeout(300)
+        check(page.evaluate("() => !document.querySelector('.handoff').hasAttribute('data-folded') && getComputedStyle(document.querySelector('.handoff')).opacity === '1'"), f"{label}: pressing the pill unfolds the phone card")
         page.click(".handoff-close")
         page.click('#lang [data-lang="ko"]')
         check("경로는 걸어서" in text(page) and "지식 그래프" in page.inner_text(".bar"), f"{label}: the page is Korean after the switch")
@@ -323,7 +332,7 @@ def korean_typing(page, shots):
     """Writing Korean into the text field turns the page Korean."""
     page.fill("#search textarea", "시부야에 가고 싶어요")
     page.keyboard.press("Enter")
-    page.wait_for_selector("#place-yes", timeout=15000)
+    page.wait_for_selector("#place-yes", state="attached", timeout=15000)
     intro = page.text_content(".guide-line").strip()
     check("가장 좋은 장소" in intro, f"Korean: the intro sentence is Korean ({intro!r})")
     page.wait_for_function("() => /가 보시겠어요/.test(document.querySelector('.guide-line').textContent)", timeout=8000)
@@ -550,8 +559,16 @@ def main():
             page.click("#start-button")
             page.wait_for_selector(".making-head")
             shots.take("making-step")
-            page.wait_for_selector("#place-yes", timeout=20000)
+            page.wait_for_selector("#place-yes", state="attached", timeout=20000)
+            # While the intro is said, Yes / No are not shown and a number key does nothing.
+            first = page.text_content(".work-content h2") if page.query_selector(".work-content h2") else None
+            early = page.evaluate("() => [Boolean(document.querySelector('.dock[data-ready]')), getComputedStyle(document.querySelector('.work-actions')).visibility, document.querySelector('.guide-line').textContent]")
             intro = page.text_content(".guide-line").strip()
+            page.keyboard.press("1")
+            after = page.evaluate("() => [Boolean(document.querySelector('.dock[data-ready]')), document.querySelector('.guide-line').textContent]")
+            same = (page.text_content(".work-content h2") if page.query_selector(".work-content h2") else None) == first
+            check(early[0] is False and early[1] == "hidden" and "best places" in early[2] and same and after[0] and "Would you like" in after[1],
+                  f"saved run: during the intro Yes / No are hidden; a key ends the intro, chooses nothing, and the question comes with its choices at once ({early}, {after}, same place: {same})")
             check(intro == f"These are the {len(real['candidates'])} best places I found in Shibuya.", f"saved run: the intro sentence names the count and Shibuya ({intro!r})")
             page.screenshot(path=os.path.join(folder, "desktop-saved-run-00-intro-line.png"))
             shots.take("place")

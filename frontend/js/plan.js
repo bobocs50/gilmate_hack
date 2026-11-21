@@ -156,6 +156,8 @@ function renderPlace(app, act) {
     ], { label: t("Your answer"), row: true }),
     line: app.placeNote ? app.placeNote() : t("Would you like to go to {name}?", { name: place.name ?? t("Name unknown") }),
     lineAttrs: { "aria-live": "polite" },
+    hold: Boolean(app.placeNote?.hold),
+    plain: true,
   }));
 }
 
@@ -198,6 +200,8 @@ function renderFood(app, act) {
     content: el("div", { class: "food-cards" }, cards),
     actions: list,
     line: app.placeNote ? app.placeNote() : t("Where would you like to eat?"),
+    hold: Boolean(app.placeNote?.hold),
+    plain: true,
     lineAttrs: { "aria-live": "polite" },
   }));
 }

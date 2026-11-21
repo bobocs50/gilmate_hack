@@ -89,7 +89,8 @@ export function choices(list, { label = null, row = false } = {}) {
       type: "button", class: "choice", id: choice.id ?? null, "data-key": index + 1, "data-lead": choice.lead ? true : null,
       "aria-pressed": choice.pressed === undefined ? null : choice.pressed ? "true" : "false",
       disabled: Boolean(choice.disabled), "aria-describedby": choice.describedBy ?? null,
-      on: { click: choice.onPick },
+      // A press before the guide has said what it is about does nothing: the choices are not ready yet.
+      on: { click: (event) => { const owner = event.currentTarget.closest(".dock"); if (!owner || owner.hasAttribute("data-ready")) choice.onPick(event); } },
     }, el("span", { class: "choice-key", "aria-hidden": "true" }, index + 1), el("span", { class: "choice-label" }, choice.label)))));
 }
 
@@ -105,11 +106,11 @@ const PER_CHAR = 25;
 const SETTLE = 600;
 const said = { text: null, began: 0, whole: false, stop: null };
 
-function typeLine(dockEl, wordsEl, avatarEl, text) {
-  const ready = () => dockEl.setAttribute("data-ready", "");
+function typeLine(dockEl, wordsEl, avatarEl, text, hold = false, plain = false) {
+  const ready = () => { if (!hold) dockEl.setAttribute("data-ready", ""); };
   if (said.stop) said.stop();
   const calm = typeof matchMedia === "function" && matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!text || calm || (said.text === text && said.whole)) {
+  if (!text || calm || plain || (said.text === text && said.whole)) {
     wordsEl.textContent = text;
     Object.assign(said, { text, whole: true, stop: null });
     ready();
@@ -152,7 +153,7 @@ function typeLine(dockEl, wordsEl, avatarEl, text) {
  * While the agents work the sentence shimmers and the guide's eyes move; `done` puts a tick before it.
  * A plain sentence is typed (typeLine); the dock is marked `data-ready` when her choices may be pressed.
  */
-export function dock({ content = null, actions = null, line, lineAttrs = {}, under = null, working = false, done = false }) {
+export function dock({ content = null, actions = null, line, lineAttrs = {}, under = null, working = false, done = false, hold = false, plain = false }) {
   const work = content || actions
     ? el("div", { class: "work" },
         content ? el("div", { class: "work-content" }, content) : null,
@@ -163,7 +164,9 @@ export function dock({ content = null, actions = null, line, lineAttrs = {}, und
   const dockEl = el("div", { class: "dock" },
     work,
     el("div", { class: "dialogue" }, avatar, el("div", { class: "guide-line", ...lineAttrs }, words), under));
-  if (typeof line === "string" && !working && !done) typeLine(dockEl, words, avatar, line);
-  else dockEl.setAttribute("data-ready", "");
+  // `hold`: the guide is not yet talking about what the choices answer, so they stay hidden and cannot be pressed.
+  // `plain`: the sentence is shown whole at once and the choices come with it (choosing places, where speed matters).
+  if (typeof line === "string" && !working && !done) typeLine(dockEl, words, avatar, line, hold, plain);
+  else if (!hold) dockEl.setAttribute("data-ready", "");
   return dockEl;
 }

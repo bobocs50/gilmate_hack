@@ -455,11 +455,25 @@ function startChoosing() {
   if (!app.candidates.length) { fail(new Error(t("I found no places, so there is nothing to choose from."))); return; }
   const area = areaWords(app.area?.name ? app.area : entryOf(app.areaKey)).place;
   const intro = () => t("These are the {count} best places I found in {area}.", { count: app.candidates.length, area });
+  // While the guide says the intro, the Yes / No below it are not about anything yet: they wait for the place's own line.
+  intro.hold = true;
   nextChoice();
   if (app.step !== "choose" && app.step !== "food") return;
   app.placeNote = intro;
   render();
-  timer = setTimeout(() => { if (app.placeNote === intro) { app.placeNote = null; render(); } }, 3200);
+  // The intro is short, and a press or a key ends it at once; that press or key chooses nothing.
+  const end = (event) => {
+    window.removeEventListener("pointerdown", end, true);
+    window.removeEventListener("keydown", end, true);
+    if (app.placeNote !== intro) return;
+    if (event) { event.stopPropagation(); event.preventDefault(); }
+    clearTimeout(timer);
+    app.placeNote = null;
+    render();
+  };
+  window.addEventListener("pointerdown", end, true);
+  window.addEventListener("keydown", end, true);
+  timer = setTimeout(() => end(null), 1400);
 }
 
 // Food is chosen once: the places to eat are not asked one at a time but together, after the sights and shops.
@@ -487,7 +501,7 @@ function nextChoice(from = 0) {
       app.step = "food";
       app.foodFull = true;
       render();
-      timer = setTimeout(() => { app.foodFull = false; placesDone(); }, 2600);
+      timer = setTimeout(() => { app.foodFull = false; placesDone(); }, 1000);
       return;
     }
     askFood();
