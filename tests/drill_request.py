@@ -67,7 +67,7 @@ def eat_kinds(wish):
 
 with_wish, without = eat_kinds("sushi"), eat_kinds(None)
 check("three sushi places first", with_wish[:3], ["sushi"] * 3)
-check("four places to eat", len(with_wish), 4)
+check("three places to eat", len(with_wish), 3)
 check("without a wish as before", without.count("sushi") <= 1, True)
 south, west, north, east = osm.AREA["bbox"]
 check("all inside the area", all(south <= places[r]["lat"] <= north and west <= places[r]["lon"] <= east

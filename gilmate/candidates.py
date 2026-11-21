@@ -1,6 +1,6 @@
 """The places offered on the map (CONTRACT.md section 7). Pure Python: no model, no ADK.
 
-Python chooses 8 to 12 places from the OpenStreetMap extract, mixed across see / shop / eat, by a fixed score:
+Python chooses 8 to 10 places from the OpenStreetMap extract, mixed across see / shop / eat, by a fixed score:
 a place counts for more when it has its own Wikidata entry, when a saved web search result names it, and when the
 map knows its access. Name, coordinates and access are the map's. What a place is (`kind`) comes from its map tags
 through a fixed table; its description is copied from a cited page (Wikipedia, Wikidata, the map's own note).
@@ -14,7 +14,7 @@ import re
 from . import areas, guards, memory, osm, photos
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-PER_CATEGORY = 4                     # 3 categories: 12 places at most
+PER_CATEGORY = {"see": 4, "shop": 3, "eat": 3}     # 10 places at most, the best-ranked of each kept
 AT_LEAST = 8
 LOOKED_UP_FOR_PHOTOS = 8             # per category, the best places by the other points
 APART_M = 40                         # two candidates are never the same spot (shops on floors of one building)
@@ -268,7 +268,7 @@ def choose(texts, wish=None):
             alike = sum(1 for c in taken if kind(tags[c])["key"] == what)
             if not near and not same_name and alike < most:
                 taken.append(ref)
-            if len(taken) == PER_CATEGORY:
+            if len(taken) == PER_CATEGORY[category]:
                 break
         chosen += taken
     return chosen

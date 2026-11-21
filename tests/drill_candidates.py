@@ -1,6 +1,6 @@
 """Drill: the places on the map, their photos and the map-first turns (CONTRACT.md section 7).
 
-8 to 12 real places from the map extract, mixed; every name, coordinate and access is the map's; every fact and
+8 to 10 real places from the map extract, mixed; every name, coordinate and access is the map's; every fact and
 description has a source that was read; no photo without author and licence; a description or a rating a source
 does not support is dropped; two to five picks of any kind make a route; her typed answer is one of the fixed
 choices or "not understood". Uses the committed caches in data/cache (photos, wiki, tavily).
@@ -46,7 +46,7 @@ KEYS = {"id", "category", "name", "kind", "description", "description_source", "
         "near_photos"}
 PHOTO_KEYS = {"url", "thumb_url", "width", "height", "credit", "licence", "source_url", "taken_at"}
 
-check("8 to 12 places", 8 <= len(places) <= 12, len(places))
+check("8 to 10 places", 8 <= len(places) <= 10, len(places))
 check("mixed: at least two to see, two to shop, two to eat",
       all(sum(1 for c in places if c["category"] == cat) >= 2 for cat in ("see", "shop", "eat")),
       [c["category"] for c in places])
@@ -358,8 +358,8 @@ with tempfile.TemporaryDirectory() as folder:
                   got["status"] == "ok" and got["from_saved_results"] and got["returned"] > 0, got)
         got = tools.find_candidates(ctx)
         state = plain(ctx.state)
-        check("tools: find_candidates writes 8 to 12 candidates, the photos, the places to sit and the counts",
-              got["status"] == "ok" and 8 <= len(state["candidates"]) <= 12 and state["street_photos"]
+        check("tools: find_candidates writes 8 to 10 candidates, the photos, the places to sit and the counts",
+              got["status"] == "ok" and 8 <= len(state["candidates"]) <= 10 and state["street_photos"]
               and state["rest_spots"] and state["counts"]["places_shown"] == len(state["candidates"]), got.get("counts"))
         order = [r["tool"] for r in state["audit"]]
         check("tools: every step of the start turn left an audit row, in order",

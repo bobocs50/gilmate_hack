@@ -855,91 +855,6 @@
   },
   {
    "id": "c8",
-   "category": "shop",
-   "name": "Mega Don Quijote",
-   "kind": {
-    "en": "Supermarket",
-    "ko": "슈퍼마켓"
-   },
-   "description": null,
-   "description_source": null,
-   "rating": null,
-   "facts": [
-    {
-     "label": "Opening hours",
-     "value": "24/7",
-     "source_url": "https://www.openstreetmap.org/way/136691387",
-     "quote": "opening_hours=24/7"
-    },
-    {
-     "label": "Website",
-     "value": "https://www.donki.com/store/shop_detail.php?shop_id=442",
-     "source_url": "https://www.openstreetmap.org/way/136691387",
-     "quote": "website=https://www.donki.com/store/shop_detail.php?shop_id=442"
-    }
-   ],
-   "place": {
-    "lat": 35.66048,
-    "lon": 139.69786,
-    "osm_id": "way/136691387",
-    "access": "limited"
-   },
-   "photos": [
-    {
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Shibuyamegadonkihonten.jpg",
-     "thumb_url": "data/photos/way_136691387_1.jpg",
-     "width": 3456,
-     "height": 4608,
-     "credit": "WhisperToMe",
-     "licence": "CC0",
-     "source_url": "https://commons.wikimedia.org/wiki/File:Shibuyamegadonkihonten.jpg",
-     "taken_at": null
-    }
-   ],
-   "near_photos": [
-    {
-     "id": "w75985786",
-     "lat": 35.660417,
-     "lon": 139.697997,
-     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Shibuyamegadonkihonten.jpg/500px-Shibuyamegadonkihonten.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Shibuyamegadonkihonten.jpg",
-     "credit": "WhisperToMe",
-     "licence": "CC0",
-     "source_url": "https://commons.wikimedia.org/wiki/File:Shibuyamegadonkihonten.jpg",
-     "taken_at": null,
-     "source": "commons",
-     "distance_m": 14
-    },
-    {
-     "id": "w144009149",
-     "lat": 35.660181,
-     "lon": 139.697985,
-     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/-i---i-_%2853075359757%29.jpg/500px--i---i-_%2853075359757%29.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/-i---i-_%2853075359757%29.jpg",
-     "credit": "Vitor Coelho Nisida from São Paulo, Brasil",
-     "licence": "Public domain",
-     "source_url": "https://commons.wikimedia.org/wiki/File:-i---i-_(53075359757).jpg",
-     "taken_at": null,
-     "source": "commons",
-     "distance_m": 35
-    },
-    {
-     "id": "w144009150",
-     "lat": 35.660181,
-     "lon": 139.697985,
-     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/-i---i-_%2853076132959%29.jpg/500px--i---i-_%2853076132959%29.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/-i---i-_%2853076132959%29.jpg",
-     "credit": "Vitor Coelho Nisida from São Paulo, Brasil",
-     "licence": "Public domain",
-     "source_url": "https://commons.wikimedia.org/wiki/File:-i---i-_(53076132959).jpg",
-     "taken_at": "2023-03-07",
-     "source": "commons",
-     "distance_m": 35
-    }
-   ]
-  },
-  {
-   "id": "c9",
    "category": "eat",
    "name": "Yakiniku Gyugujo",
    "kind": {
@@ -1022,7 +937,7 @@
    ]
   },
   {
-   "id": "c10",
+   "id": "c9",
    "category": "eat",
    "name": "Sushiro",
    "kind": {
@@ -1093,7 +1008,7 @@
    ]
   },
   {
-   "id": "c11",
+   "id": "c10",
    "category": "eat",
    "name": "Ootoya",
    "kind": {
@@ -1166,81 +1081,6 @@
      "taken_at": "2019-09-10",
      "source": "mapillary",
      "distance_m": 18
-    }
-   ]
-  },
-  {
-   "id": "c12",
-   "category": "eat",
-   "name": "Ocean good table",
-   "kind": {
-    "en": "Restaurant",
-    "ko": "식당"
-   },
-   "description": null,
-   "description_source": null,
-   "rating": null,
-   "facts": [
-    {
-     "label": "Opening hours",
-     "value": "We-Su 12:00-23:00",
-     "source_url": "https://www.openstreetmap.org/node/12452266951",
-     "quote": "opening_hours=We-Su 12:00-23:00"
-    },
-    {
-     "label": "Website",
-     "value": "https://www.instagram.com/shibuya_oceangoodtable/",
-     "source_url": "https://www.openstreetmap.org/node/12452266951",
-     "quote": "website=https://www.instagram.com/shibuya_oceangoodtable/"
-    }
-   ],
-   "place": {
-    "lat": 35.657321,
-    "lon": 139.703269,
-    "osm_id": "node/12452266951",
-    "access": "yes"
-   },
-   "photos": [],
-   "near_photos": [
-    {
-     "id": "m1338367510478547",
-     "lat": 35.657282,
-     "lon": 139.702609,
-     "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQM7Xz09iXhYEJs5t0GFhqSruB-_FCPo_X__2H4jvffZEhSQdPfHEE6ROI9VPB1hzr4dgonxdnxeuj0jG3YGkbaTrqsszVRfHUeeV4FU-RpTSUKRsTYzsvbyy2bOt3LoyN8dWy5GkmqjaYFHnd3itMsS0HyB4WIXLvsfVWrxeSApPA?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=KqRwt2rhdavnVjoK7g1qLw&_nc_oc=AdrC-ckUlv5fe3AAoo0_HlKBvnXI6HqAFcDpA8tWWRnA5iOJaCZfG_daYNAuvcuK0Gg&ccb=10-5&oh=00_AQQ5PD9O5uz8c2kd7VQB9TF2BiUYZdR2LqNzUyLIJwhu7A&oe=6B28D539&_nc_sid=201bca",
-     "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQM7Xz09iXhYEJs5t0GFhqSruB-_FCPo_X__2H4jvffZEhSQdPfHEE6ROI9VPB1hzr4dgonxdnxeuj0jG3YGkbaTrqsszVRfHUeeV4FU-RpTSUKRsTYzsvbyy2bOt3LoyN8dWy5GkmqjaYFHnd3itMsS0HyB4WIXLvsfVWrxeSApPA?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=KqRwt2rhdavnVjoK7g1qLw&_nc_oc=AdrC-ckUlv5fe3AAoo0_HlKBvnXI6HqAFcDpA8tWWRnA5iOJaCZfG_daYNAuvcuK0Gg&ccb=10-5&oh=00_AQSKMbKGDm8cMUtMnobyzoQFnf2vF65bpd3k_-6BCbyFKg&oe=6B28D539&_nc_sid=201bca",
-     "credit": "Mapillary contributors",
-     "licence": "CC BY-SA 4.0",
-     "creator": "ChenJJ",
-     "source_url": "https://www.mapillary.com/app/?pKey=1338367510478547",
-     "taken_at": "2024-08-06",
-     "source": "mapillary",
-     "distance_m": 60
-    },
-    {
-     "id": "w150666858",
-     "lat": 35.657294,
-     "lon": 139.70345,
-     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Shibuya_River%2C_near_Shibuya_Stream.jpg/500px-Shibuya_River%2C_near_Shibuya_Stream.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Shibuya_River%2C_near_Shibuya_Stream.jpg",
-     "credit": "Syced",
-     "licence": "CC0",
-     "source_url": "https://commons.wikimedia.org/wiki/File:Shibuya_River,_near_Shibuya_Stream.jpg",
-     "taken_at": null,
-     "source": "commons",
-     "distance_m": 17
-    },
-    {
-     "id": "w150666900",
-     "lat": 35.657294,
-     "lon": 139.70345,
-     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Shibuya_River%2C_near_Shibuya_Stream_2.jpg/500px-Shibuya_River%2C_near_Shibuya_Stream_2.jpg",
-     "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Shibuya_River%2C_near_Shibuya_Stream_2.jpg",
-     "credit": "Syced",
-     "licence": "CC0",
-     "source_url": "https://commons.wikimedia.org/wiki/File:Shibuya_River,_near_Shibuya_Stream_2.jpg",
-     "taken_at": null,
-     "source": "commons",
-     "distance_m": 17
     }
    ]
   }
@@ -6847,8 +6687,8 @@
  ],
  "counts": {
   "places_on_map": 786,
-  "places_shown": 12,
-  "photos_found": 1407,
+  "places_shown": 10,
+  "photos_found": 1406,
   "street_photos": 1381,
   "photo_sources": {
    "mapillary": 418,

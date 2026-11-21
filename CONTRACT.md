@@ -214,7 +214,7 @@ She types where she wants to go, the scout searches and makes the map with the p
 
 ### 7.1 The flow
 1. A text field first. She types where she wants to go ("I want to visit Shibuya in Tokyo"). Python decides which area the text asks for: Shibuya or, since section 8, Hongdae, the two areas with map data.
-2. The map is made, and the page shows the work step by step. The scout really searches the web (sights, well-rated places to eat, souvenir shops), Python chooses 8 to 12 places that are on the map, mixed, fetches photos of them and the photos taken in the area, lists the places to sit, and checks every fact. The page shows the real counts: places found, photos found.
+2. The map is made, and the page shows the work step by step. The scout really searches the web (sights, well-rated places to eat, souvenir shops), Python chooses 8 to 10 places that are on the map, mixed, fetches photos of them and the photos taken in the area, lists the places to sit, and checks every fact. The page shows the real counts: places found, photos found.
 3. She chooses on the map. Pressing a place opens its card: real photos of the place, what it is (a sight, a shop, somewhere to eat) with a short description, its facts with sources, access. Two answers, Yes and No. Yes puts it on her list; No dims it. She can change her mind. She may also type in her own words instead of pressing.
 4. When she has said Yes to at least two places (at most five), the guide asks about her body, one question at a time with numbered choices: how far she walks comfortably (`walk`), stairs (`stairs`), how often she needs to sit (`rest`), and an optional free wish. No food question: `food` leaves the profile. Since the context turn (7.3) the page first asks for one free text and then asks with choices only what `profile_missing` lists.
 5. The route is built for her Yes places with distances, stairs, benches and warnings, checked by the critic, and shown on the same map with real photos taken near every stop, walk and bench, and with the route note written out in sentences; then feedback (Fine / Too far) and memory as before. The walk itself (the Go view of section 6.3) is no longer on this page: the final map hands the route to the phone page `frontend/walk.html` by QR code, and "Fine" / "Too far" are pressed there.
@@ -230,7 +230,7 @@ candidates: [ { id, category: "see"|"shop"|"eat", name, kind: {en, ko},         
                 facts: [ {label, value, source_url, quote} ],
                 place: {lat, lon, osm_id, access},
                 photos: [ place_photo ],                                             # photos of the place itself; may be []
-                near_photos: [ near_photo ] } ]                                      # taken within 60 m of it; 8 to 12 places
+                near_photos: [ near_photo ] } ]                                      # taken within 60 m of it; 8 to 10 places
 place_photo:  { url, thumb_url, width, height, credit, licence, source_url, taken_at|null }
 street_photos: [ taken_photo ]                                                       # the photo dots on the map
 taken_photo:  { id, lat, lon, thumb_url, url, credit, licence, source_url, taken_at|null,

@@ -53,7 +53,7 @@ The stand-in answers the Anthropic Messages API on this machine; the two free ru
 | `drill_audit.py` | The audit list keeps the rows a specialist wrote while the coordinator's call to it was open. |
 | `drill_search.py` | The place lookup on the map, and which places the web searches name. |
 | `drill_route.py` | The route draft keeps the router's advice, counts reviews, and tells a promise ("no stairs") from what the map shows. |
-| `drill_candidates.py` | 8 to 12 real places from the map, every name, coordinate and access the map's, no photo without author and licence, unsupported descriptions and ratings dropped. |
+| `drill_candidates.py` | 8 to 10 real places from the map, every name, coordinate and access the map's, no photo without author and licence, unsupported descriptions and ratings dropped. |
 | `drill_note.py` | The route note says every fact of the route once, in both languages, and nothing else. |
 | `drill_say.py` | What you type reaches the session only as one of the fixed choices. |
 | `drill_context.py` | Your free text reaches the session only as the fixed answers, a wish quoted word for word, and the list of what is missing. |
