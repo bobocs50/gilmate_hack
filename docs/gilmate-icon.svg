@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Gilmate">
+  <defs>
+    <radialGradient id="pebble" cx="0.34" cy="0.26" r="0.86" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fbf6ea"/>
+      <stop offset="0.58" stop-color="#dccba8"/>
+      <stop offset="1" stop-color="#b59f76"/>
+    </radialGradient>
+  </defs>
+  <path d="M74.24 18A77.76 72.8 0 0 1 152 90.8A72 57.2 0 0 1 80 148A72 57.2 0 0 1 8 90.8A66.24 72.8 0 0 1 74.24 18Z" fill="url(#pebble)"/>
+  <ellipse cx="64.7" cy="86.25" rx="9.9" ry="14.3" fill="#172548"/>
+  <ellipse cx="100.7" cy="86.25" rx="9.9" ry="14.3" fill="#172548"/>
+</svg>

@@ -1,6 +1,10 @@
-# Gilmate
-
-A tour guide that plans around you, not the city.
+<p align="center">
+  <img src="docs/gilmate-icon.svg" width="120" alt="Gilmate">
+</p>
+<h1 align="center">Gilmate</h1>
+<p align="center">
+  A tour guide that plans around you, not the city.
+</p>
 
 ## Overview
 

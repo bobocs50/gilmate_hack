@@ -137,8 +137,8 @@
 .making-skip { position: absolute; right: calc(12px + env(safe-area-inset-right, 0px)); bottom: calc(34px + env(safe-area-inset-bottom, 0px)); color: var(--ink); }
 .making-skip:focus-visible { outline-color: var(--ink); }
 .dialogue > .step-dots { align-self: start; }
-/* While the agents work the bubble holds exactly one line */
-.guide-line:has(.line-words[data-working]) { max-width: none; white-space: nowrap; }
+/* While the agents work the bubble keeps its width and wraps a long sentence onto more lines */
+.guide-line:has(.line-words[data-working]) { white-space: normal; }
 /* One small dot per step under the bubble: done, now, still to come */
 .step-dots { grid-column: 2; grid-row: 2; display: flex; gap: 6px; padding: 0 18px; }
 .step-dots i { width: 6px; height: 6px; border-radius: 50%; background: rgb(var(--ink-rgb) / 0.2); }
