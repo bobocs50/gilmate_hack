@@ -1,0 +1,165 @@
+/* Parts adapted from Mercature by Glendon Chin (MIT), github.com/glendonC/mercature, src/style.css: see THIRD_PARTY.md. */
+/*
+  tokens.css: every colour, size and timing by name.
+  Values follow Mercature by Glendon Chin (MIT), as extracted in docs/design/mercature.md.
+  Type and controls are the reference's size: quiet and compact. Every pressable thing is still 44 px high.
+*/
+@font-face {
+  font-family: Aspekta;
+  src: url("../fonts/AspektaVF.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  font-family: Aspekta, system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-synthesis: none;
+
+  /*
+    Colour: navy and beige, and one warm accent. The ground and the buildings are paper and sand, everything
+    written or pressed is navy, and terracotta is kept for the way and for what is chosen. These colours are
+    Gilmate's own; only sizes, spacing and motion further down still follow the reference named above.
+    The "charcoal" in some names is kept so no other file has to change: the dark surface is navy now.
+  */
+
+  /* Channels, for the places that need their own opacity: rgb(var(--ink-rgb) / 0.3) */
+  --ink-rgb: 23 37 72;
+  --navy-rgb: 23 37 72;
+  --shade-rgb: 14 23 46;
+  --cream-rgb: 255 252 245;
+  --on-dark-rgb: 246 242 233;
+
+  /* Page neutrals */
+  --paper: #f8f3e9;
+  --surface: #fffcf5;
+  --ink: #172548;
+  --muted: #505a74;
+  --ground: #eee7d7;
+  --hairline: rgb(23 37 72 / 0.1);
+  --hairline-strong: rgb(23 37 72 / 0.18);
+
+  /* Meaning: terracotta is the way, ochre is a possible barrier, slate is unknown */
+  --reachable: #b9472a;
+  --blocked: #7d5a0c;
+  --unknown: #5c6478;
+  --error: #a3283a;
+  /* The same three on a navy surface, and the text written there */
+  --on-dark: #f6f2e9;
+  --on-dark-muted: rgb(246 242 233 / 0.78);
+  --on-dark-reachable: #f4a583;
+  --on-dark-blocked: #e9c46a;
+  --on-dark-unknown: #b8bfd0;
+
+  /* Navy glass */
+  --glass-filter: blur(24px) saturate(160%);
+  --glass-charcoal: rgb(23 37 72 / 0.93);
+  --glass-charcoal-edge: inset 0 0.5px 0 rgb(255 252 245 / 0.14), inset 0 0 0 0.5px rgb(255 252 245 / 0.08), 0 0 0 0.5px rgb(14 23 46 / 0.5);
+  --glass-hover: rgb(40 57 100 / 0.94);
+  --glass-light: rgb(251 247 238 / 0.95);
+  --glass-light-edge: inset 0 0.5px 0 rgb(255 252 245 / 0.9), 0 0 0 0.5px rgb(23 37 72 / 0.14);
+  --panel-dark: #1a2950;
+  --chip: #f6f1e6;
+  --chip-hover: #fffcf5;
+  --scrim: rgb(14 23 46 / 0.34);
+  --shadow-float: 0 1px 2px rgb(14 23 46 / 0.07), 0 4px 12px -2px rgb(14 23 46 / 0.12);
+  --shadow-panel-dark: 0 2px 6px -2px rgb(14 23 46 / 0.22), 0 18px 44px -10px rgb(14 23 46 / 0.44);
+  --shadow-lift: 0 2px 4px rgb(14 23 46 / 0.1), 0 8px 18px -4px rgb(14 23 46 / 0.22);
+
+  /* The map: streets a shade lighter than the ground, blocks in sand, the places to visit a tone apart */
+  --map-ground: var(--ground);
+  --map-way: #faf6ec;
+  --map-steps: #a39679;
+  --map-roof: #e5dac4;
+  --map-roof-edge: #b5a686;
+  --map-wall: #cbbc9d;
+  --map-wall-lit: #dacdb2;
+  --map-wall-shade: #ad9c7b;
+  --map-landmark-roof: #dfcdaa;
+  --map-landmark-edge: #a69068;
+  --map-landmark-wall: #c0a67c;
+  --map-landmark-wall-lit: #cfb992;
+  --map-landmark-wall-shade: #a0885f;
+  --route: var(--reachable);
+  --route-halo: rgb(255 252 245 / 0.94);
+  --route-unknown: var(--unknown);
+  --mark: var(--ink);
+  --mark-ring: #fffcf5;
+  --mark-glow: rgb(255 252 245 / 0.82);
+  --mark-quiet: var(--muted);
+  --bench: #3f5286;
+  /* The small signs inside a navy label: steps, a long walk, a bench, nothing known, a walk */
+  --tag-neutral: #aab1c4;
+  --tag-steps: #a9bcf5;
+  --tag-long: var(--on-dark-blocked);
+  --tag-bench: #dcc9a1;
+  --tag-unknown: #c5cbd9;
+  --tag-leg: var(--on-dark-reachable);
+  /* The guide: a small sand pebble */
+  --guide-light: #fbf6ea;
+  --guide-mid: #dccba8;
+  --guide-deep: #b59f76;
+
+  /* What keeps words readable when they lie on the map */
+  --halo: 0 0 2px var(--ground), 0 0 6px var(--ground), 0 0 12px var(--ground);
+
+  /* Type: 16 px reading size, labels 13 px */
+  --font-xs: 13px;
+  --font-s: 15px;
+  --font-m: 16px;
+  --font-l: 17px;
+  --font-xl: 22px;
+  --leading-tight: 1.2;
+  --leading: 1.4;
+  --leading-read: 1.5;
+
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-panel: 14px;
+  --radius-pill: 999px;
+  --tap: 44px;
+  --main-button: 44px;
+  --choice-height: 40px;
+  --hair-width: 1px;
+
+  /* Motion: a strong ease-out, everything under 300 ms, a press answers at once */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --hover-time: 120ms;
+  --press-time: 140ms;
+  --press-scale: 0.97;
+  --lift: -1px;
+  --motion-panel: 220ms;
+  --stagger: 40ms;
+
+  /* Light surface */
+  --ui-ink: var(--ink);
+  --ui-muted: var(--muted);
+  --ui-hair: var(--hairline);
+  --ui-hair-strong: var(--hairline-strong);
+  --ui-hover: rgb(23 37 72 / 0.06);
+  --ui-fill: rgb(255 252 245 / 0.62);
+  --ui-focus: var(--ink);
+}
+
+/* A navy surface flips everything inside it */
+[data-tone="dark"] {
+  --ui-ink: var(--on-dark);
+  --ui-muted: var(--on-dark-muted);
+  --ui-hair: rgb(255 252 245 / 0.13);
+  --ui-hair-strong: rgb(255 252 245 / 0.24);
+  --ui-hover: rgb(255 252 245 / 0.08);
+  --ui-fill: rgb(255 252 245 / 0.08);
+  --ui-focus: #fffcf5;
+  --reachable: var(--on-dark-reachable);
+  --blocked: var(--on-dark-blocked);
+  --unknown: var(--on-dark-unknown);
+  color: var(--ui-ink);
+}
+
+@media (min-resolution: 2dppx) {
+  :root { --hair-width: 0.5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --hover-time: 0ms; --press-time: 0ms; --press-scale: 1; --lift: 0px; --motion-panel: 0ms; --stagger: 0ms; }
+}

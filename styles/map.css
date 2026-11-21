@@ -1,0 +1,167 @@
+/* Parts adapted from Mercature by Glendon Chin (MIT), github.com/glendonC/mercature, src/destinations/map.css, lens.ts and src/home/Home.css: see THIRD_PARTY.md. */
+/* map.css: the leaning map. Palette from mercature/src/destinations/map.css, via docs/design/mercature.md. */
+.stage-map { position: fixed; z-index: 0; inset: 0; overflow: hidden; background: var(--map-ground); }
+.map-svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+.map-way { fill: none; stroke: var(--map-way); stroke-linecap: round; stroke-linejoin: round; }
+.map-way-steps { stroke: var(--map-steps); stroke-dasharray: 2 2; stroke-linecap: butt; }
+
+.map-block-roof, .map-landmark-roof, .map-block-wall, .map-landmark-wall { stroke-width: 0.7; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.map-block-roof { fill: var(--map-roof); stroke: var(--map-roof-edge); }
+.map-block-wall { fill: var(--map-wall); stroke: var(--map-wall); }
+.map-block-wall.map-wall-lit { fill: var(--map-wall-lit); stroke: var(--map-wall-lit); }
+.map-block-wall.map-wall-shade { fill: var(--map-wall-shade); stroke: var(--map-wall-shade); }
+.map-landmark-roof { fill: var(--map-landmark-roof); stroke: var(--map-landmark-edge); }
+.map-landmark-wall { fill: var(--map-landmark-wall); stroke: var(--map-landmark-wall); }
+.map-landmark-wall.map-wall-lit { fill: var(--map-landmark-wall-lit); stroke: var(--map-landmark-wall-lit); }
+.map-landmark-wall.map-wall-shade { fill: var(--map-landmark-wall-shade); stroke: var(--map-landmark-wall-shade); }
+
+/* The way: blue over a white halo. A straight line that is not a walked path is dashed. */
+.map-route-halo, .map-route-line { fill: none; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.map-route-halo { stroke: var(--route-halo); stroke-width: 9; }
+.map-route-line { stroke: var(--route); stroke-width: 3.5; }
+/* Not routed: grey, the colour for unknown, in dots. It is not "the way". */
+.map-route-line[data-straight] { stroke: var(--route-unknown); stroke-dasharray: 1 9; }
+.map-route-halo[data-straight] { stroke-width: 7; }
+.map-route-halo[data-current] { stroke-width: 11; }
+.map-route-line[data-current] { stroke-width: 4.5; }
+
+/* The far part of the map fades into the ground: solid at the top edge, clear at 36% of the height. The landing has its own veil. */
+.map-haze { position: absolute; inset: 0 0 auto 0; height: 36%; background: linear-gradient(var(--map-ground) 15%, transparent); pointer-events: none; }
+.stage[data-step="landing"] .map-haze { display: none; }
+
+.map-labels { position: absolute; inset: 0; pointer-events: none; }
+.map-labels > * { position: absolute; top: 0; left: 0; will-change: transform; }
+.map-labels > .map-stop { z-index: 2; }
+.map-labels > .map-pill { z-index: 3; }
+
+.map-stop {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  border-radius: 50%;
+  background: rgb(var(--cream-rgb) / 0.88);
+  box-shadow: inset 0 0 0 1.5px var(--mark), 0 0 0 4px rgb(var(--cream-rgb) / 0.5), 0 1px 5px rgb(var(--shade-rgb) / 0.16);
+  color: var(--mark);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.map-stop[data-current] { width: 26px; height: 26px; margin: -13px 0 0 -13px; background: var(--route); box-shadow: 0 0 0 2px var(--mark-ring), 0 0 0 3.5px var(--mark), 0 0 12px 5px rgb(var(--cream-rgb) / 0.8); color: var(--on-dark); font-size: 14px; }
+
+.map-dot {
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border-radius: 50%;
+  background: rgb(var(--cream-rgb) / 0.9);
+  box-shadow: inset 0 0 0 3.5px var(--mark), 0 0 0 1.5px rgb(var(--cream-rgb) / 0.8), 0 1px 4px rgb(var(--shade-rgb) / 0.2);
+}
+.map-dot[data-kind="bench"] { width: 10px; height: 10px; margin: -5px 0 0 -5px; box-shadow: inset 0 0 0 2.5px var(--mark), 0 0 0 1.5px rgb(var(--cream-rgb) / 0.8); }
+
+.map-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 24px;
+  max-width: 250px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: rgb(var(--navy-rgb) / 0.88);
+  box-shadow: var(--glass-charcoal-edge), 0 1px 4px rgb(var(--shade-rgb) / 0.16);
+  color: var(--on-dark);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-variant-numeric: tabular-nums;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+.map-pill[data-kind="stop"] { display: inline-block; padding: 0 8px; line-height: 24px; }
+.map-pill[data-shown] { opacity: 1; }
+.map-pill-dot { flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--tag-neutral); }
+.map-pill-dot[data-kind="steps"] { border-radius: 2px; background: var(--tag-steps); }
+.map-pill-dot[data-kind="long"] { background: var(--tag-long); }
+.map-pill-dot[data-kind="bench"] { border-radius: 2px 2px 0 0; height: 6px; width: 11px; background: var(--tag-bench); }
+.map-pill-dot[data-kind="unknown"] { background: none; border: 1.5px dashed var(--tag-unknown); }
+.map-pill-dot[data-kind="straight"] { width: 14px; height: 0; border-radius: 0; background: none; border-top: 3px dotted var(--tag-unknown); }
+
+.map-credit {
+  position: absolute;
+  left: calc(12px + env(safe-area-inset-left, 0px));
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgb(var(--navy-rgb) / 0.82);
+  color: rgb(var(--on-dark-rgb) / 0.82);
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+/* ---- The places to choose from: each a button, 44 px to the finger, a small dark mark to the eye ---- */
+.map-layer { position: absolute; inset: 0; pointer-events: none; }
+.map-layer > * { position: absolute; top: 0; left: 0; will-change: transform; }
+.map-layer > .map-stop, .map-layer > .map-place { z-index: 2; }
+.map-layer > .map-pill { z-index: 3; }
+.stage-map { touch-action: none; cursor: grab; }
+.map-place { display: grid; place-items: center; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; pointer-events: auto; cursor: pointer; }
+.map-place-dot { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--mark); box-shadow: 0 0 0 2px var(--mark-ring), 0 2px 6px rgb(var(--shade-rgb) / 0.3); color: var(--on-dark); transition: transform var(--press-time) var(--ease-out); }
+.map-place-dot svg { width: 16px; height: 16px; }
+.map-place:active .map-place-dot { transform: scale(0.94); }
+.map-place:focus-visible { outline: none; }
+.map-place:focus-visible .map-place-dot { outline: 2px solid var(--ink); outline-offset: 3px; }
+/* Yes: a white mark with a tick. No: a faint ring with a cross. The place she is looking at: larger, in the route blue. */
+.map-place[data-state="yes"] .map-place-dot { background: var(--mark-ring); color: var(--mark); box-shadow: 0 0 0 2px var(--mark), 0 2px 6px rgb(var(--shade-rgb) / 0.3); }
+.map-place[data-state="no"] .map-place-dot { background: rgb(var(--cream-rgb) / 0.7); color: var(--mark-quiet); box-shadow: 0 0 0 1px rgb(var(--ink-rgb) / 0.3); opacity: 0.75; }
+.map-place[data-current] .map-place-dot { width: 34px; height: 34px; background: var(--route); color: var(--on-dark); box-shadow: 0 0 0 2.5px var(--mark-ring), 0 0 0 4px var(--mark), 0 0 14px 6px rgb(var(--cream-rgb) / 0.8); }
+.map-place[data-current] .map-place-dot svg { width: 18px; height: 18px; }
+/* Before the map is made the places are only small grey dots */
+.map-layer[data-quiet] .map-place { pointer-events: none; }
+.map-layer[data-quiet] .map-place-dot { width: 9px; height: 9px; background: var(--mark-quiet); box-shadow: 0 0 0 1.5px rgb(var(--cream-rgb) / 0.9); }
+.map-layer[data-quiet] .map-place-dot svg, .map-layer[data-quiet] .map-pill { display: none; }
+.map-pill[data-kind="place"] { display: inline-block; height: 24px; padding: 0 8px; line-height: 24px; font-size: 13px; pointer-events: auto; cursor: pointer; }
+.map-pill[data-kind="place"][data-state="no"] { opacity: 0; pointer-events: none; }
+.map-pill[data-kind="place"][data-state="yes"] { background: var(--chip); color: var(--mark); box-shadow: 0 0 0 0.5px rgb(var(--shade-rgb) / 0.2), var(--shadow-float); }
+.map-pill[data-kind="place"]:not([data-shown]) { pointer-events: none; }
+/* Where street photos were taken: small grey dots, as in the reference */
+.map-photo-dot { fill: var(--mark-quiet); opacity: 0.45; }
+.map-pill-dot[data-kind="leg"] { width: 12px; height: 0; border-radius: 0; background: none; border-top: 2.5px solid var(--tag-leg); }
+
+/* Places to sit, before the route: small quiet marks. On the route the benches of the walks become "Bench" labels. */
+.map-spot { width: 11px; height: 8px; margin: -4px 0 0 -5.5px; border-radius: 2px 2px 0 0; background: var(--bench); box-shadow: 0 0 0 1.5px rgb(var(--cream-rgb) / 0.95), 0 1px 3px rgb(var(--shade-rgb) / 0.3); z-index: 1; }
+.stage[data-step="landing"] .map-spots { display: none; }
+
+/* The map has no edge: it dissolves into the ground on every side */
+.map-svg {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+/* Whose map: one tiny quiet mark at the bottom right */
+.map-credit { left: auto; top: auto; right: calc(10px + env(safe-area-inset-right, 0px)); bottom: calc(8px + env(safe-area-inset-bottom, 0px)); padding: 2px 8px; font-size: 11px; }
+.stage[data-step="landing"] .map-credit { display: none; }
+
+/* The landing backdrop is the saved route, still: no words, the stops as small dots */
+.stage[data-step="landing"] .map-pill, .stage[data-step="landing"] .map-dot { display: none; }
+.stage[data-step="landing"] .map-stop { width: 14px; height: 14px; margin: -7px 0 0 -7px; background: var(--mark); font-size: 0; box-shadow: 0 0 0 1.5px var(--mark-ring), 0 1px 4px rgb(var(--shade-rgb) / 0.22); }
+
+/* A mark on the route can be pressed: it opens one small card in the left column with the real photo taken nearest to it. */
+.map-pill[data-look], .map-dot[data-look], .map-stop[data-look] { pointer-events: auto; cursor: pointer; transition: scale var(--press-time) var(--ease-out); }
+.map-pill[data-look]:active, .map-dot[data-look]:active, .map-stop[data-look]:active { scale: var(--press-scale); }
+.map-look { position: absolute; z-index: 5; top: 84px; left: 16px; width: min(360px, calc(100% - 32px)); padding: 10px; border-radius: 16px; background: var(--panel-dark); color: var(--on-dark); box-shadow: 0 4px 16px rgb(var(--shade-rgb) / 0.24); cursor: default; }
+.map-look-photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; background: rgb(255 255 255 / 0.08); }
+.map-look-none { margin: 0; padding: 40px 8px; text-align: center; border-radius: 10px; background: rgb(255 255 255 / 0.08); }
+.map-look-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; font-size: 13px; }
+.map-look-step { min-width: 44px; min-height: 44px; border: 0; border-radius: 10px; background: none; color: inherit; font-size: 24px; cursor: pointer; transition: transform var(--press-time) var(--ease-out); }
+.map-look-step:active { transform: scale(var(--press-scale)); }
+.map-look-title { margin: 8px 2px 2px; font-size: 16px; }
+.map-look-facts { margin: 2px; font-size: 13px; opacity: 0.75; }

@@ -1,0 +1,452 @@
+/* Parts adapted from Mercature by Glendon Chin (MIT), github.com/glendonC/mercature, src/ui/chat.css, src/ui/interact.css, src/ui/Chat.tsx (the talking guide), src/guide/guide.css: see THIRD_PARTY.md. */
+/*
+  ui.css: the shared parts. Navy glass over a beige map; the shapes and sizes follow Mercature, the colours
+  are this project's tokens. Very little chrome, one type family, thin hairlines. Controls are compact; every
+  pressable thing is at least 44 px high (a small control gets the rest of its height from its padding box).
+  Motion: a surface answers the pointer by brightening and lifting a little, and a press scales the surface
+  and never the words; hover effects only where there is a real pointer; less motion when she asks for less.
+*/
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-size: var(--font-m);
+  line-height: var(--leading-read);
+  overflow: hidden;
+}
+
+h1, h2, h3, p, ol, ul, dl, dd, blockquote, figure { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+button, input, textarea { font: inherit; color: inherit; }
+button { margin: 0; padding: 0; border: 0; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+button:disabled { cursor: not-allowed; }
+a { color: inherit; text-underline-offset: 3px; }
+[hidden] { display: none !important; }
+
+:focus-visible { outline: 2px solid var(--ui-focus); outline-offset: 2px; }
+
+/* The guide's size: 64 px beside 15 px words, 52 px on a phone */
+:root { --companion: 64px; }
+@media (max-width: 699px) { :root { --companion: 52px; } }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* ---- Top bar: the wordmark, the Knowledge graph tab and the language. No solid bar: the ground fades out under it ---- */
+.bar {
+  position: fixed;
+  z-index: 8;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 64px;
+  padding: calc(8px + env(safe-area-inset-top, 0px)) calc(12px + env(safe-area-inset-right, 0px)) 12px calc(20px + env(safe-area-inset-left, 0px));
+  background: linear-gradient(var(--ground) 35%, transparent);
+  pointer-events: none;
+}
+.bar > * { pointer-events: auto; }
+.bar > .wordmark { flex: none; min-height: 44px; margin-right: auto; padding: 0 6px 0 0; font-size: 20px; font-weight: 400; letter-spacing: -0.05em; line-height: 1.15; color: var(--ink); text-shadow: var(--halo); border-radius: 8px; transition: transform var(--press-time) var(--ease-out); }
+.bar > .wordmark:active { transform: scale(var(--press-scale)); }
+.bar > .wordmark:focus-visible { outline-color: var(--ink); }
+.bar > .seg#view-tabs { position: absolute; left: 50%; translate: -50% 0; }
+.bar-tools { display: flex; flex: none; align-items: center; justify-content: flex-end; gap: 6px; }
+/* On the landing the wordmark stands on the same left edge as the words under it */
+@media (min-width: 700px) {
+  .stage[data-step="landing"] .bar { padding-top: calc(22px + env(safe-area-inset-top, 0px)); padding-left: calc(var(--edge) + env(safe-area-inset-left, 0px)); padding-right: calc(var(--edge) + env(safe-area-inset-right, 0px)); }
+}
+/* While the map is being made the screen holds the title, the guide and Skip: the two switches wait */
+.stage[data-step="making"] #view-tabs, .stage[data-step="making"] #lang { display: none; }
+/* Today's weather for the area being visited: a line icon, the average temperature and one word. Quiet, and
+   not pressed. On a phone the bar is full, so it stands under the bar's right end. */
+.weather-mark { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; margin: 0 8px 0 0; font-size: var(--font-xs); font-weight: 500; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink); text-shadow: var(--halo); }
+.weather-mark svg { flex: none; width: 18px; height: 18px; }
+@media (max-width: 699px) {
+  .stage:not([data-step="making"]) .weather-mark { position: absolute; top: calc(100% - 10px); right: calc(12px + env(safe-area-inset-right, 0px)); min-height: 24px; margin: 0; }
+  .stage[data-step="making"] .weather-mark { margin-right: 4px; }
+}
+
+/* Segmented control on charcoal glass; the pressed item turns white */
+.seg {
+  display: inline-flex;
+  flex: none;
+  padding: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--glass-charcoal);
+  -webkit-backdrop-filter: var(--glass-filter);
+  backdrop-filter: var(--glass-filter);
+  box-shadow: var(--glass-charcoal-edge), var(--shadow-float);
+}
+.seg-item {
+  position: relative;
+  min-width: 44px;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  color: rgb(var(--on-dark-rgb) / 0.78);
+  transition: background-color var(--hover-time) var(--ease-out), color var(--hover-time) var(--ease-out), transform var(--press-time) var(--ease-out);
+}
+/* The item is 34 px to the eye and 44 px to the finger */
+.seg-item::after { content: ""; position: absolute; inset: -5px 0; }
+.seg-item[aria-pressed="true"] { background: var(--chip); color: var(--ink); box-shadow: 0 1px 2px rgb(var(--shade-rgb) / 0.25); }
+.seg-item:disabled { color: rgb(var(--on-dark-rgb) / 0.42); }
+.seg-item:focus-visible { outline-color: var(--on-dark); outline-offset: -4px; }
+.seg-item[aria-pressed="true"]:focus-visible { outline-color: var(--ink); }
+.seg-item:active:not(:disabled) { transform: scale(var(--press-scale)); }
+
+/* Floating glass pill button */
+.pill-button {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: var(--radius-pill);
+  background: var(--glass-charcoal);
+  -webkit-backdrop-filter: var(--glass-filter);
+  backdrop-filter: var(--glass-filter);
+  box-shadow: var(--glass-charcoal-edge), var(--shadow-float);
+  color: var(--on-dark);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.1;
+  transition: background-color var(--hover-time) var(--ease-out), box-shadow var(--hover-time) var(--ease-out), translate var(--hover-time) var(--ease-out), transform var(--press-time) var(--ease-out);
+}
+.pill-button:focus-visible { outline-color: var(--ink); }
+.pill-button:active { transform: scale(var(--press-scale)); }
+
+/* Quiet text button, for use on a charcoal panel */
+.text-button {
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: var(--radius-s);
+  font-size: var(--font-s);
+  font-weight: 500;
+  color: var(--ui-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--ui-hair-strong);
+  text-underline-offset: 4px;
+}
+
+/* Main button. White on charcoal, ink on light. */
+.main-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--main-button);
+  padding: 0 18px;
+  border-radius: var(--radius-m);
+  background: var(--ink);
+  color: var(--on-dark);
+  font-size: var(--font-s);
+  font-weight: 500;
+  line-height: 1.15;
+  transition: transform var(--press-time) var(--ease-out);
+}
+[data-tone="dark"] .main-button { background: var(--chip); color: var(--ink); }
+.main-button[data-quiet] { background: var(--ui-fill); color: var(--ui-ink); box-shadow: inset 0 0 0 var(--hair-width) var(--ui-hair-strong); }
+.main-button:disabled { opacity: 0.45; }
+.main-button:active:not(:disabled) { transform: scale(var(--press-scale)); }
+.step-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+/* ---- Charcoal panel ---- */
+.panel {
+  position: relative;
+  padding: 10px 12px 12px;
+  border-radius: var(--radius-panel);
+  /* A card holds text to read: the glass is laid twice, so no map detail shows through its words */
+  background: linear-gradient(var(--glass-charcoal), var(--glass-charcoal)), var(--glass-charcoal);
+  -webkit-backdrop-filter: var(--glass-filter);
+  backdrop-filter: var(--glass-filter);
+  box-shadow: var(--glass-charcoal-edge), var(--shadow-panel-dark);
+}
+
+.meta { font-size: var(--font-xs); line-height: var(--leading-tight); color: var(--ui-muted); font-variant-numeric: tabular-nums; }
+.title { font-size: var(--font-l); font-weight: 500; line-height: var(--leading-tight); letter-spacing: -0.01em; overflow-wrap: anywhere; }
+
+/* ---- The guide: a sand pebble with two eyes. It floats, and it bobs while its sentence is being said ---- */
+.guide { display: flex; align-items: flex-end; gap: 10px; }
+.guide-avatar {
+  position: relative;
+  flex: none;
+  width: var(--companion);
+  height: calc(var(--companion) * 0.9);
+  border-radius: 46% 54% 50% 50% / 56% 56% 44% 44%;
+  background: radial-gradient(circle at 34% 26%, var(--guide-light), var(--guide-mid) 58%, var(--guide-deep));
+  box-shadow: 0 6px 12px -4px rgb(var(--shade-rgb) / 0.4), inset 0 -3px 6px rgb(var(--shade-rgb) / 0.18);
+  transform-origin: 50% 90%;
+  animation: float 4.2s ease-in-out infinite alternate;
+}
+/* The eyes are set in percent, so they keep their place at every size */
+.guide-avatar::before, .guide-avatar::after {
+  content: "";
+  position: absolute;
+  top: 41.5%;
+  width: 13.75%;
+  height: 22%;
+  border-radius: 50%;
+  background: var(--ink);
+}
+.guide-avatar::before { left: 32.5%; }
+.guide-avatar::after { left: 57.5%; }
+@keyframes float { from { translate: 0 -3px; } to { translate: 0 3px; } }
+.guide-avatar[data-talking] { animation: float 4.2s ease-in-out infinite alternate, talk 0.17s ease-in-out infinite alternate; }
+@keyframes talk { to { transform: translateY(-2px) scale(1.035, 0.955); } }
+
+/* What it says: one dark bubble */
+.guide-line {
+  min-width: 0;
+  padding: 12px 18px;
+  border-radius: var(--radius-panel);
+  background: var(--glass-charcoal);
+  -webkit-backdrop-filter: var(--glass-filter);
+  backdrop-filter: var(--glass-filter);
+  box-shadow: var(--glass-charcoal-edge), var(--shadow-panel-dark);
+  color: var(--on-dark);
+  font-size: 15px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+.guide-line:lang(ko), .guide-line :lang(ko) { word-break: keep-all; }
+.guide-line small { display: block; margin-top: 3px; font-size: var(--font-xs); line-height: 1.4; color: rgb(var(--on-dark-rgb) / 0.72); }
+.guide-line .line-meta { margin-bottom: 1px; font-size: var(--font-xs); line-height: 1.3; color: rgb(var(--on-dark-rgb) / 0.72); font-variant-numeric: tabular-nums; }
+.guide-line .line-warn { color: var(--on-dark-blocked); }
+/* One sentence. While the agents work a quiet light runs across it and the guide's eyes move; when the work
+   is done a small tick stands before it. */
+.line-words { margin: 0; }
+/* The part of the sentence not yet said keeps its room, so the bubble never changes size while it types */
+.untyped { color: transparent; }
+.line-words[data-working] {
+  background: linear-gradient(90deg, rgb(var(--cream-rgb) / 0.62) 30%, var(--on-dark) 50%, rgb(var(--cream-rgb) / 0.62) 70%) 0 0 / 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sweep 1.6s linear infinite;
+}
+.line-tick { display: inline-grid; place-items: center; width: 18px; height: 18px; margin-right: 8px; border-radius: 50%; background: var(--chip); color: var(--ink); vertical-align: -3px; }
+.line-tick svg { width: 12px; height: 12px; stroke-width: 2.6; }
+.guide-avatar[data-working]::before, .guide-avatar[data-working]::after { animation: look 1.3s var(--ease-in-out) infinite alternate; }
+@keyframes look { from { transform: translateX(-2px); } to { transform: translateX(2px); } }
+/* A quiet link: "Skip" */
+.quiet { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 8px; border-radius: var(--radius-s); color: var(--on-dark); font-size: 14px; font-weight: 500; transition: background-color var(--hover-time) var(--ease-out), transform var(--press-time) var(--ease-out); }
+.quiet svg { width: 17px; height: 17px; flex: none; }
+.quiet:focus-visible { outline-color: var(--on-dark); outline-offset: -4px; }
+.quiet:active { transform: scale(var(--press-scale)); }
+
+/* Waiting is a sentence with a light sweep, not a spinner */
+.working {
+  background: linear-gradient(90deg, rgb(var(--cream-rgb) / 0.6) 30%, var(--on-dark) 50%, rgb(var(--cream-rgb) / 0.6) 70%) 0 0 / 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sweep 1.6s linear infinite;
+}
+@keyframes sweep { from { background-position: 110% 0; } to { background-position: -110% 0; } }
+
+/* ---- Numbered answers: charcoal rows, the one that goes on is light ---- */
+.choices { display: grid; gap: 0; }
+.choice {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: var(--tap);
+  padding: 0 14px 0 10px;
+  color: var(--on-dark);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: start;
+}
+/* The row she sees is 40 px; the 2 px above and below belong to the finger */
+.choice::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: calc((var(--tap) - var(--choice-height)) / 2) 0;
+  border-radius: 12px;
+  background: var(--glass-charcoal);
+  -webkit-backdrop-filter: var(--glass-filter);
+  backdrop-filter: var(--glass-filter);
+  box-shadow: var(--glass-charcoal-edge), var(--shadow-float);
+  transition: background-color var(--hover-time) var(--ease-out), box-shadow var(--hover-time) var(--ease-out), translate var(--hover-time) var(--ease-out), transform var(--press-time) var(--ease-out);
+}
+/* A press scales the surface; the words and the room for the finger stay */
+.choice:active:not(:disabled)::before { transform: scale(var(--press-scale)); translate: 0 0; }
+.choice:focus-visible { outline: none; }
+.choice:focus-visible::before { outline: 2px solid var(--ink); outline-offset: 2px; }
+.choice[data-lead]::before { background: var(--chip); box-shadow: 0 0 0 0.5px rgb(var(--shade-rgb) / 0.18), var(--shadow-float); }
+.choice[data-lead] { color: var(--ink); }
+/* Her answer so far: a white line around the row, and the words say it too */
+.choice[aria-pressed="true"]::before { box-shadow: inset 0 0 0 1.5px var(--on-dark), var(--shadow-float); }
+.choice[data-lead][aria-pressed="true"]::before { box-shadow: inset 0 0 0 2px var(--ink), var(--shadow-float); }
+.choice:disabled { opacity: 0.45; }
+.choice-key {
+  display: grid;
+  place-items: center;
+  flex: none;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 5px;
+  background: rgb(var(--cream-rgb) / 0.1);
+  box-shadow: inset 0 0 0 var(--hair-width) rgb(var(--cream-rgb) / 0.18);
+  font-size: var(--font-xs);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: rgb(var(--on-dark-rgb) / 0.72);
+}
+.choice[data-lead] .choice-key { background: rgb(var(--ink-rgb) / 0.06); box-shadow: inset 0 0 0 var(--hair-width) rgb(var(--ink-rgb) / 0.16); color: var(--muted); }
+.choice-label { min-width: 0; overflow-wrap: anywhere; }
+
+/* ---- "Type in your own words" ---- */
+.composer {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 2px 0 16px;
+  border-radius: 24px;
+  background: var(--glass-charcoal);
+  -webkit-backdrop-filter: var(--glass-filter);
+  backdrop-filter: var(--glass-filter);
+  box-shadow: var(--glass-charcoal-edge), var(--shadow-float);
+  color: var(--on-dark);
+  transition: box-shadow var(--hover-time) var(--ease-out);
+}
+.composer:focus-within { box-shadow: var(--glass-charcoal-edge), inset 0 0 0 1px rgb(var(--cream-rgb) / 0.6), var(--shadow-float); }
+.composer input {
+  flex: 1;
+  min-width: 0;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  caret-color: var(--on-dark);
+}
+.composer input::placeholder { color: rgb(var(--on-dark-rgb) / 0.72); opacity: 1; }
+.composer-send {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--ink);
+}
+.composer-send::before { content: ""; position: absolute; z-index: -1; inset: 4px; border-radius: 50%; background: var(--chip); transition: background-color var(--hover-time) var(--ease-out), box-shadow var(--hover-time) var(--ease-out), translate var(--hover-time) var(--ease-out), transform var(--press-time) var(--ease-out); }
+.composer-send:disabled { color: rgb(var(--on-dark-rgb) / 0.5); }
+.composer-send:disabled::before { background: rgb(var(--cream-rgb) / 0.08); }
+.composer-send:active:not(:disabled)::before { transform: scale(var(--press-scale)); translate: 0 0; }
+/* The send disc wakes when she is in the field */
+.composer:focus-within .composer-send:disabled { color: rgb(var(--on-dark-rgb) / 0.78); }
+.composer:focus-within .composer-send:disabled::before { background: rgb(var(--cream-rgb) / 0.16); }
+.composer-send:focus-visible { outline: none; }
+.composer-send:focus-visible::before { outline: 2px solid var(--on-dark); outline-offset: 2px; }
+.composer-send svg { width: 18px; height: 18px; }
+.composer[data-off] input { cursor: not-allowed; }
+.composer[data-off] input::placeholder { color: rgb(var(--on-dark-rgb) / 0.5); }
+
+/* Round glass button: Back, and the three on the map */
+.round-button {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--glass-charcoal);
+  -webkit-backdrop-filter: var(--glass-filter);
+  backdrop-filter: var(--glass-filter);
+  box-shadow: var(--glass-charcoal-edge), var(--shadow-float);
+  color: var(--on-dark);
+  transition: background-color var(--hover-time) var(--ease-out), box-shadow var(--hover-time) var(--ease-out), translate var(--hover-time) var(--ease-out), transform var(--press-time) var(--ease-out);
+}
+.round-button svg { width: 20px; height: 20px; }
+.round-button:focus-visible { outline-color: var(--ink); }
+.round-button:active { transform: scale(var(--press-scale)); }
+
+/* ---- Chips: a small shape and a word, never colour alone ---- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-xs);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--ui-ink);
+}
+.chip::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--unknown); }
+.chip[data-tone="route"]::before { background: var(--reachable); }
+.chip[data-tone="barrier"]::before { background: linear-gradient(90deg, var(--blocked) 50%, transparent 50%); box-shadow: inset 0 0 0 1.5px var(--blocked); }
+.chip[data-tone="blocked"]::before { border-radius: 2px; background: var(--blocked); }
+.chip[data-tone="unknown"]::before { background: none; border: 1.5px dashed var(--unknown); }
+.chip[data-tone="plain"]::before { display: none; }
+.chip[data-tone="plain"] { font-weight: 400; color: var(--ui-muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+
+.plain-note { max-width: 46ch; font-size: var(--font-m); color: var(--ui-ink); }
+.plain-note + .plain-note { margin-top: 8px; }
+
+/* ---- Sources, quotes ---- */
+.source-link, .source-plain { font-size: var(--font-xs); overflow-wrap: anywhere; }
+.source-link { display: inline-block; padding: 6px 0; }
+.quote { padding-left: 10px; border-left: 1.5px solid var(--ui-hair-strong); font-size: var(--font-xs); line-height: 1.45; color: var(--ui-muted); overflow-wrap: anywhere; }
+
+/* ---- "What the agent did" ---- */
+.audit {
+  width: min(680px, 100vw - 24px);
+  max-height: min(84svh, 820px);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-panel);
+  background: rgb(var(--navy-rgb) / 0.96);
+  box-shadow: var(--glass-charcoal-edge), var(--shadow-panel-dark);
+  color: var(--on-dark);
+  overflow: hidden;
+}
+.audit[open] { display: flex; flex-direction: column; animation: dialog-in 200ms var(--ease-out) both; }
+@keyframes dialog-in { from { opacity: 0; transform: scale(0.97); } }
+.audit::backdrop { background: var(--scrim); }
+.audit-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 8px 6px 18px; border-bottom: var(--hair-width) solid var(--ui-hair); }
+.audit-head h2 { font-size: var(--font-l); font-weight: 500; }
+.audit-body { padding: 12px 18px 18px; overflow-y: auto; overscroll-behavior: contain; }
+.audit-sum { margin-bottom: 8px; font-size: var(--font-xs); line-height: 1.4; color: var(--ui-muted); }
+.audit-sample { margin-bottom: 8px; font-size: var(--font-xs); font-weight: 500; line-height: 1.3; }
+.audit-row { display: grid; grid-template-columns: 60px 1fr; gap: 2px 12px; padding: 9px 0; border-top: var(--hair-width) solid var(--ui-hair); }
+.audit-row[data-decision="withheld"], .audit-row[data-decision="blocked"] { box-shadow: inset 2px 0 0 var(--blocked); margin-left: -18px; padding-left: 18px; }
+.audit-time { font-size: var(--font-xs); color: var(--ui-muted); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.audit-what { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-size: var(--font-s); }
+.audit-what b { font-weight: 500; }
+.audit-tool { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; color: var(--ui-muted); }
+.audit-more { grid-column: 2; font-size: var(--font-xs); line-height: 1.4; color: var(--ui-muted); overflow-wrap: anywhere; }
+.verdict { font-size: var(--font-xs); font-weight: 500; color: var(--ui-muted); }
+.verdict[data-decision="withheld"], .verdict[data-decision="blocked"] { color: var(--blocked); }
+
+@media (hover: hover) and (pointer: fine) {
+  .seg-item:hover:not(:disabled):not([aria-pressed="true"]) { background: rgb(var(--cream-rgb) / 0.1); }
+  .pill-button:hover, .round-button:hover { background: var(--glass-hover); translate: 0 var(--lift); box-shadow: var(--glass-charcoal-edge), var(--shadow-lift); }
+  .choice:hover:not(:disabled):not([data-lead])::before { background: var(--glass-hover); translate: 0 var(--lift); box-shadow: var(--glass-charcoal-edge), var(--shadow-lift); }
+  .choice[data-lead]:hover:not(:disabled)::before { background: var(--chip-hover); translate: 0 var(--lift); box-shadow: 0 0 0 0.5px rgb(var(--shade-rgb) / 0.18), var(--shadow-lift); }
+  .composer:hover:not(:focus-within) { box-shadow: var(--glass-charcoal-edge), inset 0 0 0 1px rgb(var(--cream-rgb) / 0.22), var(--shadow-float); }
+  .composer-send:hover:not(:disabled)::before { background: var(--chip-hover); }
+  .quiet:hover, .text-button:hover { background: rgb(var(--cream-rgb) / 0.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guide-avatar, .guide-avatar[data-talking], .audit[open] { animation: none; }
+  .guide-avatar[data-working]::before, .guide-avatar[data-working]::after { animation: none; }
+  .working, .line-words[data-working] { animation-duration: 4s; }
+}

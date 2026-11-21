@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#eee7d7">
+  <title>Gilmate · Shibuya</title>
+  <link rel="icon" href="data:,">
+  <link rel="preload" href="fonts/AspektaVF.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/ui.css">
+  <link rel="stylesheet" href="styles/views.css">
+  <link rel="stylesheet" href="styles/map.css">
+  <link rel="stylesheet" href="styles/know.css">
+</head>
+<body>
+  <div class="stage" id="stage" data-view="plan" data-step="landing">
+    <!-- The map fills the screen behind everything. It stays empty when there is no map data. -->
+    <div class="stage-map" id="map"></div>
+
+    <header class="bar">
+      <!-- The wordmark starts over -->
+      <button type="button" class="wordmark" id="start-over" aria-label="Gilmate: start over">gilmate</button>
+      <nav class="seg" id="view-tabs" aria-label="View">
+        <button type="button" class="seg-item" data-go="map" aria-pressed="true" data-t="Map">Map</button>
+        <button type="button" class="seg-item" data-go="know" aria-pressed="false" id="know-open" data-t="Knowledge graph">Knowledge graph</button>
+      </nav>
+      <div class="bar-tools">
+        <!-- Today's weather for the area being visited. Not pressed; empty until a forecast was read. -->
+        <p class="weather-mark" id="weather" hidden></p>
+        <div class="seg" id="lang" role="group" aria-label="Language">
+          <button type="button" class="seg-item" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="seg-item" data-lang="ko" aria-pressed="false" lang="ko">한국어</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="content" id="content"></main>
+
+  </div>
+
+  <!-- The list of the agent's steps. Nothing on the page opens it at the moment; the data and the code that draws it stay. -->
+  <dialog class="audit" id="audit" data-tone="dark" aria-labelledby="audit-title">
+    <div class="audit-head">
+      <h2 id="audit-title" data-t="What the agent did">What the agent did</h2>
+      <button type="button" class="text-button" id="audit-close" data-t="Close">Close</button>
+    </div>
+    <div class="audit-body" id="audit-body"></div>
+  </dialog>
+
+  <!-- "Knowledge graph": what Gilmate knows about her. The tab in the top bar opens it. -->
+  <dialog class="know" id="know" aria-labelledby="know-title">
+    <div class="know-head">
+      <h2 id="know-title" data-t="What Gilmate knows about you">What Gilmate knows about you</h2>
+      <button type="button" class="pill-button" id="know-close" data-t="Close">Close</button>
+    </div>
+    <div class="know-body" id="know-body"></div>
+    <div class="know-side" id="know-side"></div>
+  </dialog>
+
+  <noscript><p class="plain-note">This page needs JavaScript to show the map.</p></noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
