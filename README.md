@@ -2,7 +2,7 @@
 
 <img src="docs/gilmate-icon.svg" width="120" alt="Gilmate">
 
-# Gilmate | 4th Place | DevFest Münster 2026 Agentic AI Hackathon
+# Gilmate | 4th Place | Google Developer Group x MLH Hackathon, DevFest Münster 2026
 
 **A tour guide that plans around you, not the city.**
 
@@ -10,7 +10,10 @@ Built in three hours by one person directing AI coding agents.
 
 <br/>
 
+![Google Developer Group Münster](https://img.shields.io/badge/Google_Developer_Group-M%C3%BCnster-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Major League Hacking](https://img.shields.io/badge/MLH-Major_League_Hacking-265A8F?style=for-the-badge&logo=majorleaguehacking&logoColor=white)
 ![DevFest Münster 2026](https://img.shields.io/badge/DevFest_M%C3%BCnster-2026-172548?style=for-the-badge)
+
 ![4th Place](https://img.shields.io/badge/4th_Place-Agentic_AI_Hackathon-b9472a?style=for-the-badge)
 ![Built in 3 hours](https://img.shields.io/badge/Built_in-3_hours-172548?style=for-the-badge)
 
