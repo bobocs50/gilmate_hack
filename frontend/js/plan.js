@@ -61,6 +61,7 @@ export function renderPlan(app, act) {
   if (app.step === "landing") return renderLanding(app, act);
   if (app.step === "making") return renderMaking(app, act);
   if (app.step === "choose") return renderPlace(app, act);
+  if (app.step === "food") return renderFood(app, act);
   if (app.step === "remember") return renderRemembered(app, act);
   if (app.step === "context") return renderContext(app, act);
   if (app.step === "ask") return renderAsk(app, act);
@@ -158,6 +159,49 @@ function renderPlace(app, act) {
   }));
 }
 
+// ---- 3b. Food, once: the places to eat together, one of them or none ------------------------------
+
+function renderFood(app, act) {
+  const food = app.candidates.filter((place) => place.category === "eat");
+  if (app.foodFull) {
+    return el("section", { class: "screen" }, dock({ line: t("Five places is the most for one walk."), lineAttrs: { role: "status" } }));
+  }
+  // On a saved run the saved choice is already made, as for the other saved answers.
+  const saved = app.source?.kind !== "live" && Array.isArray(app.run?.picks) ? app.run.picks : null;
+  const savedPick = saved ? food.find((place) => saved.includes(place.id))?.id ?? null : null;
+  const chosen = food.find((place) => app.said[place.id] === "yes")?.id ?? null;
+  const first = food.find((place) => place.id === app.foodAt) ?? food.find((place) => place.id === (chosen ?? savedPick)) ?? food[0];
+  // One card per place to eat; the one highlighted, hovered or tapped first shows, the others wait hidden.
+  const cards = food.map((place) => {
+    const card = placeCard(app, place, t("Food"));
+    card.hidden = place !== first;
+    card.dataset.food = place.id;
+    return card;
+  });
+  const list = choices([
+    ...food.map((place, index) => ({
+      label: [place.name ?? t("Name unknown"), kindWords(place, app.lang).text, ratingLine(place)].filter(Boolean).join(" · "),
+      id: `food-${index + 1}`, lead: place === first, pressed: (chosen ?? savedPick) === place.id,
+      onPick: () => act.sayFood(place.id),
+    })),
+    { label: t("No food stop"), id: "food-none", pressed: food.every((place) => app.said[place.id] === "no"), onPick: () => act.sayFood(null) },
+  ], { label: t("Where would you like to eat?") });
+  list.querySelectorAll(".choice").forEach((button, index) => {
+    const place = food[index];
+    if (!place) return;
+    const show = () => { app.foodAt = place.id; for (const card of cards) card.hidden = card.dataset.food !== place.id; };
+    button.addEventListener("mouseenter", show);
+    button.addEventListener("focus", show);
+    button.addEventListener("touchstart", show, { passive: true });
+  });
+  return el("section", { class: "screen" }, dock({
+    content: el("div", { class: "food-cards" }, cards),
+    actions: list,
+    line: app.placeNote ? app.placeNote() : t("Where would you like to eat?"),
+    lineAttrs: { "aria-live": "polite" },
+  }));
+}
+
 // The rating Python took from Google Maps (CONTRACT.md, the Places section), as one short line:
 // "4.9 · 17,274 ratings on Google". Only the fact's own numbers; a place without that fact has no line.
 function ratingLine(place) {
@@ -169,14 +213,14 @@ function ratingLine(place) {
 }
 
 /** A short card: the photos, the name, what it is and its access in one grey line, and two sentences. */
-function placeCard(app, place) {
+function placeCard(app, place, group = null) {
   const kind = kindWords(place, app.lang);
   const description = pick(place.description, app.lang);
   const rating = ratingLine(place);
   return el("article", { class: "panel spot", "data-tone": "dark", "aria-label": place.name ?? t("Name unknown") },
     photoStrip(app, place),
     el("div", { class: "spot-head" },
-      el("p", { class: "meta" }, t("Place {n} of {count}", { n: app.at + 1, count: app.candidates.length })),
+      el("p", { class: "meta" }, group ?? t("Place {n} of {count}", { n: app.at + 1, count: app.candidates.length })),
       el("h2", { class: "title" }, place.name ?? t("Name unknown")),
       el("p", { class: "spot-kind" }, el("span", { lang: kind.lang }, kind.text), " · ", accessChip(place.place?.access)),
       rating ? el("p", { class: "spot-rating" }, rating) : null),

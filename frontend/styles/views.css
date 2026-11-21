@@ -248,3 +248,6 @@
   .work, .dialogue > .guide-line, .dock[data-ready] .work-actions { animation: none; }
   .ready-card, .ready-card img { transition: none; }
 }
+
+/* The food question: one card shows, for the place to eat that is highlighted. */
+.food-cards > [hidden] { display: none; }

@@ -117,6 +117,29 @@ def text(page, selector="#content"):
     return page.inner_text(selector)
 
 
+def answer_food(page, label, choose="#food-1", shots=None, food=None):
+    """Food is asked once: the places to eat together as numbered choices, then "No food stop"."""
+    try:
+        page.wait_for_selector("#food-none, .dialogue .composer, #still-yes, #route-map", timeout=8000)
+    except Exception:
+        pass
+    if not page.query_selector("#food-none"):
+        return False
+    if food is not None:
+        labels = page.locator(".choices .choice-label").all_inner_texts()
+        check(len(labels) == len(food) + 1 and labels[-1] == "No food stop" and all(place["name"] in line for place, line in zip(food, labels)),
+              f"{label}: ONE food question lists the places to eat, then No food stop ({labels})")
+        check(page.inner_text(".guide-line").strip() == "Where would you like to eat?", f"{label}: the guide asks Where would you like to eat? ({page.inner_text('.guide-line')!r})")
+        check(page.locator(".food-cards .spot:visible").count() == 1 and "Food" in page.inner_text(".food-cards .spot:visible .meta"),
+              f"{label}: one place to eat shows its picture and description, its group named Food")
+        page.hover("#food-2")
+        check(food[1]["name"] in page.inner_text(".food-cards .spot:visible"), f"{label}: the hovered choice shows its own card")
+    if shots:
+        shots.take("food-question")
+    page.click(choose)
+    return True
+
+
 def layout_checks(page, label):
     """Every pressable thing is at least 44 px high, nothing leaves the screen, the bubble is in sight."""
     small = page.evaluate("""() => [...document.querySelectorAll('#content button, .bar button, .map-controls button, .map-place')]
@@ -208,6 +231,8 @@ def walk(page, shots, dev, full=True):
 
     first = places[0]
     check(first["name"] in text(page) and "Place 1 of" in page.inner_text(".spot"), f"{label}: the first place comes by itself")
+    intro = page.text_content(".guide-line").strip()
+    check(intro.startswith(f"These are the {len(places)} best places I found in "), f"{label}: the guide first says what is coming, with the real count ({intro!r})")
     check(page.locator(".photo img").count() == len(first["photos"]), f"{label}: its pictures are shown, {len(first['photos'])} of them")
     check(pressable(page) == ["place-no", "place-yes"], f"{label}: a place: exactly Yes and No ({pressable(page)})")
     check(page.locator(".spot-rating").count() == 0, f"{label}: a place without a rating in its facts has no rating line")
@@ -220,6 +245,7 @@ def walk(page, shots, dev, full=True):
         page.click(".photo-nav[data-side=next]")
         page.wait_for_timeout(500)
         check(page.inner_text(".photo-count").startswith("2 /"), f"{label}: Next shows the second picture")
+    page.wait_for_function("() => /Would you like/.test(document.querySelector('.guide-line').textContent) && document.querySelector('.dock[data-ready]')", timeout=8000)
     said = page.evaluate("() => [document.querySelector('.dock').hasAttribute('data-ready'), document.querySelector('.untyped')?.textContent ?? '']")
     check(said == [True, ""], f"{label}: when the answers can be pressed the guide's sentence is whole ({said})")
     page.click("#place-yes")
@@ -239,6 +265,7 @@ def walk(page, shots, dev, full=True):
         page.click("#place-no")
     while page.query_selector("#place-yes"):
         page.click("#place-yes")
+    answer_food(page, label, shots=shots, food=[place for place in places if place.get("category") == "eat"])
 
     if dev == 2:
         # A visit starts with nothing remembered (the knowledge graph fills as she decides), so the answers kept
@@ -297,6 +324,9 @@ def korean_typing(page, shots):
     page.fill("#search textarea", "시부야에 가고 싶어요")
     page.keyboard.press("Enter")
     page.wait_for_selector("#place-yes", timeout=15000)
+    intro = page.text_content(".guide-line").strip()
+    check("가장 좋은 장소" in intro, f"Korean: the intro sentence is Korean ({intro!r})")
+    page.wait_for_function("() => /가 보시겠어요/.test(document.querySelector('.guide-line').textContent)", timeout=8000)
     check(page.evaluate("() => document.documentElement.lang") == "ko" and "가 보시겠어요" in text(page), "Korean: writing Korean turns the page Korean")
     shots.take("place-korean")
 
@@ -368,6 +398,7 @@ def live_walk(page, shots, sample):
         page.click("#place-yes")
     while page.query_selector("#place-no"):
         page.click("#place-no")
+    answer_food(page, "live", choose="#food-none")
     page.wait_for_selector(".dialogue .composer input:not(:disabled)")
     shots.take("live-what-i-should-know")
     page.fill(".dialogue .composer input", "I have a bad knee")
@@ -447,6 +478,7 @@ def weather_walk(browser, base, folder, errors):
             Shots(page, folder, "desktop-weather").take("place-with-rating")
         while page.query_selector("#place-yes"):
             page.click("#place-yes")
+        answer_food(page, f"weather {mode}")
         seen = set()
         for _ in range(400):
             if page.query_selector("#route-map"):
@@ -519,11 +551,20 @@ def main():
             page.wait_for_selector(".making-head")
             shots.take("making-step")
             page.wait_for_selector("#place-yes", timeout=20000)
+            intro = page.text_content(".guide-line").strip()
+            check(intro == f"These are the {len(real['candidates'])} best places I found in Shibuya.", f"saved run: the intro sentence names the count and Shibuya ({intro!r})")
+            page.screenshot(path=os.path.join(folder, "desktop-saved-run-00-intro-line.png"))
             shots.take("place")
             for place in real.get("candidates", []):
                 if not page.query_selector("#place-yes"):
                     break
                 page.click("#place-yes" if place["id"] in real["picks"] else "#place-no")
+            food = [place for place in real.get("candidates", []) if place.get("category") == "eat"]
+            pick = next((i + 1 for i, place in enumerate(food) if place["id"] in real["picks"]), None)
+            if page.query_selector("#food-none") or food:
+                pressed = page.evaluate("() => [...document.querySelectorAll('.choices .choice[aria-pressed=\"true\"]')].map((b) => b.id)") if page.query_selector("#food-none") else None
+                check(pressed == ([f"food-{pick}"] if pick else []), f"saved run: the food question shows the saved choice already made ({pressed})")
+                answer_food(page, "saved run", choose=f"#food-{pick}" if pick else "#food-none", shots=shots, food=food)
             if page.query_selector("#still-yes"):
                 shots.take("still-true")
                 page.click("#still-yes")

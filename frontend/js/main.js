@@ -43,7 +43,7 @@ const app = {
   saved: {},            // area key -> { run, early }: what its files hold (the run only in recorded and dev mode)
   run: null,            // the saved run of the area shown (recorded and dev mode)
   view: "plan",         // plan (everything up to the route) | route
-  step: "landing",      // landing | making | choose | remember | context | ask | working | error
+  step: "landing",      // landing | making | choose | food | remember | context | ask | working | error
   none: false,          // there is nothing to open
   noneReason: () => "", // why, said in the page's language when it is drawn
   landingNote: null,    // what the guide says on the landing screen after a place it has no map for was typed
@@ -55,6 +55,8 @@ const app = {
   said: {},             // candidate id -> "yes" | "no"
   at: 0,                // the place she is looking at
   placeNote: null,
+  foodAt: null,         // the place to eat whose picture shows in the food question
+  foodFull: false,      // five Yes already: the food question is skipped
   photoAt: {},          // candidate id -> the photo she is at
   progress: null,       // what the agent is doing, or a saved run's steps played back
   mapKey: "",           // what the map shows now, so it is redrawn only when that changes
@@ -92,8 +94,9 @@ const act = {
   open(key) { const area = entryOf(key) ?? app.areas[0]; startArea(area?.example ?? t(EXAMPLE), area?.key ?? null); },
   retry() { if (app.retry) app.retry(); },
   skipReplay,
-  openPlace(id) { const index = app.candidates.findIndex((place) => place.id === id); if (index >= 0 && app.view === "plan" && app.step !== "landing") goToPlace(index); },
+  openPlace(id) { const index = app.candidates.findIndex((place) => place.id === id); if (index >= 0 && app.view === "plan" && app.step !== "landing") { if (isFood(app.candidates[index])) { app.foodAt = id; askFood(); } else goToPlace(index); } },
   sayPlace,
+  sayFood,
   // "Yes": her remembered answers are this session's answers. "Change": she tells me again.
   stillTrue() { app.answers = { wish: null, ...remembered() }; askMissing(); },
   changeAnswers() { app.answers = {}; askContext(); },
@@ -447,18 +450,65 @@ function reached() {
 
 // ---- choosing ------------------------------------------------------------------------------
 
+// Before the first place the guide says what is coming: "These are the 12 best places I found in Shibuya."
 function startChoosing() {
   if (!app.candidates.length) { fail(new Error(t("I found no places, so there is nothing to choose from."))); return; }
-  goToPlace(Math.max(0, firstOpen(0)));
+  const area = areaWords(app.area?.name ? app.area : entryOf(app.areaKey)).place;
+  const intro = () => t("These are the {count} best places I found in {area}.", { count: app.candidates.length, area });
+  nextChoice();
+  if (app.step !== "choose" && app.step !== "food") return;
+  app.placeNote = intro;
+  render();
+  timer = setTimeout(() => { if (app.placeNote === intro) { app.placeNote = null; render(); } }, 3200);
 }
+
+// Food is chosen once: the places to eat are not asked one at a time but together, after the sights and shops.
+const isFood = (place) => place?.category === "eat";
+function foodPlaces() { return app.candidates.filter(isFood); }
 
 function firstOpen(from) {
   const count = app.candidates.length;
   for (let i = 0; i < count; i += 1) {
     const index = (from + i) % count;
-    if (!app.said[app.candidates[index].id]) return index;
+    if (!isFood(app.candidates[index]) && !app.said[app.candidates[index].id]) return index;
   }
   return -1;
+}
+
+// The next thing to ask: a sight or shop not answered, else the food question, else the line goes on.
+function nextChoice(from = 0) {
+  const next = firstOpen(from);
+  if (next >= 0) { goToPlace(next); return; }
+  const food = foodPlaces();
+  if (food.length && food.some((place) => !app.said[place.id])) {
+    if (yesPlaces(app).length >= MAX_PLACES) {
+      for (const place of food) app.said[place.id] = "no";
+      clearTimeout(timer);
+      app.step = "food";
+      app.foodFull = true;
+      render();
+      timer = setTimeout(() => { app.foodFull = false; placesDone(); }, 2600);
+      return;
+    }
+    askFood();
+    return;
+  }
+  placesDone();
+}
+
+function askFood() {
+  clearTimeout(timer);
+  app.view = "plan";
+  app.step = "food";
+  app.foodFull = false;
+  render();
+}
+
+// One place to eat is Yes and the others No; "No food stop" (id null) is No for all of them.
+function sayFood(id) {
+  app.placeNote = null;
+  for (const place of foodPlaces()) app.said[place.id] = place.id === id ? "yes" : "no";
+  placesDone();
 }
 
 function goToPlace(index) {
@@ -475,9 +525,9 @@ function sayPlace(id, choice) {
   app.placeNote = null;
   if (choice === "yes" && app.said[id] !== "yes" && yesPlaces(app).length >= MAX_PLACES) { placesDone(); return; }
   app.said[id] = choice;
-  const next = firstOpen(app.at + 1);
-  if (yesPlaces(app).length >= MAX_PLACES || next < 0) { placesDone(); return; }
-  goToPlace(next);
+  if (isFood(app.candidates.find((place) => place.id === id))) { placesDone(); return; }
+  if (yesPlaces(app).length >= MAX_PLACES) { for (const place of foodPlaces()) if (!app.said[place.id]) app.said[place.id] = "no"; placesDone(); return; }
+  nextChoice(app.at + 1);
 }
 
 function placesDone() {
@@ -485,7 +535,7 @@ function placesDone() {
     // A route needs two places: the ones answered No are asked again.
     for (const place of app.candidates) if (app.said[place.id] === "no") delete app.said[place.id];
     app.placeNote = () => t("I need at least two places for a route. Here they are again.");
-    goToPlace(Math.max(0, firstOpen(0)));
+    nextChoice(0);
     return;
   }
   if (Object.keys(remembered()).length) { app.step = "remember"; render(); return; }
