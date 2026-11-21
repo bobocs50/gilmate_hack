@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+.adk/
+audit.jsonl
+audit.jsonl.head
+frontend/shots/
+data/cache/weather/
+data/cache/elevation/
+# saved Google Places responses: Google's terms do not allow keeping Places content in a public repository
+data/cache/places/

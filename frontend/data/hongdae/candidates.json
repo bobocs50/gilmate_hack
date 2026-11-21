@@ -1,0 +1,2604 @@
+{
+ "area": {
+  "name": "Hongdae, Seoul",
+  "bbox": [
+   37.5506,
+   126.9196,
+   37.5576,
+   126.9274
+  ],
+  "supported": true,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/20260829_%EB%A7%88%ED%8F%AC%EA%B5%AC_%ED%99%8D%EB%8C%80%EB%A1%9C%EB%93%9C4.jpg",
+   "thumb_url": "data/hongdae/photos/area_hongdae.jpg",
+   "width": 4000,
+   "height": 2250,
+   "credit": "Striker9498",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20260829_%EB%A7%88%ED%8F%AC%EA%B5%AC_%ED%99%8D%EB%8C%80%EB%A1%9C%EB%93%9C4.jpg",
+   "taken_at": "2026-08-29"
+  },
+  "key": "hongdae",
+  "map": "data/hongdae/map.json"
+ },
+ "candidates": [
+  {
+   "id": "c1",
+   "category": "see",
+   "name": "Trick Eye Museum",
+   "kind": {
+    "en": "Museum",
+    "ko": "박물관"
+   },
+   "description": null,
+   "description_source": null,
+   "rating": null,
+   "facts": [
+    {
+     "label": "Opening hours",
+     "value": "Mo-Su 11:00-18:00",
+     "source_url": "https://www.openstreetmap.org/node/12265005601",
+     "quote": "opening_hours=Mo-Su 11:00-18:00"
+    }
+   ],
+   "place": {
+    "lat": 37.553804,
+    "lon": 126.921898,
+    "osm_id": "node/12265005601",
+    "access": "unknown"
+   },
+   "photos": [],
+   "near_photos": [
+    {
+     "id": "w93124304",
+     "lat": 37.553733,
+     "lon": 126.922097,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/20200805_004544_things_places_in_south_korea_IMG_8856.jpg/500px-20200805_004544_things_places_in_south_korea_IMG_8856.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/20200805_004544_things_places_in_south_korea_IMG_8856.jpg",
+     "credit": "Choi Kwang-mo",
+     "licence": "CC0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004544_things_places_in_south_korea_IMG_8856.jpg",
+     "taken_at": "2020-08-05",
+     "source": "commons",
+     "distance_m": 19
+    },
+    {
+     "id": "w93124305",
+     "lat": 37.553711,
+     "lon": 126.922081,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/20200805_004548_things_places_in_south_korea_IMG_8857.jpg/500px-20200805_004548_things_places_in_south_korea_IMG_8857.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/20200805_004548_things_places_in_south_korea_IMG_8857.jpg",
+     "credit": "Choi Kwang-mo",
+     "licence": "CC0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004548_things_places_in_south_korea_IMG_8857.jpg",
+     "taken_at": "2020-08-05",
+     "source": "commons",
+     "distance_m": 19
+    },
+    {
+     "id": "w93124306",
+     "lat": 37.553669,
+     "lon": 126.92205,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/20200805_004554_things_places_in_south_korea_IMG_8858.jpg/500px-20200805_004554_things_places_in_south_korea_IMG_8858.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/20200805_004554_things_places_in_south_korea_IMG_8858.jpg",
+     "credit": "Choi Kwang-mo",
+     "licence": "CC0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004554_things_places_in_south_korea_IMG_8858.jpg",
+     "taken_at": "2020-08-05",
+     "source": "commons",
+     "distance_m": 20
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "category": "see",
+   "name": "Hongdae Mural Street",
+   "kind": {
+    "en": "Mural",
+    "ko": "벽화"
+   },
+   "description": null,
+   "description_source": null,
+   "rating": null,
+   "facts": [],
+   "place": {
+    "lat": 37.552405,
+    "lon": 126.923959,
+    "osm_id": "node/4162320389",
+    "access": "unknown"
+   },
+   "photos": [],
+   "near_photos": [
+    {
+     "id": "w31689892",
+     "lat": 37.5529,
+     "lon": 126.9241,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Hongik_University_Gate.jpg/500px-Hongik_University_Gate.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Hongik_University_Gate.jpg",
+     "credit": "Adbar",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Hongik_University_Gate.jpg",
+     "taken_at": "2013-04-24",
+     "source": "commons",
+     "distance_m": 56
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "category": "see",
+   "name": "Hongdae Street",
+   "kind": {
+    "en": "Sight",
+    "ko": "명소"
+   },
+   "description": null,
+   "description_source": null,
+   "rating": null,
+   "facts": [],
+   "place": {
+    "lat": 37.555904,
+    "lon": 126.924199,
+    "osm_id": "node/4927966777",
+    "access": "unknown"
+   },
+   "photos": [],
+   "near_photos": [
+    {
+     "id": "w88701886",
+     "lat": 37.556081,
+     "lon": 126.923569,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Kkochi-eomuk.jpg/500px-Kkochi-eomuk.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Kkochi-eomuk.jpg",
+     "credit": "anokarina",
+     "licence": "CC BY-SA 2.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Kkochi-eomuk.jpg",
+     "taken_at": "2016-03-27",
+     "source": "commons",
+     "distance_m": 59
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "category": "shop",
+   "name": "Olive Young",
+   "kind": {
+    "en": "Cosmetics shop",
+    "ko": "화장품 가게"
+   },
+   "description": null,
+   "description_source": null,
+   "rating": null,
+   "facts": [
+    {
+     "label": "Opening hours",
+     "value": "Mo-Su,PH 10:00-23:00",
+     "source_url": "https://www.openstreetmap.org/node/12121499331",
+     "quote": "opening_hours=Mo-Su,PH 10:00-23:00"
+    }
+   ],
+   "place": {
+    "lat": 37.556606,
+    "lon": 126.924431,
+    "osm_id": "node/12121499331",
+    "access": "unknown"
+   },
+   "photos": [],
+   "near_photos": [
+    {
+     "id": "w75775058",
+     "lat": 37.556707,
+     "lon": 126.923933,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Street_In_The_Morning_%28176088053%29.jpeg/500px-Street_In_The_Morning_%28176088053%29.jpeg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Street_In_The_Morning_%28176088053%29.jpeg",
+     "credit": "Mathew Schwartz",
+     "licence": "CC BY 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Street_In_The_Morning_(176088053).jpeg",
+     "taken_at": null,
+     "source": "commons",
+     "distance_m": 45
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "category": "shop",
+   "name": "KAKAO FRIENDS STORE",
+   "kind": {
+    "en": "Souvenir shop",
+    "ko": "기념품 가게"
+   },
+   "description": null,
+   "description_source": null,
+   "rating": null,
+   "facts": [],
+   "place": {
+    "lat": 37.556473,
+    "lon": 126.923748,
+    "osm_id": "node/5701734321",
+    "access": "unknown"
+   },
+   "photos": [],
+   "near_photos": [
+    {
+     "id": "w75775058",
+     "lat": 37.556707,
+     "lon": 126.923933,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Street_In_The_Morning_%28176088053%29.jpeg/500px-Street_In_The_Morning_%28176088053%29.jpeg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Street_In_The_Morning_%28176088053%29.jpeg",
+     "credit": "Mathew Schwartz",
+     "licence": "CC BY 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Street_In_The_Morning_(176088053).jpeg",
+     "taken_at": null,
+     "source": "commons",
+     "distance_m": 31
+    },
+    {
+     "id": "w150032417",
+     "lat": 37.556757,
+     "lon": 126.923552,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/239_Hongik_University_Line_2_platforms_20240630_101850.jpg/500px-239_Hongik_University_Line_2_platforms_20240630_101850.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/239_Hongik_University_Line_2_platforms_20240630_101850.jpg",
+     "credit": "ZKang123",
+     "licence": "CC BY-SA 4.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:239_Hongik_University_Line_2_platforms_20240630_101850.jpg",
+     "taken_at": "2024-06-30",
+     "source": "commons",
+     "distance_m": 36
+    },
+    {
+     "id": "w150032421",
+     "lat": 37.556757,
+     "lon": 126.923552,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/239_Hongik_University_Line_2_platforms_20240630_101838.jpg/500px-239_Hongik_University_Line_2_platforms_20240630_101838.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/239_Hongik_University_Line_2_platforms_20240630_101838.jpg",
+     "credit": "ZKang123",
+     "licence": "CC BY-SA 4.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:239_Hongik_University_Line_2_platforms_20240630_101838.jpg",
+     "taken_at": "2024-06-30",
+     "source": "commons",
+     "distance_m": 36
+    }
+   ]
+  },
+  {
+   "id": "c6",
+   "category": "shop",
+   "name": "POP MART",
+   "kind": {
+    "en": "Toy shop",
+    "ko": "장난감 가게"
+   },
+   "description": null,
+   "description_source": null,
+   "rating": null,
+   "facts": [
+    {
+     "label": "Floor",
+     "value": "0;1",
+     "source_url": "https://www.openstreetmap.org/node/11747581884",
+     "quote": "level=0;1"
+    }
+   ],
+   "place": {
+    "lat": 37.555295,
+    "lon": 126.923738,
+    "osm_id": "node/11747581884",
+    "access": "yes"
+   },
+   "photos": [],
+   "near_photos": [
+    {
+     "id": "m825117218378877",
+     "lat": 37.555526,
+     "lon": 126.923133,
+     "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQP_01qsSOiUQaNe5vHPI9EHDSwz_SNvstt8gOnxF1U0NJ3x7NHZjuM4NZZNh1BWv3vem8INN0inQ6ABV3Rg7u8HiFM7yxMMVT116VcejWBvvB3_Cu3ajSX00dLoTusdjA2-SDCb7cnqJuXaxWa3NAj7cq6CORhnpYTIKfHbb_zb4A?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdrbKm9SdJg-42vNnmr3OWDjo6xpjXrCipf8Zbzcx0aHhj52L3qSb4w59WMobMCa52k&ccb=10-5&oh=00_AQQ8KziRAvGPJWyAXEvPQVazOlHZYyA2b8BmgvPCNyKIcw&oe=6B2903D9&_nc_sid=201bca",
+     "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQP_01qsSOiUQaNe5vHPI9EHDSwz_SNvstt8gOnxF1U0NJ3x7NHZjuM4NZZNh1BWv3vem8INN0inQ6ABV3Rg7u8HiFM7yxMMVT116VcejWBvvB3_Cu3ajSX00dLoTusdjA2-SDCb7cnqJuXaxWa3NAj7cq6CORhnpYTIKfHbb_zb4A?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdrbKm9SdJg-42vNnmr3OWDjo6xpjXrCipf8Zbzcx0aHhj52L3qSb4w59WMobMCa52k&ccb=10-5&oh=00_AQSQutblHjRkPAhtspanDlWQxopgdKkzmgftCIerfh3XzA&oe=6B2903D9&_nc_sid=201bca",
+     "credit": "Mapillary contributors",
+     "licence": "CC BY-SA 4.0",
+     "creator": "laye",
+     "source_url": "https://www.mapillary.com/app/?pKey=825117218378877",
+     "taken_at": "2019-07-10",
+     "source": "mapillary",
+     "distance_m": 59
+    }
+   ]
+  },
+  {
+   "id": "c7",
+   "category": "shop",
+   "name": "My Jam - Self Service",
+   "kind": {
+    "en": "Souvenir shop",
+    "ko": "기념품 가게"
+   },
+   "description": null,
+   "description_source": null,
+   "rating": null,
+   "facts": [
+    {
+     "label": "Opening hours",
+     "value": "24/7",
+     "source_url": "https://www.openstreetmap.org/node/14216433695",
+     "quote": "opening_hours=24/7"
+    }
+   ],
+   "place": {
+    "lat": 37.554396,
+    "lon": 126.927001,
+    "osm_id": "node/14216433695",
+    "access": "no"
+   },
+   "photos": [],
+   "near_photos": []
+  },
+  {
+   "id": "c8",
+   "category": "eat",
+   "name": "Hongdae Dakgalbi",
+   "kind": {
+    "en": "Korean restaurant",
+    "ko": "한식당"
+   },
+   "description": null,
+   "description_source": null,
+   "rating": null,
+   "facts": [
+    {
+     "label": "Opening hours",
+     "value": "Mo-Su 11:00-23:00",
+     "source_url": "https://www.openstreetmap.org/node/4416285699",
+     "quote": "opening_hours=Mo-Su 11:00-23:00"
+    }
+   ],
+   "place": {
+    "lat": 37.553098,
+    "lon": 126.921599,
+    "osm_id": "node/4416285699",
+    "access": "unknown"
+   },
+   "photos": [],
+   "near_photos": [
+    {
+     "id": "w93124902",
+     "lat": 37.553131,
+     "lon": 126.921639,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/20200805_030812_things_places_in_south_korea_IMG_8954.jpg/500px-20200805_030812_things_places_in_south_korea_IMG_8954.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/20200805_030812_things_places_in_south_korea_IMG_8954.jpg",
+     "credit": "Choi Kwang-mo",
+     "licence": "CC0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:20200805_030812_things_places_in_south_korea_IMG_8954.jpg",
+     "taken_at": "2020-08-05",
+     "source": "commons",
+     "distance_m": 5
+    },
+    {
+     "id": "w156800055",
+     "lat": 37.553097,
+     "lon": 126.921708,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Korean_spicy_fried_chicken.jpg/500px-Korean_spicy_fried_chicken.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Korean_spicy_fried_chicken.jpg",
+     "credit": "悅辰",
+     "licence": "CC0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Korean_spicy_fried_chicken.jpg",
+     "taken_at": "2019-08-20",
+     "source": "commons",
+     "distance_m": 10
+    },
+    {
+     "id": "w93124312",
+     "lat": 37.553008,
+     "lon": 126.921783,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/20200805_004712_things_places_in_south_korea_IMG_8863.jpg/500px-20200805_004712_things_places_in_south_korea_IMG_8863.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/20200805_004712_things_places_in_south_korea_IMG_8863.jpg",
+     "credit": "Choi Kwang-mo",
+     "licence": "CC0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004712_things_places_in_south_korea_IMG_8863.jpg",
+     "taken_at": "2020-08-05",
+     "source": "commons",
+     "distance_m": 19
+    }
+   ]
+  },
+  {
+   "id": "c9",
+   "category": "eat",
+   "name": "KyoChon",
+   "kind": {
+    "en": "Fried chicken restaurant",
+    "ko": "치킨집"
+   },
+   "description": null,
+   "description_source": null,
+   "rating": null,
+   "facts": [
+    {
+     "label": "Opening hours",
+     "value": "Mo-Su 12:00-02:00",
+     "source_url": "https://www.openstreetmap.org/node/4416285700",
+     "quote": "opening_hours=Mo-Su 12:00-02:00"
+    }
+   ],
+   "place": {
+    "lat": 37.551898,
+    "lon": 126.922906,
+    "osm_id": "node/4416285700",
+    "access": "unknown"
+   },
+   "photos": [],
+   "near_photos": [
+    {
+     "id": "w88737171",
+     "lat": 37.551797,
+     "lon": 126.922731,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Cream-saeu.jpg/500px-Cream-saeu.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Cream-saeu.jpg",
+     "credit": "chomjong",
+     "licence": "CC BY 2.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Cream-saeu.jpg",
+     "taken_at": "2014-06-28",
+     "source": "commons",
+     "distance_m": 19
+    },
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 48
+    }
+   ]
+  },
+  {
+   "id": "c10",
+   "category": "eat",
+   "name": "PAIK’s NOODLE",
+   "kind": {
+    "en": "Restaurant",
+    "ko": "식당"
+   },
+   "description": null,
+   "description_source": null,
+   "rating": null,
+   "facts": [
+    {
+     "label": "Opening hours",
+     "value": "Mo-Su 10:00-20:00",
+     "source_url": "https://www.openstreetmap.org/node/4888721121",
+     "quote": "opening_hours=Mo-Su 10:00-20:00"
+    },
+    {
+     "label": "Floor",
+     "value": "-1",
+     "source_url": "https://www.openstreetmap.org/node/4888721121",
+     "quote": "level=-1"
+    }
+   ],
+   "place": {
+    "lat": 37.554774,
+    "lon": 126.923639,
+    "osm_id": "node/4888721121",
+    "access": "unknown"
+   },
+   "photos": [],
+   "near_photos": []
+  }
+ ],
+ "street_photos": [
+  {
+   "id": "m371916070888859",
+   "lat": 37.55638,
+   "lon": 126.921591,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQOTziyK4LGZhOliD8Houyh0K8chcskobyEHbSD6ecFPiEXurNu_EmyMPD5_ynUq4sb9BQLSdUkCjtOPjMGXJrhK5j344J6x7Pcxxtw6Ys9MgcHYluwpzNzVuxfd26so2pFIFmyG3k49ovmkDle0c3gCPGM4Q_CnqvZV4cmhGhe-M_c?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdolZtjRXOJJDVal1urtPDNeqrmAM8zo1pJkik_rPf-6whmfOtYXpU61fkKD20Lfe8k&ccb=10-5&oh=00_AQRRJ0zhs3yGp9_HaqLBazsTQcZ_HL17S2dZP6tfPQ4tPg&oe=6B28F018&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQOTziyK4LGZhOliD8Houyh0K8chcskobyEHbSD6ecFPiEXurNu_EmyMPD5_ynUq4sb9BQLSdUkCjtOPjMGXJrhK5j344J6x7Pcxxtw6Ys9MgcHYluwpzNzVuxfd26so2pFIFmyG3k49ovmkDle0c3gCPGM4Q_CnqvZV4cmhGhe-M_c?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdolZtjRXOJJDVal1urtPDNeqrmAM8zo1pJkik_rPf-6whmfOtYXpU61fkKD20Lfe8k&ccb=10-5&oh=00_AQTJT9EOKc6e2PmWwSXUJyZVOhGvmOJv3gPqSoRbUv8-sw&oe=6B28F018&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=371916070888859",
+   "taken_at": "2019-07-11",
+   "source": "mapillary"
+  },
+  {
+   "id": "m380392819933813",
+   "lat": 37.555923,
+   "lon": 126.923108,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQN4iWaLCyyo9GVeOjuL_TM1oJBkHo0uEb9ygRzviGrj56ABYWXu7GKSDbUiNucr0F-1fa-dK1cufTnkqlPl_Q5cgwMABFm6QE1UBJrXtw2ZCWD__u2CJUYCuOJcGC1kXh4-EbRFtPFtho3p4sohC0eL8i7bOusZUJvPwdX7unSlKCU?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=Adol4V9nAo5o9S-IIUEAE5467FPl8fBfQJ3RmZ6G2ch7GKJXZt-rup5k2Z3ktM4Uodw&ccb=10-5&oh=00_AQSYTtorJVWC2sALgjGFGoJ_eSuYtfWUDrlZdRXif1wnfA&oe=6B28EA79&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQN4iWaLCyyo9GVeOjuL_TM1oJBkHo0uEb9ygRzviGrj56ABYWXu7GKSDbUiNucr0F-1fa-dK1cufTnkqlPl_Q5cgwMABFm6QE1UBJrXtw2ZCWD__u2CJUYCuOJcGC1kXh4-EbRFtPFtho3p4sohC0eL8i7bOusZUJvPwdX7unSlKCU?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=Adol4V9nAo5o9S-IIUEAE5467FPl8fBfQJ3RmZ6G2ch7GKJXZt-rup5k2Z3ktM4Uodw&ccb=10-5&oh=00_AQSzC_93uRNNMynxOW0lJKGU-YB3hUc_vsdYnbktHSuMnw&oe=6B28EA79&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=380392819933813",
+   "taken_at": "2019-07-10",
+   "source": "mapillary"
+  },
+  {
+   "id": "m4335997343118960",
+   "lat": 37.556005,
+   "lon": 126.920829,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMWz87WPkCK2GMK3bwp26iubFGSi9LqHmRCCBquOfm3lKs2WhUwCp9dwf1Ppldiie16n2VpXUY5V-vefoKxDHOfiO5yKArJRy8R3Ue_g5PakAr1RxWxXZYvamaqFNtwi1-mCS9ecEQaf-5dUkjOkckMq_KxAMIBTXsKW9zoyShFxk0?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdpflSLrFuSPivvYH3-TRv408EsqikaKQ_GA27C_oaHHXtfzjML3AcuK2KM469NF_u8&ccb=10-5&oh=00_AQR8_GEV5w9M7Ck7etRUzQ8dao52BEVd4OfprOZlwzkUgQ&oe=6B290A43&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMWz87WPkCK2GMK3bwp26iubFGSi9LqHmRCCBquOfm3lKs2WhUwCp9dwf1Ppldiie16n2VpXUY5V-vefoKxDHOfiO5yKArJRy8R3Ue_g5PakAr1RxWxXZYvamaqFNtwi1-mCS9ecEQaf-5dUkjOkckMq_KxAMIBTXsKW9zoyShFxk0?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdpflSLrFuSPivvYH3-TRv408EsqikaKQ_GA27C_oaHHXtfzjML3AcuK2KM469NF_u8&ccb=10-5&oh=00_AQRJUHJbIVIUIpHdU0zo_GDO9g13qXxsFtgn3NjZS3qD-Q&oe=6B290A43&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=4335997343118960",
+   "taken_at": "2019-07-11",
+   "source": "mapillary"
+  },
+  {
+   "id": "m506632433748462",
+   "lat": 37.555752,
+   "lon": 126.92316,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQO7KrE-zj8FY8t0QayjcFynT27934vdHfEVERKDW26Ki4np3jw0Ir8ymUSaU3TpOmKlps6wu8YNuY9sbwY-cNeU3mCB2KSINqrPs5bNxp2yGL2i8lSX_OugSOtcEKZEotNqX2De3uFnvcxL0cEOhMH95hsH2wNJuOhCA7i412aUDcA?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdqUIY7TBlgRDjE-sFoHS5DvDoTehtN5b7daoxP8m7TOMFOJbcxM84j3C_5Si1uGdAs&ccb=10-5&oh=00_AQTbnyWmPpjeQUlK_290_0BWqyiAnhV_Lh-MKTuBUyTG5Q&oe=6B2907A2&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQO7KrE-zj8FY8t0QayjcFynT27934vdHfEVERKDW26Ki4np3jw0Ir8ymUSaU3TpOmKlps6wu8YNuY9sbwY-cNeU3mCB2KSINqrPs5bNxp2yGL2i8lSX_OugSOtcEKZEotNqX2De3uFnvcxL0cEOhMH95hsH2wNJuOhCA7i412aUDcA?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdqUIY7TBlgRDjE-sFoHS5DvDoTehtN5b7daoxP8m7TOMFOJbcxM84j3C_5Si1uGdAs&ccb=10-5&oh=00_AQTyAMpR3qJdAvNCIN66Lh4uNlKVWp_g8tbxjY6nb0migQ&oe=6B2907A2&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=506632433748462",
+   "taken_at": "2019-07-10",
+   "source": "mapillary"
+  },
+  {
+   "id": "m512347410194043",
+   "lat": 37.555783,
+   "lon": 126.921625,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMH4yYQrT-w3VZOibArf1SBZ6fzioZJQeNnXEOx4spWTJ9tM-nMcBpGH8oxIet_H8dTTjY7Z5Ztf1qSPo8831uQPnd6Wq8xjRg8SDwosiIbjXx7uG7h47FjqGIltN-ukhxBAgHqQS_WeK0BBwaGQ23cc2Gc8pdyI4qjwqY41LFpsB4?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=Adr_R0Oof_ktdZ_9YxGbqTNyGZ5GAppmow6w8cBwuKEmhPssLoCK6OWmMFKpXHjaB8k&ccb=10-5&oh=00_AQQSljR3Hu0RsjtBa4otXM0VDsMVeo9dPDRoY0gPsxLNFA&oe=6B290BE5&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMH4yYQrT-w3VZOibArf1SBZ6fzioZJQeNnXEOx4spWTJ9tM-nMcBpGH8oxIet_H8dTTjY7Z5Ztf1qSPo8831uQPnd6Wq8xjRg8SDwosiIbjXx7uG7h47FjqGIltN-ukhxBAgHqQS_WeK0BBwaGQ23cc2Gc8pdyI4qjwqY41LFpsB4?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=Adr_R0Oof_ktdZ_9YxGbqTNyGZ5GAppmow6w8cBwuKEmhPssLoCK6OWmMFKpXHjaB8k&ccb=10-5&oh=00_AQRaykU9VlXtQ2IB-s0k--M-6i2xRygJ2tjNOFWOSpC5FQ&oe=6B290BE5&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=512347410194043",
+   "taken_at": "2019-07-10",
+   "source": "mapillary"
+  },
+  {
+   "id": "m512875956735287",
+   "lat": 37.556749,
+   "lon": 126.921985,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQP4Wfk2LKWCwTjA1KfDbDzFOAY8a71cnvaeaHEC4B_SdYjrnF71smOltj3AHD3FjJSMS_Ge42EHOF0-vpT7gUKBmaIX73w1gfPxYbrBuLjggtSYS1kRx6QInwpnpA3CaAuk06Q55zyNckFxFDarpUJIS49W8QiC464hcDe0ia4sng?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdqJd2VzyO5ebzEtehtcm9Bes9OEooTEUQDGEDgjossUW3G7dVu8qLaVMTSSiw86w98&ccb=10-5&oh=00_AQQ20fOxTtzIE2WRI63rs0tRDDTlilWnnbov2WOOPoRLGg&oe=6B290375&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQP4Wfk2LKWCwTjA1KfDbDzFOAY8a71cnvaeaHEC4B_SdYjrnF71smOltj3AHD3FjJSMS_Ge42EHOF0-vpT7gUKBmaIX73w1gfPxYbrBuLjggtSYS1kRx6QInwpnpA3CaAuk06Q55zyNckFxFDarpUJIS49W8QiC464hcDe0ia4sng?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdqJd2VzyO5ebzEtehtcm9Bes9OEooTEUQDGEDgjossUW3G7dVu8qLaVMTSSiw86w98&ccb=10-5&oh=00_AQSEhWx_nquBpF6GY3gE0rVXh0mf3AInPQSyMNqYiBWXYQ&oe=6B290375&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=512875956735287",
+   "taken_at": "2019-07-11",
+   "source": "mapillary"
+  },
+  {
+   "id": "m516693232838872",
+   "lat": 37.556498,
+   "lon": 126.921709,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMCbBsURbXluJGu2CUS-2_gIBEhk5g9jVxMGYYgUFaAie3_Lgjj97qU_BjcEF0BqYRHXdzF2V2bOuqbX5u5lmYE5yCBHAOwUkf2Vlj9Hnqvkeq3hjCsTZ9y6Rp-sSivvmGXv25V9i7BwA62QcSsWOIiBuB5rNXEs0-E1sEzpIKj_wk?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=Adp0x5uL4g4qbkkgQRSR9akv7203kRcpSMqXaOUTrFm3G8cAwvhJ2yjSP1i1Tdqn2a4&ccb=10-5&oh=00_AQQsenP9X57_wmVuI5QUOwZY4I5AVR3Kau3ITyYi191OBg&oe=6B28FD8A&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMCbBsURbXluJGu2CUS-2_gIBEhk5g9jVxMGYYgUFaAie3_Lgjj97qU_BjcEF0BqYRHXdzF2V2bOuqbX5u5lmYE5yCBHAOwUkf2Vlj9Hnqvkeq3hjCsTZ9y6Rp-sSivvmGXv25V9i7BwA62QcSsWOIiBuB5rNXEs0-E1sEzpIKj_wk?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=Adp0x5uL4g4qbkkgQRSR9akv7203kRcpSMqXaOUTrFm3G8cAwvhJ2yjSP1i1Tdqn2a4&ccb=10-5&oh=00_AQTu1KYHAxGqKVTS1Sl_JRjhZnl9-9EUqyY_FZVGSqBuqw&oe=6B28FD8A&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=516693232838872",
+   "taken_at": "2019-07-11",
+   "source": "mapillary"
+  },
+  {
+   "id": "m773508056666409",
+   "lat": 37.556653,
+   "lon": 126.921879,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMAqyqJ6QZ4Tlxa1Ivvzz5IcjV0B7B9vagFDSuuuypUu0IlHokQ-xT0v3LtS-iytvZBfavQ8SMpzrqdTlTOq6f-s1tsndK0utmfx83xjCzc79c2DxN0R7OoE2rtdvqlAo516r_H5zOYO_z-oOH0FYK5LKHLhTty4F7RJXiDFv9FHA?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=Adp8syTS0tjojtHszI7bbxvfJ9d03qrSRpUxAzgypaUwjjO8oHDzmwMbrYJJTwNXocw&ccb=10-5&oh=00_AQT66MZ2KQ7letdeDFMAIT5MWFayCkgPQxo6k_RF5MgVOg&oe=6B28ED1F&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMAqyqJ6QZ4Tlxa1Ivvzz5IcjV0B7B9vagFDSuuuypUu0IlHokQ-xT0v3LtS-iytvZBfavQ8SMpzrqdTlTOq6f-s1tsndK0utmfx83xjCzc79c2DxN0R7OoE2rtdvqlAo516r_H5zOYO_z-oOH0FYK5LKHLhTty4F7RJXiDFv9FHA?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=Adp8syTS0tjojtHszI7bbxvfJ9d03qrSRpUxAzgypaUwjjO8oHDzmwMbrYJJTwNXocw&ccb=10-5&oh=00_AQQdvylZLvDXRlQpUz9BV-NYhZGe44Lef2-2qcmdOLcxvg&oe=6B28ED1F&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=773508056666409",
+   "taken_at": "2019-07-11",
+   "source": "mapillary"
+  },
+  {
+   "id": "m786785772228676",
+   "lat": 37.556084,
+   "lon": 126.922071,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQO3BCZxsV5kKHg-j7X1PerhwBS_o_lWr9ZzSFGzqSNdXt7xtpCzjwJRJ9Xhh8DcMlWpNkJck3v_SEMk-HZ5KxHrEa1TtsMbuUoqeliU70J2TKBF30QPEiOC4xM7IlRoXLrejC6zca1djYv6wOKfIk-cP8jY20BziHnZ-l7PpiKRYg?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdqXSKv_E7SYsiICo0CBbC_g_pDBJXGjcf0fhMK5aZeBm5vnQWBMbpmF_DWpbJwsm40&ccb=10-5&oh=00_AQSRonIEParzVXQ4xyrf09EyFlypjh9iW3-CROOEs4hhwg&oe=6B28ECD4&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQO3BCZxsV5kKHg-j7X1PerhwBS_o_lWr9ZzSFGzqSNdXt7xtpCzjwJRJ9Xhh8DcMlWpNkJck3v_SEMk-HZ5KxHrEa1TtsMbuUoqeliU70J2TKBF30QPEiOC4xM7IlRoXLrejC6zca1djYv6wOKfIk-cP8jY20BziHnZ-l7PpiKRYg?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdqXSKv_E7SYsiICo0CBbC_g_pDBJXGjcf0fhMK5aZeBm5vnQWBMbpmF_DWpbJwsm40&ccb=10-5&oh=00_AQSIbKoSMmvON-fleW3ystT9ZMzOJUGuCNPC7Rv5RgvbMw&oe=6B28ECD4&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=786785772228676",
+   "taken_at": "2019-07-10",
+   "source": "mapillary"
+  },
+  {
+   "id": "m791828281478406",
+   "lat": 37.556046,
+   "lon": 126.921906,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQOidIePVwCKOKNkJFTx5KB8l85lroZuCNxWgBDpibAI1tsw3ntNXyUarkaT69EL8b6E5QkeUnAk4cgm7-rgVa3JdHrpfSU136PjtORV6QXh5ofAULKbADGwcysWgLQM3jh5IaIiO-UNxiuJaecxGp--pLBgHYsrNBjrnpC6LPssPA?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=Ado_QgwC4ZdF_W6-rC5z-UEfEA6m1P1CK7YWvvLwdAzBIWvkzNluTcRxB4M1IQSwNz4&ccb=10-5&oh=00_AQTnNNMRCHjG82RDdlFvqEtYT6Un5QMrWC9XrEpmPbJDpQ&oe=6B28F8A3&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQOidIePVwCKOKNkJFTx5KB8l85lroZuCNxWgBDpibAI1tsw3ntNXyUarkaT69EL8b6E5QkeUnAk4cgm7-rgVa3JdHrpfSU136PjtORV6QXh5ofAULKbADGwcysWgLQM3jh5IaIiO-UNxiuJaecxGp--pLBgHYsrNBjrnpC6LPssPA?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=Ado_QgwC4ZdF_W6-rC5z-UEfEA6m1P1CK7YWvvLwdAzBIWvkzNluTcRxB4M1IQSwNz4&ccb=10-5&oh=00_AQQG8VwNW-C6IuB2XIOUn26zrI_SiHknEZrtolKZnt_ovw&oe=6B28F8A3&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=791828281478406",
+   "taken_at": "2019-07-10",
+   "source": "mapillary"
+  },
+  {
+   "id": "m812637522680701",
+   "lat": 37.555282,
+   "lon": 126.923017,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMUrPyz1S7_oAK9lwQXvXRor9iEpJ2v99HHz4J45iluIzpl5iuI17Mjc4ndVcsxcMyK1PCMVqOtYWO_9AScpe1CCv-asCxpj5Y_Tj7xbj9s48xVMqn-u8fuZOi0g_MCfbe4jj1bT4Lc80KxYaK6WOmB05aogCzKiFar9iw2ldiSTg?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdrmWsV_NOzCxvFpsZd_O-1JZekSdOEii5g3SiJNSmpyyO67XNuajmZCpm7NFQ6m9RA&ccb=10-5&oh=00_AQR5kwqbPO_MysTzIsgfD_L1mcOlqk1Lgti7i2BCko3LQA&oe=6B290417&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMUrPyz1S7_oAK9lwQXvXRor9iEpJ2v99HHz4J45iluIzpl5iuI17Mjc4ndVcsxcMyK1PCMVqOtYWO_9AScpe1CCv-asCxpj5Y_Tj7xbj9s48xVMqn-u8fuZOi0g_MCfbe4jj1bT4Lc80KxYaK6WOmB05aogCzKiFar9iw2ldiSTg?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdrmWsV_NOzCxvFpsZd_O-1JZekSdOEii5g3SiJNSmpyyO67XNuajmZCpm7NFQ6m9RA&ccb=10-5&oh=00_AQTxhPKOAq5tcEWnrki4rNeiLRaKNlRE-VQ1Sivr6sjOXw&oe=6B290417&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=812637522680701",
+   "taken_at": "2019-07-10",
+   "source": "mapillary"
+  },
+  {
+   "id": "m813319316267911",
+   "lat": 37.556839,
+   "lon": 126.922067,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQPwfMa9N_OqN-tvPBb31VqNFyZzEjz_f9YzdKZANv5EUeilw68_xvT6EJ5oAvQUQCIJ8vGDQ44aLWSDsSzcq6U2O7RzgI0iFKpruQ04xgwa-wDWj8QgZRRApFMfgjkEAA6CSsHDDut-NLu2IprENzkDR3U53uSe430-QLKPPY6D_w?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=Adrzh0SWB80Os2nZrTNv6GJ4XN6FUWOtPmzftNwHiY516UzLb7TpNeBaQSrZBmHpDxM&ccb=10-5&oh=00_AQTgvbCphr8GzkwnLYlSBsP-fs70I4cmq6hMkSB6C84nvA&oe=6B28FF67&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQPwfMa9N_OqN-tvPBb31VqNFyZzEjz_f9YzdKZANv5EUeilw68_xvT6EJ5oAvQUQCIJ8vGDQ44aLWSDsSzcq6U2O7RzgI0iFKpruQ04xgwa-wDWj8QgZRRApFMfgjkEAA6CSsHDDut-NLu2IprENzkDR3U53uSe430-QLKPPY6D_w?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=Adrzh0SWB80Os2nZrTNv6GJ4XN6FUWOtPmzftNwHiY516UzLb7TpNeBaQSrZBmHpDxM&ccb=10-5&oh=00_AQTEngG_lA0uyZeBYy419GXkGE-IZ4tlXdF3eVbebwzrvA&oe=6B28FF67&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=813319316267911",
+   "taken_at": "2019-07-11",
+   "source": "mapillary"
+  },
+  {
+   "id": "m825117218378877",
+   "lat": 37.555526,
+   "lon": 126.923133,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQP_01qsSOiUQaNe5vHPI9EHDSwz_SNvstt8gOnxF1U0NJ3x7NHZjuM4NZZNh1BWv3vem8INN0inQ6ABV3Rg7u8HiFM7yxMMVT116VcejWBvvB3_Cu3ajSX00dLoTusdjA2-SDCb7cnqJuXaxWa3NAj7cq6CORhnpYTIKfHbb_zb4A?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdrbKm9SdJg-42vNnmr3OWDjo6xpjXrCipf8Zbzcx0aHhj52L3qSb4w59WMobMCa52k&ccb=10-5&oh=00_AQQ8KziRAvGPJWyAXEvPQVazOlHZYyA2b8BmgvPCNyKIcw&oe=6B2903D9&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQP_01qsSOiUQaNe5vHPI9EHDSwz_SNvstt8gOnxF1U0NJ3x7NHZjuM4NZZNh1BWv3vem8INN0inQ6ABV3Rg7u8HiFM7yxMMVT116VcejWBvvB3_Cu3ajSX00dLoTusdjA2-SDCb7cnqJuXaxWa3NAj7cq6CORhnpYTIKfHbb_zb4A?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdrbKm9SdJg-42vNnmr3OWDjo6xpjXrCipf8Zbzcx0aHhj52L3qSb4w59WMobMCa52k&ccb=10-5&oh=00_AQSQutblHjRkPAhtspanDlWQxopgdKkzmgftCIerfh3XzA&oe=6B2903D9&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=825117218378877",
+   "taken_at": "2019-07-10",
+   "source": "mapillary"
+  },
+  {
+   "id": "m833131200888932",
+   "lat": 37.556058,
+   "lon": 126.923048,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQNlPpKLWZgpr6ftonwDN_UyQLmAwyOGjJ227SyzrjOl1FnHR3Ie7RFZqT-w80sdXhgI7oUQd7kPnVCfPb2htetbZsuYHzNzdAZDqA8aHN9ns9emCC-P2n6iQSG_VUflJcNdXD_Ovp2IKCsIw9zpkbSATVyefirglcA00LsD13S_1g?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdqV1SI8OLrRwVXlYX80XwVRnC2Gh1rvOsO9aZeB38T8I_JaZ6BIdiVnjo0As-cx_6c&ccb=10-5&oh=00_AQSsDW8Ys2IPHktUqlKg_KaVUmB0m6k9uN-KwgzGJOthzA&oe=6B28EB02&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQNlPpKLWZgpr6ftonwDN_UyQLmAwyOGjJ227SyzrjOl1FnHR3Ie7RFZqT-w80sdXhgI7oUQd7kPnVCfPb2htetbZsuYHzNzdAZDqA8aHN9ns9emCC-P2n6iQSG_VUflJcNdXD_Ovp2IKCsIw9zpkbSATVyefirglcA00LsD13S_1g?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdqV1SI8OLrRwVXlYX80XwVRnC2Gh1rvOsO9aZeB38T8I_JaZ6BIdiVnjo0As-cx_6c&ccb=10-5&oh=00_AQSWHXi7kFFYlo02jf6NdOjcMqaVnr_ME4tx4P5B-10i1A&oe=6B28EB02&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=833131200888932",
+   "taken_at": "2019-07-10",
+   "source": "mapillary"
+  },
+  {
+   "id": "m843026999946696",
+   "lat": 37.556164,
+   "lon": 126.921174,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQO0fOn5W3J24ge07zDKvxS_epB1KUI6Jr2T_PHrNgZGk4Fmf5BZ670aKze6DRc53iyCH7c1LdDdfCkJgAE2kb47igk84GIUW0Y8v40LbhDrQ9JYbmXBs5sENk07gqL_GhOJxKkhCGxA_5hO4G_Uosb91o1s_JI_Yar00hEbytLy6EI?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdoCvkYxMWEsd1_NnkwD8FxeoWvKVA6R-SbKAAAsY1dBl1888KmKvp1uVN-ROHid28Y&ccb=10-5&oh=00_AQRzbHxIIHctqGMm-9iOyekqoYieTWAECkODhOz1Q5nDIA&oe=6B28EDBB&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQO0fOn5W3J24ge07zDKvxS_epB1KUI6Jr2T_PHrNgZGk4Fmf5BZ670aKze6DRc53iyCH7c1LdDdfCkJgAE2kb47igk84GIUW0Y8v40LbhDrQ9JYbmXBs5sENk07gqL_GhOJxKkhCGxA_5hO4G_Uosb91o1s_JI_Yar00hEbytLy6EI?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdoCvkYxMWEsd1_NnkwD8FxeoWvKVA6R-SbKAAAsY1dBl1888KmKvp1uVN-ROHid28Y&ccb=10-5&oh=00_AQS-8QQTHPzMsD6_2MpPrNtzgFfCErUTlOJdas2pfuoFfg&oe=6B28EDBB&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=843026999946696",
+   "taken_at": "2019-07-11",
+   "source": "mapillary"
+  },
+  {
+   "id": "m871691300228348",
+   "lat": 37.555888,
+   "lon": 126.921795,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQPIPwaGc2bfOBxdTjzJVCCKpmMBVWim4e3niEMtQUr2hsCGMOZbpPicyYCroMJ0A31kyjUCS6l-S5kaMbuOCxrlaTxuOyWEDyT7b5xuP6J4phRgwZKqPKYqs7yE0G7DBjDeP5_ZKEkQlsfvnR1J5SI-_yxRZYW6xd9Ms0LJq6gfEQ?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=Adrl6SWuArNKLFM3ltX21hbW8JLP2DZA5ABl-YFwIbc13ean4hdlrC0uhS_bP4LjacU&ccb=10-5&oh=00_AQQc5ohR8AOomXDhHwtJeKizx5lDNRhQc0D8cHuRouFz8g&oe=6B28D647&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQPIPwaGc2bfOBxdTjzJVCCKpmMBVWim4e3niEMtQUr2hsCGMOZbpPicyYCroMJ0A31kyjUCS6l-S5kaMbuOCxrlaTxuOyWEDyT7b5xuP6J4phRgwZKqPKYqs7yE0G7DBjDeP5_ZKEkQlsfvnR1J5SI-_yxRZYW6xd9Ms0LJq6gfEQ?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=Adrl6SWuArNKLFM3ltX21hbW8JLP2DZA5ABl-YFwIbc13ean4hdlrC0uhS_bP4LjacU&ccb=10-5&oh=00_AQSxgR73P1mkndl4fuj-VTrfg6Z-4y84cr35HCTGbNV_bA&oe=6B28D647&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=871691300228348",
+   "taken_at": "2019-07-10",
+   "source": "mapillary"
+  },
+  {
+   "id": "m896473211203758",
+   "lat": 37.556803,
+   "lon": 126.922221,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMCtJFF97pwbeenAPkNxZbuvi5dDZsbnI39gsj4iDyBDRb7H9LLAYrTbwxy5tyxHpWOYXNyeLHXpqyAbiBrfmi7jEm-eRFmfIU3dxo1Y2HqSmO6PSY5APCHfD4R39ISyzIhioCdQRR4SPsnjx3gttor-nvKCvqXVQjdZIdZjYfn9E4?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdoR_e3Yyz7rBkv7rC_XGRL2QR_1AZv4iyGnUYbGZIWJ_Q9cxmc3Y8_6aStPDLEW1zw&ccb=10-5&oh=00_AQQ6BHv_6y_fT1UiFHyez0m6h5pkSAV32dwUe9uem30I1g&oe=6B28F7AD&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMCtJFF97pwbeenAPkNxZbuvi5dDZsbnI39gsj4iDyBDRb7H9LLAYrTbwxy5tyxHpWOYXNyeLHXpqyAbiBrfmi7jEm-eRFmfIU3dxo1Y2HqSmO6PSY5APCHfD4R39ISyzIhioCdQRR4SPsnjx3gttor-nvKCvqXVQjdZIdZjYfn9E4?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdoR_e3Yyz7rBkv7rC_XGRL2QR_1AZv4iyGnUYbGZIWJ_Q9cxmc3Y8_6aStPDLEW1zw&ccb=10-5&oh=00_AQRaj_vnJNDnNE8raDRK_kw4cIAhWbMCP-q-zlbu_FB-OA&oe=6B28F7AD&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=896473211203758",
+   "taken_at": "2019-07-11",
+   "source": "mapillary"
+  },
+  {
+   "id": "m908150646409561",
+   "lat": 37.556276,
+   "lon": 126.921535,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQPhmQK16KwYkg9ZWTRUT2jcq4zQKz0FIKTceUSO4IxdlWbqQbU2KDNLN9FrAQJO44nqlHwMnOXCY0AQCeIqhnCTJCF5qI0Mc86DnITAkKGEk8uB1eSbC5Ln0qGD4SQJ9m6mNikffIZKt1q9CDTX6QdxhfG43YVzUAikV1Dfq_uBkQ?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdrLjVJri6fGh1XXAH4n2jZ290vDERYMogmmav8TfOjSOum2WmFLvzpV6ALLyzOcVpU&ccb=10-5&oh=00_AQQ2YhlNXKJ_k7sh1j8Gh3UJ6snIWM_D1W-bUN_JtsNhmA&oe=6B290394&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQPhmQK16KwYkg9ZWTRUT2jcq4zQKz0FIKTceUSO4IxdlWbqQbU2KDNLN9FrAQJO44nqlHwMnOXCY0AQCeIqhnCTJCF5qI0Mc86DnITAkKGEk8uB1eSbC5Ln0qGD4SQJ9m6mNikffIZKt1q9CDTX6QdxhfG43YVzUAikV1Dfq_uBkQ?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdrLjVJri6fGh1XXAH4n2jZ290vDERYMogmmav8TfOjSOum2WmFLvzpV6ALLyzOcVpU&ccb=10-5&oh=00_AQTK5sJ-lEJrqYTnbVIQXBYHdYZe2tTuthsTJE-V-vcuSQ&oe=6B290394&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=908150646409561",
+   "taken_at": "2019-07-11",
+   "source": "mapillary"
+  },
+  {
+   "id": "m910490746472855",
+   "lat": 37.556655,
+   "lon": 126.922232,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQOloxvLrckEeBYY-14Pfoigt3gOH3XsMV3f02mQuaU0HU9GI94Z9wntY6pxGNw9YQK-_p_qIxOjqBtpDNl9UPBADWNdi-yJUIQLUDWCAZNbVBfm_RDARdG62RD-_tK1sB9rRwAYKyMG867n2ZHJFQtzfEA3DZJagqotnE94FPuQf_A?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdrllsNHB0U_A9mjuhc5gCeagllvzo6iN3DIXZR-TOaUbcDiq3GqY_-2kvZK8jToTE0&ccb=10-5&oh=00_AQSLYH6rY0S7WXUNm7e6Bq9beIbRKtu7ZdJzQrG2yLUJyw&oe=6B28FE85&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQOloxvLrckEeBYY-14Pfoigt3gOH3XsMV3f02mQuaU0HU9GI94Z9wntY6pxGNw9YQK-_p_qIxOjqBtpDNl9UPBADWNdi-yJUIQLUDWCAZNbVBfm_RDARdG62RD-_tK1sB9rRwAYKyMG867n2ZHJFQtzfEA3DZJagqotnE94FPuQf_A?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdrllsNHB0U_A9mjuhc5gCeagllvzo6iN3DIXZR-TOaUbcDiq3GqY_-2kvZK8jToTE0&ccb=10-5&oh=00_AQTuhl7_4oHZvouGx2GetAhNJlLSnHLRNn6N--R_mscrdg&oe=6B28FE85&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=910490746472855",
+   "taken_at": "2019-07-11",
+   "source": "mapillary"
+  },
+  {
+   "id": "m917714855718911",
+   "lat": 37.556109,
+   "lon": 126.920953,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMVG9nnVWPteyWahNj8BtioLltVml0_4cQrcypGUIbxxAHW1zyTUsIXumzzOyWnrifQroabrR-GYSh_UM7i-CDrj3MwijckaJCHAusXeP10DqvaI4F_V2kbxabovMpfYxhyKPOt2HVeaLedVRveTfvV80fA_rrhZ4jWAspnS4YJbw?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdpKKBSVPo_JeR81SIE2uHI3Lw9UjHzDQkh9sDnow9GUv6P083hJCNtk5Zg2lhHYAm0&ccb=10-5&oh=00_AQSviWrl12D9p-25ElJQSkj2GsokiO-nKCf54-0l5PABAA&oe=6B28F2AB&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQMVG9nnVWPteyWahNj8BtioLltVml0_4cQrcypGUIbxxAHW1zyTUsIXumzzOyWnrifQroabrR-GYSh_UM7i-CDrj3MwijckaJCHAusXeP10DqvaI4F_V2kbxabovMpfYxhyKPOt2HVeaLedVRveTfvV80fA_rrhZ4jWAspnS4YJbw?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdpKKBSVPo_JeR81SIE2uHI3Lw9UjHzDQkh9sDnow9GUv6P083hJCNtk5Zg2lhHYAm0&ccb=10-5&oh=00_AQRPIDjft3b7LCayLXgxxygOcnXCxwaNeZhoMky4g-W3Fg&oe=6B28F2AB&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=917714855718911",
+   "taken_at": "2019-07-11",
+   "source": "mapillary"
+  },
+  {
+   "id": "m940018870151267",
+   "lat": 37.555443,
+   "lon": 126.922972,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQNAYK8uJSxuqvbTgN2UnTf4SiF0hZTWASZQMbfg7V_Hjhe8-yu3XnqGDXIi8DdT4UaSgqOgGceGtmmlUOYdHECg9PxU_VIuVohBTmguR7ejdmfKRzXB5mn3FoRhJnSkyYN_GgqQeaAN15EcCC9th9mznf7z4dAlcSEj017qGwcpUg?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdrATGMtqS6aeg3jaOAlPGAaBwcJbGNUxuTq1milSSLCTZn0HTB7WgIdjgE_LLksyFI&ccb=10-5&oh=00_AQSQMcZuRr1vYhFZHiKAIJnzS0JZ2ePuRwuuk4-Q1YWKLg&oe=6B28EDDD&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQNAYK8uJSxuqvbTgN2UnTf4SiF0hZTWASZQMbfg7V_Hjhe8-yu3XnqGDXIi8DdT4UaSgqOgGceGtmmlUOYdHECg9PxU_VIuVohBTmguR7ejdmfKRzXB5mn3FoRhJnSkyYN_GgqQeaAN15EcCC9th9mznf7z4dAlcSEj017qGwcpUg?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=AdrATGMtqS6aeg3jaOAlPGAaBwcJbGNUxuTq1milSSLCTZn0HTB7WgIdjgE_LLksyFI&ccb=10-5&oh=00_AQStd89k8S4i-gkO2_cbrfK_jlWfbXYK8yBE6Bbia2RAzw&oe=6B28EDDD&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=940018870151267",
+   "taken_at": "2019-07-10",
+   "source": "mapillary"
+  },
+  {
+   "id": "m958896678179210",
+   "lat": 37.556177,
+   "lon": 126.921436,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQPxGH1PGEvsLkr0PBAelvzC2ryRU5628JvvSey_PNd1cnflrsUut0UBPSLDhvvdTy8Axv9sUXq5obLl9RD2VTQhvbbz2hZs6-ZW2X0J-ZaojbH11w9f15i_Nm8IJC96mrIj9sQeiuPh3gg2Pp99TXEsgcV7J5QPEqggEH048bhEag?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdpGFKeD0_lMpPsHRov9uLsHQXmcA4Mv_u10Fx98_AxkD96CXPGpKkYugAC4oEdp-Ig&ccb=10-5&oh=00_AQTjpt9nKi7dIriMAHTbD_MI_N9EyR3uGnaxFEBylRMDLQ&oe=6B28E7E2&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQPxGH1PGEvsLkr0PBAelvzC2ryRU5628JvvSey_PNd1cnflrsUut0UBPSLDhvvdTy8Axv9sUXq5obLl9RD2VTQhvbbz2hZs6-ZW2X0J-ZaojbH11w9f15i_Nm8IJC96mrIj9sQeiuPh3gg2Pp99TXEsgcV7J5QPEqggEH048bhEag?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=dae7R2qP_JdIKS-f_fun2w&_nc_oc=AdpGFKeD0_lMpPsHRov9uLsHQXmcA4Mv_u10Fx98_AxkD96CXPGpKkYugAC4oEdp-Ig&ccb=10-5&oh=00_AQSbWUHAGMceMh-3rZW3ZeLKlcW2uJ-5XqUqTiLLnO4UdQ&oe=6B28E7E2&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=958896678179210",
+   "taken_at": "2019-07-11",
+   "source": "mapillary"
+  },
+  {
+   "id": "m965587434192731",
+   "lat": 37.555632,
+   "lon": 126.923172,
+   "thumb_url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQPp9FIp0fPgulfESTNR6ITBl3la7K7Yl9gsfQVTwg0c7WqpMLGRXMCIgiO5QJiahsEhvITyY2IQlmhp8ZKYs_qfp0tJegXfQFybXc4QHAm0as_lBoAbb_WZmUFKbWp3NB6AhSi6yjyQFZafi5ph272hdMlZ8kaENGQytMztwXeO-g?stp=s256x192_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=Adq4sCWlhLX0rfVnjFlKVXqEEMOox8Jb0r5JjM1ONabucI-DhZN1nbNA3PFjiVCG8es&ccb=10-5&oh=00_AQQx9yJTMlJN_SWpBn_9H_71GfA773lAkpuyx9u0LYhX_g&oe=6B28F4C0&_nc_sid=201bca",
+   "url": "https://scontent-fra3-1.xx.fbcdn.net/m1/v/t6/AQPp9FIp0fPgulfESTNR6ITBl3la7K7Yl9gsfQVTwg0c7WqpMLGRXMCIgiO5QJiahsEhvITyY2IQlmhp8ZKYs_qfp0tJegXfQFybXc4QHAm0as_lBoAbb_WZmUFKbWp3NB6AhSi6yjyQFZafi5ph272hdMlZ8kaENGQytMztwXeO-g?stp=s1024x768_tt6&edm=AOnQwmMEAAAA&_nc_gid=xdMn53zTpqHfiDyF1XZkaA&_nc_oc=Adq4sCWlhLX0rfVnjFlKVXqEEMOox8Jb0r5JjM1ONabucI-DhZN1nbNA3PFjiVCG8es&ccb=10-5&oh=00_AQRPOwdv3mMtZAwzHvU9zvS2dwI9aMnLg9KSw-8Nc1DfTw&oe=6B28F4C0&_nc_sid=201bca",
+   "credit": "Mapillary contributors",
+   "licence": "CC BY-SA 4.0",
+   "creator": "laye",
+   "source_url": "https://www.mapillary.com/app/?pKey=965587434192731",
+   "taken_at": "2019-07-10",
+   "source": "mapillary"
+  },
+  {
+   "id": "w148804776",
+   "lat": 37.551022,
+   "lon": 126.920203,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/24_hours_Ramyeon_Ramen_convenience_store_%28South_Korea%29.jpg/500px-24_hours_Ramyeon_Ramen_convenience_store_%28South_Korea%29.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/24_hours_Ramyeon_Ramen_convenience_store_%28South_Korea%29.jpg",
+   "credit": "lazy fri13th",
+   "licence": "CC BY 2.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:24_hours_Ramyeon_Ramen_convenience_store_(South_Korea).jpg",
+   "taken_at": "2024-03-09",
+   "source": "commons"
+  },
+  {
+   "id": "w150032405",
+   "lat": 37.556799,
+   "lon": 126.926915,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/239_A03_K314_Hongik_University_Station_Entrance_20240702_101335.jpg/500px-239_A03_K314_Hongik_University_Station_Entrance_20240702_101335.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/239_A03_K314_Hongik_University_Station_Entrance_20240702_101335.jpg",
+   "credit": "ZKang123",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:239_A03_K314_Hongik_University_Station_Entrance_20240702_101335.jpg",
+   "taken_at": "2024-07-02",
+   "source": "commons"
+  },
+  {
+   "id": "w150032407",
+   "lat": 37.556763,
+   "lon": 126.923549,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/239_Hongik_University_Line_2_platforms_20240702_103743.jpg/500px-239_Hongik_University_Line_2_platforms_20240702_103743.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/239_Hongik_University_Line_2_platforms_20240702_103743.jpg",
+   "credit": "ZKang123",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:239_Hongik_University_Line_2_platforms_20240702_103743.jpg",
+   "taken_at": "2024-07-02",
+   "source": "commons"
+  },
+  {
+   "id": "w150032413",
+   "lat": 37.557254,
+   "lon": 126.92418,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/239_Hongik_University_Line_2_platforms_20240630_102020.jpg/500px-239_Hongik_University_Line_2_platforms_20240630_102020.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/239_Hongik_University_Line_2_platforms_20240630_102020.jpg",
+   "credit": "ZKang123",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:239_Hongik_University_Line_2_platforms_20240630_102020.jpg",
+   "taken_at": "2024-06-30",
+   "source": "commons"
+  },
+  {
+   "id": "w150032415",
+   "lat": 37.556815,
+   "lon": 126.923642,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/239_Hongik_University_Line_2_platforms_20240630_101906.jpg/500px-239_Hongik_University_Line_2_platforms_20240630_101906.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/239_Hongik_University_Line_2_platforms_20240630_101906.jpg",
+   "credit": "ZKang123",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:239_Hongik_University_Line_2_platforms_20240630_101906.jpg",
+   "taken_at": "2024-06-30",
+   "source": "commons"
+  },
+  {
+   "id": "w150032417",
+   "lat": 37.556757,
+   "lon": 126.923552,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/239_Hongik_University_Line_2_platforms_20240630_101850.jpg/500px-239_Hongik_University_Line_2_platforms_20240630_101850.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/239_Hongik_University_Line_2_platforms_20240630_101850.jpg",
+   "credit": "ZKang123",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:239_Hongik_University_Line_2_platforms_20240630_101850.jpg",
+   "taken_at": "2024-06-30",
+   "source": "commons"
+  },
+  {
+   "id": "w150032421",
+   "lat": 37.556757,
+   "lon": 126.923552,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/239_Hongik_University_Line_2_platforms_20240630_101838.jpg/500px-239_Hongik_University_Line_2_platforms_20240630_101838.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/239_Hongik_University_Line_2_platforms_20240630_101838.jpg",
+   "credit": "ZKang123",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:239_Hongik_University_Line_2_platforms_20240630_101838.jpg",
+   "taken_at": "2024-06-30",
+   "source": "commons"
+  },
+  {
+   "id": "w150032425",
+   "lat": 37.556811,
+   "lon": 126.923602,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/239_Hongik_University_Line_2_platforms_20240630_101722.jpg/500px-239_Hongik_University_Line_2_platforms_20240630_101722.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/239_Hongik_University_Line_2_platforms_20240630_101722.jpg",
+   "credit": "ZKang123",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:239_Hongik_University_Line_2_platforms_20240630_101722.jpg",
+   "taken_at": "2024-06-30",
+   "source": "commons"
+  },
+  {
+   "id": "w154259084",
+   "lat": 37.557225,
+   "lon": 126.923972,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Hongdae_3.jpg/500px-Hongdae_3.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Hongdae_3.jpg",
+   "credit": "Sgroey",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Hongdae_3.jpg",
+   "taken_at": "2024-08-19",
+   "source": "commons"
+  },
+  {
+   "id": "w154259085",
+   "lat": 37.552325,
+   "lon": 126.921769,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Hongdae_1.jpg/500px-Hongdae_1.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Hongdae_1.jpg",
+   "credit": "Sgroey",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Hongdae_1.jpg",
+   "taken_at": "2024-08-19",
+   "source": "commons"
+  },
+  {
+   "id": "w154259086",
+   "lat": 37.557225,
+   "lon": 126.923972,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Hongdae_2.jpg/500px-Hongdae_2.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Hongdae_2.jpg",
+   "credit": "Sgroey",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Hongdae_2.jpg",
+   "taken_at": "2024-08-19",
+   "source": "commons"
+  },
+  {
+   "id": "w154259731",
+   "lat": 37.556667,
+   "lon": 126.923347,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Seoul_bus.jpg/500px-Seoul_bus.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Seoul_bus.jpg",
+   "credit": "Sgroey",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Seoul_bus.jpg",
+   "taken_at": "2024-08-20",
+   "source": "commons"
+  },
+  {
+   "id": "w155176063",
+   "lat": 37.550987,
+   "lon": 126.921073,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/CATCH_THE_YOUNG_1%EC%A3%BC%EB%85%84_%EA%B8%B0%EB%85%90_%EC%BD%98%EC%84%9C%ED%8A%B8_DREAM_IT.jpg/500px-CATCH_THE_YOUNG_1%EC%A3%BC%EB%85%84_%EA%B8%B0%EB%85%90_%EC%BD%98%EC%84%9C%ED%8A%B8_DREAM_IT.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/CATCH_THE_YOUNG_1%EC%A3%BC%EB%85%84_%EA%B8%B0%EB%85%90_%EC%BD%98%EC%84%9C%ED%8A%B8_DREAM_IT.jpg",
+   "credit": "143kpop",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:CATCH_THE_YOUNG_1%EC%A3%BC%EB%85%84_%EA%B8%B0%EB%85%90_%EC%BD%98%EC%84%9C%ED%8A%B8_DREAM_IT.jpg",
+   "taken_at": "2024-11-10",
+   "source": "commons"
+  },
+  {
+   "id": "w156800055",
+   "lat": 37.553097,
+   "lon": 126.921708,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Korean_spicy_fried_chicken.jpg/500px-Korean_spicy_fried_chicken.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Korean_spicy_fried_chicken.jpg",
+   "credit": "悅辰",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Korean_spicy_fried_chicken.jpg",
+   "taken_at": "2019-08-20",
+   "source": "commons"
+  },
+  {
+   "id": "w159662858",
+   "lat": 37.552108,
+   "lon": 126.921967,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Cooking_Dak-galbi_in_Seoul_Korea.jpg/500px-Cooking_Dak-galbi_in_Seoul_Korea.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Cooking_Dak-galbi_in_Seoul_Korea.jpg",
+   "credit": "Sgroey",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Cooking_Dak-galbi_in_Seoul_Korea.jpg",
+   "taken_at": "2024-08-19",
+   "source": "commons"
+  },
+  {
+   "id": "w166109569",
+   "lat": 37.554201,
+   "lon": 126.92016,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Hyundai_Atoz_MX_Oriental_Red_%281%29.jpg/500px-Hyundai_Atoz_MX_Oriental_Red_%281%29.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Hyundai_Atoz_MX_Oriental_Red_%281%29.jpg",
+   "credit": "Damian B Oh",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Hyundai_Atoz_MX_Oriental_Red_(1).jpg",
+   "taken_at": "2025-05-17",
+   "source": "commons"
+  },
+  {
+   "id": "w168093065",
+   "lat": 37.555897,
+   "lon": 126.922086,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/T1_Base_Camp_PC_bang_interior_-_2023-07-21.jpg/500px-T1_Base_Camp_PC_bang_interior_-_2023-07-21.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/T1_Base_Camp_PC_bang_interior_-_2023-07-21.jpg",
+   "credit": "Wvdp",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:T1_Base_Camp_PC_bang_interior_-_2023-07-21.jpg",
+   "taken_at": "2023-07-21",
+   "source": "commons"
+  },
+  {
+   "id": "w171310965",
+   "lat": 37.557049,
+   "lon": 126.923943,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/20250802_2%ED%98%B8%EC%84%A0_%ED%95%A9%EC%A0%95%EC%97%AD_%EC%8A%B9%EA%B0%95%EC%9E%A5.jpg/500px-20250802_2%ED%98%B8%EC%84%A0_%ED%95%A9%EC%A0%95%EC%97%AD_%EC%8A%B9%EA%B0%95%EC%9E%A5.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/20250802_2%ED%98%B8%EC%84%A0_%ED%95%A9%EC%A0%95%EC%97%AD_%EC%8A%B9%EA%B0%95%EC%9E%A5.jpg",
+   "credit": "Striker9498",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20250802_2%ED%98%B8%EC%84%A0_%ED%95%A9%EC%A0%95%EC%97%AD_%EC%8A%B9%EA%B0%95%EC%9E%A5.jpg",
+   "taken_at": "2025-08-02",
+   "source": "commons"
+  },
+  {
+   "id": "w171310980",
+   "lat": 37.557047,
+   "lon": 126.923941,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/20250802_2%ED%98%B8%EC%84%A0_%ED%95%A9%EC%A0%95%EC%97%AD_%EC%97%AD%EB%AA%85%ED%8C%90.jpg/500px-20250802_2%ED%98%B8%EC%84%A0_%ED%95%A9%EC%A0%95%EC%97%AD_%EC%97%AD%EB%AA%85%ED%8C%90.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/20250802_2%ED%98%B8%EC%84%A0_%ED%95%A9%EC%A0%95%EC%97%AD_%EC%97%AD%EB%AA%85%ED%8C%90.jpg",
+   "credit": "Striker9498",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20250802_2%ED%98%B8%EC%84%A0_%ED%95%A9%EC%A0%95%EC%97%AD_%EC%97%AD%EB%AA%85%ED%8C%90.jpg",
+   "taken_at": "2025-08-02",
+   "source": "commons"
+  },
+  {
+   "id": "w177185837",
+   "lat": 37.556153,
+   "lon": 126.92675,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Fat_Hamster_and_Kang_New_in_Strange_Fruit.jpg/500px-Fat_Hamster_and_Kang_New_in_Strange_Fruit.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Fat_Hamster_and_Kang_New_in_Strange_Fruit.jpg",
+   "credit": "올해의수상자",
+   "licence": "CC BY 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Fat_Hamster_and_Kang_New_in_Strange_Fruit.jpg",
+   "taken_at": "2025-07-05",
+   "source": "commons"
+  },
+  {
+   "id": "w177202039",
+   "lat": 37.553039,
+   "lon": 126.924269,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/South_korea_comedian_Kim_tae-hwan.jpg/500px-South_korea_comedian_Kim_tae-hwan.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/South_korea_comedian_Kim_tae-hwan.jpg",
+   "credit": "Altostratus",
+   "licence": "CC BY 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:South_korea_comedian_Kim_tae-hwan.jpg",
+   "taken_at": "2024-09-08",
+   "source": "commons"
+  },
+  {
+   "id": "w177202044",
+   "lat": 37.553044,
+   "lon": 126.924269,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/South_korea_streammer_PI.jpg/500px-South_korea_streammer_PI.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/South_korea_streammer_PI.jpg",
+   "credit": "Altostratus",
+   "licence": "CC BY 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:South_korea_streammer_PI.jpg",
+   "taken_at": "2024-09-08",
+   "source": "commons"
+  },
+  {
+   "id": "w177202045",
+   "lat": 37.553158,
+   "lon": 126.921356,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/South_korea_streammer_Pi%60s_dog_pa-deuk.jpg/500px-South_korea_streammer_Pi%60s_dog_pa-deuk.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/South_korea_streammer_Pi%60s_dog_pa-deuk.jpg",
+   "credit": "Altostratus",
+   "licence": "CC BY 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:South_korea_streammer_Pi%60s_dog_pa-deuk.jpg",
+   "taken_at": "2024-09-08",
+   "source": "commons"
+  },
+  {
+   "id": "w178119535",
+   "lat": 37.553856,
+   "lon": 126.922517,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/If_chicken.jpg/500px-If_chicken.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/If_chicken.jpg",
+   "credit": "Myamin39",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:If_chicken.jpg",
+   "taken_at": "2025-09-10",
+   "source": "commons"
+  },
+  {
+   "id": "w28454328",
+   "lat": 37.552167,
+   "lon": 126.923333,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+   "credit": "佐藤将人",
+   "licence": "CC BY-SA 3.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+   "taken_at": "2012-09-08",
+   "source": "commons"
+  },
+  {
+   "id": "w31689892",
+   "lat": 37.5529,
+   "lon": 126.9241,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Hongik_University_Gate.jpg/500px-Hongik_University_Gate.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Hongik_University_Gate.jpg",
+   "credit": "Adbar",
+   "licence": "CC BY-SA 3.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Hongik_University_Gate.jpg",
+   "taken_at": "2013-04-24",
+   "source": "commons"
+  },
+  {
+   "id": "w53044855",
+   "lat": 37.557395,
+   "lon": 126.924915,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Yeongdeungpo_Times_Squire_%28%EC%98%81%EB%93%B1%ED%8F%AC_%ED%83%80%EC%9E%84_%EC%8A%A4%ED%80%98%EC%96%B4%29_-_panoramio_-_%EA%B3%A8%EB%B1%85%EC%9D%B4.jpg/500px-Yeongdeungpo_Times_Squire_%28%EC%98%81%EB%93%B1%ED%8F%AC_%ED%83%80%EC%9E%84_%EC%8A%A4%ED%80%98%EC%96%B4%29_-_panoramio_-_%EA%B3%A8%EB%B1%85%EC%9D%B4.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Yeongdeungpo_Times_Squire_%28%EC%98%81%EB%93%B1%ED%8F%AC_%ED%83%80%EC%9E%84_%EC%8A%A4%ED%80%98%EC%96%B4%29_-_panoramio_-_%EA%B3%A8%EB%B1%85%EC%9D%B4.jpg",
+   "credit": "골뱅이",
+   "licence": "CC BY-SA 3.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Yeongdeungpo_Times_Squire_(%EC%98%81%EB%93%B1%ED%8F%AC_%ED%83%80%EC%9E%84_%EC%8A%A4%ED%80%98%EC%96%B4)_-_panoramio_-_%EA%B3%A8%EB%B1%85%EC%9D%B4.jpg",
+   "taken_at": null,
+   "source": "commons"
+  },
+  {
+   "id": "w54006405",
+   "lat": 37.551178,
+   "lon": 126.921364,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/%EC%83%81%EC%83%81%EB%B0%94%EB%8B%B9_%E2%80%A2_sangsangmadang_-_panoramio.jpg/500px-%EC%83%81%EC%83%81%EB%B0%94%EB%8B%B9_%E2%80%A2_sangsangmadang_-_panoramio.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/%EC%83%81%EC%83%81%EB%B0%94%EB%8B%B9_%E2%80%A2_sangsangmadang_-_panoramio.jpg",
+   "credit": "Daugilas",
+   "licence": "CC BY-SA 3.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:%EC%83%81%EC%83%81%EB%B0%94%EB%8B%B9_%E2%80%A2_sangsangmadang_-_panoramio.jpg",
+   "taken_at": null,
+   "source": "commons"
+  },
+  {
+   "id": "w56534424",
+   "lat": 37.552208,
+   "lon": 126.921258,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Soju_Cola.jpg/500px-Soju_Cola.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Soju_Cola.jpg",
+   "credit": "As.jb18",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Soju_Cola.jpg",
+   "taken_at": "2016-07-03",
+   "source": "commons"
+  },
+  {
+   "id": "w59207680",
+   "lat": 37.553889,
+   "lon": 126.923056,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Seogyo-dong%2C_Mapo-gu%2C_Seoul%2C_South_Korea_-_panoramio.jpg/500px-Seogyo-dong%2C_Mapo-gu%2C_Seoul%2C_South_Korea_-_panoramio.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Seogyo-dong%2C_Mapo-gu%2C_Seoul%2C_South_Korea_-_panoramio.jpg",
+   "credit": "Phong Phat G",
+   "licence": "CC BY-SA 3.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Seogyo-dong,_Mapo-gu,_Seoul,_South_Korea_-_panoramio.jpg",
+   "taken_at": null,
+   "source": "commons"
+  },
+  {
+   "id": "w75775058",
+   "lat": 37.556707,
+   "lon": 126.923933,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Street_In_The_Morning_%28176088053%29.jpeg/500px-Street_In_The_Morning_%28176088053%29.jpeg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Street_In_The_Morning_%28176088053%29.jpeg",
+   "credit": "Mathew Schwartz",
+   "licence": "CC BY 3.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Street_In_The_Morning_(176088053).jpeg",
+   "taken_at": null,
+   "source": "commons"
+  },
+  {
+   "id": "w76826446",
+   "lat": 37.553611,
+   "lon": 126.922222,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Eoulmadangro_z.jpg/500px-Eoulmadangro_z.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Eoulmadangro_z.jpg",
+   "credit": "Minseong Kim",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Eoulmadangro_z.jpg",
+   "taken_at": "2018-05-31",
+   "source": "commons"
+  },
+  {
+   "id": "w76826448",
+   "lat": 37.553333,
+   "lon": 126.921944,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Eoulmadangro_n.jpg/500px-Eoulmadangro_n.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Eoulmadangro_n.jpg",
+   "credit": "Minseong Kim",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Eoulmadangro_n.jpg",
+   "taken_at": "2018-05-31",
+   "source": "commons"
+  },
+  {
+   "id": "w76826451",
+   "lat": 37.553333,
+   "lon": 126.922222,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Hongdae_area_cityscape.jpg/500px-Hongdae_area_cityscape.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Hongdae_area_cityscape.jpg",
+   "credit": "Minseong Kim",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Hongdae_area_cityscape.jpg",
+   "taken_at": "2018-05-03",
+   "source": "commons"
+  },
+  {
+   "id": "w77709343",
+   "lat": 37.5575,
+   "lon": 126.921111,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Wikipedian_reading_and_edit_meeting_20190330_-_2.jpg/500px-Wikipedian_reading_and_edit_meeting_20190330_-_2.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Wikipedian_reading_and_edit_meeting_20190330_-_2.jpg",
+   "credit": "Trainholic",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Wikipedian_reading_and_edit_meeting_20190330_-_2.jpg",
+   "taken_at": "2019-03-30",
+   "source": "commons"
+  },
+  {
+   "id": "w77709344",
+   "lat": 37.5575,
+   "lon": 126.921111,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Wikipedian_reading_and_edit_meeting_20190330_-_3.jpg/500px-Wikipedian_reading_and_edit_meeting_20190330_-_3.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Wikipedian_reading_and_edit_meeting_20190330_-_3.jpg",
+   "credit": "Trainholic",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Wikipedian_reading_and_edit_meeting_20190330_-_3.jpg",
+   "taken_at": "2019-03-30",
+   "source": "commons"
+  },
+  {
+   "id": "w79756836",
+   "lat": 37.552441,
+   "lon": 126.920916,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Seogyo_Art_Experimental_Center_01.jpg/500px-Seogyo_Art_Experimental_Center_01.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Seogyo_Art_Experimental_Center_01.jpg",
+   "credit": "Exj",
+   "licence": "CC BY-SA 4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Seogyo_Art_Experimental_Center_01.jpg",
+   "taken_at": "2019-05-25",
+   "source": "commons"
+  },
+  {
+   "id": "w88701441",
+   "lat": 37.554389,
+   "lon": 126.922386,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Gyeran-ppang_bungeo-ppang.jpg/500px-Gyeran-ppang_bungeo-ppang.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Gyeran-ppang_bungeo-ppang.jpg",
+   "credit": "anokarina",
+   "licence": "CC BY-SA 2.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Gyeran-ppang_bungeo-ppang.jpg",
+   "taken_at": "2016-03-19",
+   "source": "commons"
+  },
+  {
+   "id": "w88701886",
+   "lat": 37.556081,
+   "lon": 126.923569,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Kkochi-eomuk.jpg/500px-Kkochi-eomuk.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Kkochi-eomuk.jpg",
+   "credit": "anokarina",
+   "licence": "CC BY-SA 2.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Kkochi-eomuk.jpg",
+   "taken_at": "2016-03-27",
+   "source": "commons"
+  },
+  {
+   "id": "w88701887",
+   "lat": 37.556019,
+   "lon": 126.923522,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Twigim.jpg/500px-Twigim.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Twigim.jpg",
+   "credit": "anokarina",
+   "licence": "CC BY-SA 2.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Twigim.jpg",
+   "taken_at": "2016-03-27",
+   "source": "commons"
+  },
+  {
+   "id": "w88737171",
+   "lat": 37.551797,
+   "lon": 126.922731,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Cream-saeu.jpg/500px-Cream-saeu.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Cream-saeu.jpg",
+   "credit": "chomjong",
+   "licence": "CC BY 2.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Cream-saeu.jpg",
+   "taken_at": "2014-06-28",
+   "source": "commons"
+  },
+  {
+   "id": "w93069392",
+   "lat": 37.553161,
+   "lon": 126.925142,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/20200805_003630_things_places_in_south_korea_IMG_8840.jpg/500px-20200805_003630_things_places_in_south_korea_IMG_8840.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/20200805_003630_things_places_in_south_korea_IMG_8840.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_003630_things_places_in_south_korea_IMG_8840.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93069393",
+   "lat": 37.553347,
+   "lon": 126.925103,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/20200805_003630_things_places_in_south_korea_IMG_8841.jpg/500px-20200805_003630_things_places_in_south_korea_IMG_8841.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/20200805_003630_things_places_in_south_korea_IMG_8841.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_003630_things_places_in_south_korea_IMG_8841.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93069395",
+   "lat": 37.554206,
+   "lon": 126.922425,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/20200805_004424_things_places_in_south_korea_IMG_8845.jpg/500px-20200805_004424_things_places_in_south_korea_IMG_8845.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/20200805_004424_things_places_in_south_korea_IMG_8845.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004424_things_places_in_south_korea_IMG_8845.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124292",
+   "lat": 37.554133,
+   "lon": 126.922447,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/20200805_004430_things_places_in_south_korea_IMG_8846.jpg/500px-20200805_004430_things_places_in_south_korea_IMG_8846.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/20200805_004430_things_places_in_south_korea_IMG_8846.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004430_things_places_in_south_korea_IMG_8846.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124293",
+   "lat": 37.554144,
+   "lon": 126.922461,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/20200805_004438_things_places_in_south_korea_IMG_8847.jpg/500px-20200805_004438_things_places_in_south_korea_IMG_8847.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/20200805_004438_things_places_in_south_korea_IMG_8847.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004438_things_places_in_south_korea_IMG_8847.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124294",
+   "lat": 37.554131,
+   "lon": 126.922492,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/20200805_004442_things_places_in_south_korea_IMG_8849.jpg/500px-20200805_004442_things_places_in_south_korea_IMG_8849.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/20200805_004442_things_places_in_south_korea_IMG_8849.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004442_things_places_in_south_korea_IMG_8849.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124295",
+   "lat": 37.554017,
+   "lon": 126.922456,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/20200805_004452_things_places_in_south_korea_IMG_8850.jpg/500px-20200805_004452_things_places_in_south_korea_IMG_8850.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/20200805_004452_things_places_in_south_korea_IMG_8850.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004452_things_places_in_south_korea_IMG_8850.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124296",
+   "lat": 37.554019,
+   "lon": 126.922461,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/20200805_004458_things_places_in_south_korea_IMG_8852.jpg/500px-20200805_004458_things_places_in_south_korea_IMG_8852.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/20200805_004458_things_places_in_south_korea_IMG_8852.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004458_things_places_in_south_korea_IMG_8852.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124298",
+   "lat": 37.554025,
+   "lon": 126.922461,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/20200805_004454_things_places_in_south_korea_IMG_8851.jpg/500px-20200805_004454_things_places_in_south_korea_IMG_8851.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/20200805_004454_things_places_in_south_korea_IMG_8851.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004454_things_places_in_south_korea_IMG_8851.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124299",
+   "lat": 37.554006,
+   "lon": 126.922439,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/20200805_004502_things_places_in_south_korea_IMG_8853.jpg/500px-20200805_004502_things_places_in_south_korea_IMG_8853.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/20200805_004502_things_places_in_south_korea_IMG_8853.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004502_things_places_in_south_korea_IMG_8853.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124301",
+   "lat": 37.553856,
+   "lon": 126.922172,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/20200805_004526_things_places_in_south_korea_IMG_8855.jpg/500px-20200805_004526_things_places_in_south_korea_IMG_8855.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/20200805_004526_things_places_in_south_korea_IMG_8855.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004526_things_places_in_south_korea_IMG_8855.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124302",
+   "lat": 37.553939,
+   "lon": 126.922342,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/20200805_004512_things_places_in_south_korea_IMG_8854.jpg/500px-20200805_004512_things_places_in_south_korea_IMG_8854.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/20200805_004512_things_places_in_south_korea_IMG_8854.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004512_things_places_in_south_korea_IMG_8854.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124304",
+   "lat": 37.553733,
+   "lon": 126.922097,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/20200805_004544_things_places_in_south_korea_IMG_8856.jpg/500px-20200805_004544_things_places_in_south_korea_IMG_8856.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/20200805_004544_things_places_in_south_korea_IMG_8856.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004544_things_places_in_south_korea_IMG_8856.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124305",
+   "lat": 37.553711,
+   "lon": 126.922081,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/20200805_004548_things_places_in_south_korea_IMG_8857.jpg/500px-20200805_004548_things_places_in_south_korea_IMG_8857.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/20200805_004548_things_places_in_south_korea_IMG_8857.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004548_things_places_in_south_korea_IMG_8857.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124306",
+   "lat": 37.553669,
+   "lon": 126.92205,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/20200805_004554_things_places_in_south_korea_IMG_8858.jpg/500px-20200805_004554_things_places_in_south_korea_IMG_8858.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/20200805_004554_things_places_in_south_korea_IMG_8858.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004554_things_places_in_south_korea_IMG_8858.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124307",
+   "lat": 37.553378,
+   "lon": 126.921919,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/20200805_004620_things_places_in_south_korea_IMG_8859.jpg/500px-20200805_004620_things_places_in_south_korea_IMG_8859.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/20200805_004620_things_places_in_south_korea_IMG_8859.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004620_things_places_in_south_korea_IMG_8859.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124308",
+   "lat": 37.553325,
+   "lon": 126.921914,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/20200805_004626_things_places_in_south_korea_IMG_8860.jpg/500px-20200805_004626_things_places_in_south_korea_IMG_8860.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/20200805_004626_things_places_in_south_korea_IMG_8860.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004626_things_places_in_south_korea_IMG_8860.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124309",
+   "lat": 37.553244,
+   "lon": 126.921883,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/20200805_004634_things_places_in_south_korea_IMG_8861.jpg/500px-20200805_004634_things_places_in_south_korea_IMG_8861.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/20200805_004634_things_places_in_south_korea_IMG_8861.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004634_things_places_in_south_korea_IMG_8861.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124310",
+   "lat": 37.553136,
+   "lon": 126.921889,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/20200805_004646_things_places_in_south_korea_IMG_8862.jpg/500px-20200805_004646_things_places_in_south_korea_IMG_8862.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/20200805_004646_things_places_in_south_korea_IMG_8862.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004646_things_places_in_south_korea_IMG_8862.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124312",
+   "lat": 37.553008,
+   "lon": 126.921783,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/20200805_004712_things_places_in_south_korea_IMG_8863.jpg/500px-20200805_004712_things_places_in_south_korea_IMG_8863.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/20200805_004712_things_places_in_south_korea_IMG_8863.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004712_things_places_in_south_korea_IMG_8863.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124313",
+   "lat": 37.553056,
+   "lon": 126.921853,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/20200805_004716_things_places_in_south_korea_IMG_8864.jpg/500px-20200805_004716_things_places_in_south_korea_IMG_8864.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/20200805_004716_things_places_in_south_korea_IMG_8864.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004716_things_places_in_south_korea_IMG_8864.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124314",
+   "lat": 37.552925,
+   "lon": 126.921814,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/20200805_004724_things_places_in_south_korea_IMG_8865.jpg/500px-20200805_004724_things_places_in_south_korea_IMG_8865.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/20200805_004724_things_places_in_south_korea_IMG_8865.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004724_things_places_in_south_korea_IMG_8865.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124315",
+   "lat": 37.552825,
+   "lon": 126.921836,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/20200805_004732_things_places_in_south_korea_IMG_8866.jpg/500px-20200805_004732_things_places_in_south_korea_IMG_8866.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/20200805_004732_things_places_in_south_korea_IMG_8866.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004732_things_places_in_south_korea_IMG_8866.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124316",
+   "lat": 37.552792,
+   "lon": 126.921806,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/20200805_004734_things_places_in_south_korea_IMG_8867.jpg/500px-20200805_004734_things_places_in_south_korea_IMG_8867.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/20200805_004734_things_places_in_south_korea_IMG_8867.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004734_things_places_in_south_korea_IMG_8867.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124317",
+   "lat": 37.552731,
+   "lon": 126.921792,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/20200805_004746_things_places_in_south_korea_IMG_8868.jpg/500px-20200805_004746_things_places_in_south_korea_IMG_8868.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/20200805_004746_things_places_in_south_korea_IMG_8868.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004746_things_places_in_south_korea_IMG_8868.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124320",
+   "lat": 37.552642,
+   "lon": 126.921769,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/20200805_004758_things_places_in_south_korea_IMG_8870.jpg/500px-20200805_004758_things_places_in_south_korea_IMG_8870.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/20200805_004758_things_places_in_south_korea_IMG_8870.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004758_things_places_in_south_korea_IMG_8870.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124321",
+   "lat": 37.552478,
+   "lon": 126.9217,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/20200805_004812_things_places_in_south_korea_IMG_8871.jpg/500px-20200805_004812_things_places_in_south_korea_IMG_8871.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/20200805_004812_things_places_in_south_korea_IMG_8871.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004812_things_places_in_south_korea_IMG_8871.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124322",
+   "lat": 37.552722,
+   "lon": 126.921792,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/20200805_004746_things_places_in_south_korea_IMG_8869.jpg/500px-20200805_004746_things_places_in_south_korea_IMG_8869.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/20200805_004746_things_places_in_south_korea_IMG_8869.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004746_things_places_in_south_korea_IMG_8869.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124323",
+   "lat": 37.552289,
+   "lon": 126.921608,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/20200805_004836_things_places_in_south_korea_IMG_8872.jpg/500px-20200805_004836_things_places_in_south_korea_IMG_8872.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/20200805_004836_things_places_in_south_korea_IMG_8872.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004836_things_places_in_south_korea_IMG_8872.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124324",
+   "lat": 37.552278,
+   "lon": 126.9216,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/20200805_004836_things_places_in_south_korea_IMG_8873.jpg/500px-20200805_004836_things_places_in_south_korea_IMG_8873.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/20200805_004836_things_places_in_south_korea_IMG_8873.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004836_things_places_in_south_korea_IMG_8873.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124325",
+   "lat": 37.552278,
+   "lon": 126.9216,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/20200805_004838_things_places_in_south_korea_IMG_8874.jpg/500px-20200805_004838_things_places_in_south_korea_IMG_8874.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/20200805_004838_things_places_in_south_korea_IMG_8874.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004838_things_places_in_south_korea_IMG_8874.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124327",
+   "lat": 37.552181,
+   "lon": 126.921617,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/20200805_004846_things_places_in_south_korea_IMG_8875.jpg/500px-20200805_004846_things_places_in_south_korea_IMG_8875.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/20200805_004846_things_places_in_south_korea_IMG_8875.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004846_things_places_in_south_korea_IMG_8875.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124329",
+   "lat": 37.552158,
+   "lon": 126.921631,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/20200805_004850_things_places_in_south_korea_IMG_8876.jpg/500px-20200805_004850_things_places_in_south_korea_IMG_8876.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/20200805_004850_things_places_in_south_korea_IMG_8876.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004850_things_places_in_south_korea_IMG_8876.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124331",
+   "lat": 37.552033,
+   "lon": 126.921639,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/20200805_004902_things_places_in_south_korea_IMG_8877.jpg/500px-20200805_004902_things_places_in_south_korea_IMG_8877.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/20200805_004902_things_places_in_south_korea_IMG_8877.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004902_things_places_in_south_korea_IMG_8877.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124333",
+   "lat": 37.552022,
+   "lon": 126.921631,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/20200805_004906_things_places_in_south_korea_IMG_8878.jpg/500px-20200805_004906_things_places_in_south_korea_IMG_8878.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/20200805_004906_things_places_in_south_korea_IMG_8878.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004906_things_places_in_south_korea_IMG_8878.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124334",
+   "lat": 37.551883,
+   "lon": 126.921578,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/20200805_004922_things_places_in_south_korea_IMG_8879.jpg/500px-20200805_004922_things_places_in_south_korea_IMG_8879.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/20200805_004922_things_places_in_south_korea_IMG_8879.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004922_things_places_in_south_korea_IMG_8879.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124335",
+   "lat": 37.551864,
+   "lon": 126.921547,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/20200805_004930_things_places_in_south_korea_IMG_8880.jpg/500px-20200805_004930_things_places_in_south_korea_IMG_8880.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/20200805_004930_things_places_in_south_korea_IMG_8880.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004930_things_places_in_south_korea_IMG_8880.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124338",
+   "lat": 37.551833,
+   "lon": 126.921517,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/20200805_004934_things_places_in_south_korea_IMG_8881.jpg/500px-20200805_004934_things_places_in_south_korea_IMG_8881.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/20200805_004934_things_places_in_south_korea_IMG_8881.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004934_things_places_in_south_korea_IMG_8881.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124339",
+   "lat": 37.551689,
+   "lon": 126.921508,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/20200805_004948_things_places_in_south_korea_IMG_8883.jpg/500px-20200805_004948_things_places_in_south_korea_IMG_8883.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/20200805_004948_things_places_in_south_korea_IMG_8883.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004948_things_places_in_south_korea_IMG_8883.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124340",
+   "lat": 37.551803,
+   "lon": 126.921494,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/20200805_004940_things_places_in_south_korea_IMG_8882.jpg/500px-20200805_004940_things_places_in_south_korea_IMG_8882.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/20200805_004940_things_places_in_south_korea_IMG_8882.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004940_things_places_in_south_korea_IMG_8882.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124341",
+   "lat": 37.551686,
+   "lon": 126.921525,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/20200805_004950_things_places_in_south_korea_IMG_8884.jpg/500px-20200805_004950_things_places_in_south_korea_IMG_8884.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/20200805_004950_things_places_in_south_korea_IMG_8884.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004950_things_places_in_south_korea_IMG_8884.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124342",
+   "lat": 37.551681,
+   "lon": 126.921517,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/20200805_004950_things_places_in_south_korea_IMG_8885.jpg/500px-20200805_004950_things_places_in_south_korea_IMG_8885.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/20200805_004950_things_places_in_south_korea_IMG_8885.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004950_things_places_in_south_korea_IMG_8885.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124343",
+   "lat": 37.551647,
+   "lon": 126.921525,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/20200805_004958_things_places_in_south_korea_IMG_8886.jpg/500px-20200805_004958_things_places_in_south_korea_IMG_8886.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/20200805_004958_things_places_in_south_korea_IMG_8886.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_004958_things_places_in_south_korea_IMG_8886.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124344",
+   "lat": 37.551606,
+   "lon": 126.921547,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/20200805_005004_things_places_in_south_korea_IMG_8888.jpg/500px-20200805_005004_things_places_in_south_korea_IMG_8888.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/20200805_005004_things_places_in_south_korea_IMG_8888.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_005004_things_places_in_south_korea_IMG_8888.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124345",
+   "lat": 37.551608,
+   "lon": 126.921556,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/20200805_005004_things_places_in_south_korea_IMG_8887.jpg/500px-20200805_005004_things_places_in_south_korea_IMG_8887.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/20200805_005004_things_places_in_south_korea_IMG_8887.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_005004_things_places_in_south_korea_IMG_8887.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124347",
+   "lat": 37.551272,
+   "lon": 126.921464,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/20200805_005030_things_places_in_south_korea_IMG_8889.jpg/500px-20200805_005030_things_places_in_south_korea_IMG_8889.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/20200805_005030_things_places_in_south_korea_IMG_8889.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_005030_things_places_in_south_korea_IMG_8889.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124348",
+   "lat": 37.551278,
+   "lon": 126.9215,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/20200805_005032_things_places_in_south_korea_IMG_8891.jpg/500px-20200805_005032_things_places_in_south_korea_IMG_8891.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/20200805_005032_things_places_in_south_korea_IMG_8891.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_005032_things_places_in_south_korea_IMG_8891.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124349",
+   "lat": 37.551278,
+   "lon": 126.9215,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/20200805_005030_things_places_in_south_korea_IMG_8890.jpg/500px-20200805_005030_things_places_in_south_korea_IMG_8890.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/20200805_005030_things_places_in_south_korea_IMG_8890.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_005030_things_places_in_south_korea_IMG_8890.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124350",
+   "lat": 37.551194,
+   "lon": 126.921508,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/20200805_005054_things_places_in_south_korea_IMG_8894.jpg/500px-20200805_005054_things_places_in_south_korea_IMG_8894.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/20200805_005054_things_places_in_south_korea_IMG_8894.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_005054_things_places_in_south_korea_IMG_8894.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124351",
+   "lat": 37.551178,
+   "lon": 126.921586,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/20200805_005044_things_places_in_south_korea_IMG_8893.jpg/500px-20200805_005044_things_places_in_south_korea_IMG_8893.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/20200805_005044_things_places_in_south_korea_IMG_8893.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_005044_things_places_in_south_korea_IMG_8893.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124352",
+   "lat": 37.550931,
+   "lon": 126.921439,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/20200805_005156_things_places_in_south_korea_IMG_8896.jpg/500px-20200805_005156_things_places_in_south_korea_IMG_8896.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/20200805_005156_things_places_in_south_korea_IMG_8896.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_005156_things_places_in_south_korea_IMG_8896.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124384",
+   "lat": 37.551289,
+   "lon": 126.921447,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/20200805_021854_things_places_in_south_korea_IMG_8932.jpg/500px-20200805_021854_things_places_in_south_korea_IMG_8932.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/20200805_021854_things_places_in_south_korea_IMG_8932.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_021854_things_places_in_south_korea_IMG_8932.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124385",
+   "lat": 37.552311,
+   "lon": 126.921356,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/20200805_023340_things_places_in_south_korea_IMG_8934.jpg/500px-20200805_023340_things_places_in_south_korea_IMG_8934.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/20200805_023340_things_places_in_south_korea_IMG_8934.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_023340_things_places_in_south_korea_IMG_8934.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124386",
+   "lat": 37.551372,
+   "lon": 126.921228,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/20200805_021904_things_places_in_south_korea_IMG_8933.jpg/500px-20200805_021904_things_places_in_south_korea_IMG_8933.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/20200805_021904_things_places_in_south_korea_IMG_8933.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_021904_things_places_in_south_korea_IMG_8933.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124387",
+   "lat": 37.55235,
+   "lon": 126.921417,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/20200805_023708_things_places_in_south_korea_IMG_8937.jpg/500px-20200805_023708_things_places_in_south_korea_IMG_8937.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/20200805_023708_things_places_in_south_korea_IMG_8937.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_023708_things_places_in_south_korea_IMG_8937.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124388",
+   "lat": 37.552506,
+   "lon": 126.921622,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/20200805_025110_things_places_in_south_korea_IMG_8938.jpg/500px-20200805_025110_things_places_in_south_korea_IMG_8938.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/20200805_025110_things_places_in_south_korea_IMG_8938.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_025110_things_places_in_south_korea_IMG_8938.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124389",
+   "lat": 37.55275,
+   "lon": 126.921617,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/20200805_025132_things_places_in_south_korea_IMG_8939.jpg/500px-20200805_025132_things_places_in_south_korea_IMG_8939.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/20200805_025132_things_places_in_south_korea_IMG_8939.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_025132_things_places_in_south_korea_IMG_8939.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124391",
+   "lat": 37.552717,
+   "lon": 126.921739,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/20200805_025140_things_places_in_south_korea_IMG_8940.jpg/500px-20200805_025140_things_places_in_south_korea_IMG_8940.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/20200805_025140_things_places_in_south_korea_IMG_8940.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_025140_things_places_in_south_korea_IMG_8940.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124392",
+   "lat": 37.552717,
+   "lon": 126.921739,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/20200805_025142_things_places_in_south_korea_IMG_8941.jpg/500px-20200805_025142_things_places_in_south_korea_IMG_8941.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/20200805_025142_things_places_in_south_korea_IMG_8941.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_025142_things_places_in_south_korea_IMG_8941.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124393",
+   "lat": 37.552744,
+   "lon": 126.921592,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/20200805_025328_things_places_in_south_korea_IMG_8942.jpg/500px-20200805_025328_things_places_in_south_korea_IMG_8942.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/20200805_025328_things_places_in_south_korea_IMG_8942.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_025328_things_places_in_south_korea_IMG_8942.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124395",
+   "lat": 37.552722,
+   "lon": 126.921556,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/20200805_025336_things_places_in_south_korea_IMG_8943.jpg/500px-20200805_025336_things_places_in_south_korea_IMG_8943.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/20200805_025336_things_places_in_south_korea_IMG_8943.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_025336_things_places_in_south_korea_IMG_8943.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124396",
+   "lat": 37.55255,
+   "lon": 126.9216,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/20200805_025520_things_places_in_south_korea_IMG_8945.jpg/500px-20200805_025520_things_places_in_south_korea_IMG_8945.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/20200805_025520_things_places_in_south_korea_IMG_8945.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_025520_things_places_in_south_korea_IMG_8945.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124398",
+   "lat": 37.552608,
+   "lon": 126.921556,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/20200805_025524_things_places_in_south_korea_IMG_8946.jpg/500px-20200805_025524_things_places_in_south_korea_IMG_8946.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/20200805_025524_things_places_in_south_korea_IMG_8946.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_025524_things_places_in_south_korea_IMG_8946.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124400",
+   "lat": 37.552394,
+   "lon": 126.921578,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/20200805_030438_things_places_in_south_korea_IMG_8947.jpg/500px-20200805_030438_things_places_in_south_korea_IMG_8947.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/20200805_030438_things_places_in_south_korea_IMG_8947.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_030438_things_places_in_south_korea_IMG_8947.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124401",
+   "lat": 37.552989,
+   "lon": 126.921219,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/20200805_030608_things_places_in_south_korea_IMG_8948.jpg/500px-20200805_030608_things_places_in_south_korea_IMG_8948.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/20200805_030608_things_places_in_south_korea_IMG_8948.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_030608_things_places_in_south_korea_IMG_8948.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124402",
+   "lat": 37.553489,
+   "lon": 126.921356,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/20200805_030626_things_places_in_south_korea_IMG_8949.jpg/500px-20200805_030626_things_places_in_south_korea_IMG_8949.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/20200805_030626_things_places_in_south_korea_IMG_8949.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_030626_things_places_in_south_korea_IMG_8949.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124403",
+   "lat": 37.553353,
+   "lon": 126.921233,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/20200805_030632_things_places_in_south_korea_IMG_8950.jpg/500px-20200805_030632_things_places_in_south_korea_IMG_8950.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/20200805_030632_things_places_in_south_korea_IMG_8950.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_030632_things_places_in_south_korea_IMG_8950.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124404",
+   "lat": 37.553353,
+   "lon": 126.921233,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/20200805_030638_things_places_in_south_korea_IMG_8951.jpg/500px-20200805_030638_things_places_in_south_korea_IMG_8951.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/20200805_030638_things_places_in_south_korea_IMG_8951.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_030638_things_places_in_south_korea_IMG_8951.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124900",
+   "lat": 37.553189,
+   "lon": 126.92125,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/20200805_030714_things_places_in_south_korea_IMG_8953.jpg/500px-20200805_030714_things_places_in_south_korea_IMG_8953.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/20200805_030714_things_places_in_south_korea_IMG_8953.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_030714_things_places_in_south_korea_IMG_8953.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124901",
+   "lat": 37.553294,
+   "lon": 126.921181,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/20200805_030648_things_places_in_south_korea_IMG_8952.jpg/500px-20200805_030648_things_places_in_south_korea_IMG_8952.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/20200805_030648_things_places_in_south_korea_IMG_8952.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_030648_things_places_in_south_korea_IMG_8952.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124902",
+   "lat": 37.553131,
+   "lon": 126.921639,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/20200805_030812_things_places_in_south_korea_IMG_8954.jpg/500px-20200805_030812_things_places_in_south_korea_IMG_8954.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/20200805_030812_things_places_in_south_korea_IMG_8954.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_030812_things_places_in_south_korea_IMG_8954.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124905",
+   "lat": 37.553214,
+   "lon": 126.921806,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/20200805_030832_things_places_in_south_korea_IMG_8955.jpg/500px-20200805_030832_things_places_in_south_korea_IMG_8955.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/20200805_030832_things_places_in_south_korea_IMG_8955.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_030832_things_places_in_south_korea_IMG_8955.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124906",
+   "lat": 37.553514,
+   "lon": 126.921944,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/20200805_030918_things_places_in_south_korea_IMG_8957.jpg/500px-20200805_030918_things_places_in_south_korea_IMG_8957.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/20200805_030918_things_places_in_south_korea_IMG_8957.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_030918_things_places_in_south_korea_IMG_8957.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124907",
+   "lat": 37.553214,
+   "lon": 126.921806,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/20200805_030836_things_places_in_south_korea_IMG_8956.jpg/500px-20200805_030836_things_places_in_south_korea_IMG_8956.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/20200805_030836_things_places_in_south_korea_IMG_8956.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_030836_things_places_in_south_korea_IMG_8956.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  },
+  {
+   "id": "w93124908",
+   "lat": 37.554436,
+   "lon": 126.922403,
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/20200805_031056_things_places_in_south_korea_IMG_8974.jpg/500px-20200805_031056_things_places_in_south_korea_IMG_8974.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/20200805_031056_things_places_in_south_korea_IMG_8974.jpg",
+   "credit": "Choi Kwang-mo",
+   "licence": "CC0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20200805_031056_things_places_in_south_korea_IMG_8974.jpg",
+   "taken_at": "2020-08-05",
+   "source": "commons"
+  }
+ ],
+ "rest_spots": [
+  {
+   "id": "r1",
+   "lat": 37.5549555,
+   "lon": 126.9260183,
+   "kind": "bench",
+   "source": "osm:node/14216507453",
+   "photos": []
+  },
+  {
+   "id": "r2",
+   "lat": 37.5523528,
+   "lon": 126.9241872,
+   "kind": "bench",
+   "source": "osm:node/3759120571",
+   "photos": []
+  },
+  {
+   "id": "r3",
+   "lat": 37.552454,
+   "lon": 126.9235468,
+   "kind": "bench",
+   "source": "osm:node/5812155982",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 37
+    }
+   ]
+  },
+  {
+   "id": "r4",
+   "lat": 37.5524359,
+   "lon": 126.9234914,
+   "kind": "bench",
+   "source": "osm:node/5812155983",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 33
+    }
+   ]
+  },
+  {
+   "id": "r5",
+   "lat": 37.5524167,
+   "lon": 126.9234263,
+   "kind": "bench",
+   "source": "osm:node/5812155984",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 29
+    }
+   ]
+  },
+  {
+   "id": "r6",
+   "lat": 37.5523972,
+   "lon": 126.9233612,
+   "kind": "bench",
+   "source": "osm:node/5812155985",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 26
+    }
+   ]
+  },
+  {
+   "id": "r7",
+   "lat": 37.5523807,
+   "lon": 126.9232973,
+   "kind": "bench",
+   "source": "osm:node/5812155986",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 24
+    }
+   ]
+  },
+  {
+   "id": "r8",
+   "lat": 37.5523621,
+   "lon": 126.9232391,
+   "kind": "bench",
+   "source": "osm:node/5812155987",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 23
+    }
+   ]
+  },
+  {
+   "id": "r9",
+   "lat": 37.5523431,
+   "lon": 126.9231775,
+   "kind": "bench",
+   "source": "osm:node/5812155988",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 24
+    }
+   ]
+  },
+  {
+   "id": "r10",
+   "lat": 37.5523266,
+   "lon": 126.9231213,
+   "kind": "bench",
+   "source": "osm:node/5812155989",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 26
+    }
+   ]
+  },
+  {
+   "id": "r11",
+   "lat": 37.5521772,
+   "lon": 126.9233305,
+   "kind": "bench",
+   "source": "osm:node/5812155998",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 1
+    }
+   ]
+  },
+  {
+   "id": "r12",
+   "lat": 37.5521952,
+   "lon": 126.9233468,
+   "kind": "bench",
+   "source": "osm:node/5812155999",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 3
+    }
+   ]
+  },
+  {
+   "id": "r13",
+   "lat": 37.5522114,
+   "lon": 126.9233632,
+   "kind": "bench",
+   "source": "osm:node/5812156000",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 6
+    }
+   ]
+  },
+  {
+   "id": "r14",
+   "lat": 37.5522285,
+   "lon": 126.9233813,
+   "kind": "bench",
+   "source": "osm:node/5812156001",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 8
+    }
+   ]
+  },
+  {
+   "id": "r15",
+   "lat": 37.5522452,
+   "lon": 126.923404,
+   "kind": "bench",
+   "source": "osm:node/5812156002",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 11
+    }
+   ]
+  },
+  {
+   "id": "r16",
+   "lat": 37.5523167,
+   "lon": 126.9234854,
+   "kind": "bench",
+   "source": "osm:node/5812156008",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 21
+    }
+   ]
+  },
+  {
+   "id": "r17",
+   "lat": 37.5523334,
+   "lon": 126.9235042,
+   "kind": "bench",
+   "source": "osm:node/5812156009",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 24
+    }
+   ]
+  },
+  {
+   "id": "r18",
+   "lat": 37.5523499,
+   "lon": 126.9235239,
+   "kind": "bench",
+   "source": "osm:node/5812156010",
+   "photos": [
+    {
+     "id": "w28454328",
+     "lat": 37.552167,
+     "lon": 126.923333,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG/500px-%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "credit": "佐藤将人",
+     "licence": "CC BY-SA 3.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E8%97%A4%E5%B0%86%E4%BA%BA%E2%91%A2.JPG",
+     "taken_at": "2012-09-08",
+     "source": "commons",
+     "distance_m": 26
+    }
+   ]
+  },
+  {
+   "id": "r19",
+   "lat": 37.5566006,
+   "lon": 126.9268997,
+   "kind": "bench",
+   "source": "osm:node/6411666356",
+   "photos": [
+    {
+     "id": "w150032405",
+     "lat": 37.556799,
+     "lon": 126.926915,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/239_A03_K314_Hongik_University_Station_Entrance_20240702_101335.jpg/500px-239_A03_K314_Hongik_University_Station_Entrance_20240702_101335.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/239_A03_K314_Hongik_University_Station_Entrance_20240702_101335.jpg",
+     "credit": "ZKang123",
+     "licence": "CC BY-SA 4.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:239_A03_K314_Hongik_University_Station_Entrance_20240702_101335.jpg",
+     "taken_at": "2024-07-02",
+     "source": "commons",
+     "distance_m": 22
+    },
+    {
+     "id": "w177185837",
+     "lat": 37.556153,
+     "lon": 126.92675,
+     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Fat_Hamster_and_Kang_New_in_Strange_Fruit.jpg/500px-Fat_Hamster_and_Kang_New_in_Strange_Fruit.jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Fat_Hamster_and_Kang_New_in_Strange_Fruit.jpg",
+     "credit": "올해의수상자",
+     "licence": "CC BY 4.0",
+     "source_url": "https://commons.wikimedia.org/wiki/File:Fat_Hamster_and_Kang_New_in_Strange_Fruit.jpg",
+     "taken_at": "2025-07-05",
+     "source": "commons",
+     "distance_m": 52
+    }
+   ]
+  }
+ ],
+ "counts": {
+  "places_on_map": 962,
+  "places_shown": 10,
+  "photos_found": 139,
+  "street_photos": 139,
+  "photo_sources": {
+   "mapillary": 23,
+   "commons": 116
+  },
+  "rest_spots": 19
+ }
+}

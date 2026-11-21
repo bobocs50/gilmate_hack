@@ -1,0 +1,40 @@
+{
+ "fixture": true,
+ "note": "FIXTURE, written by hand in the documented response shape of the Places API (New) Place Details. Not a real response: the ids, links, ratings, counts and hours are made up for the drill and are never shown as real.",
+ "place_id": "FIXTURE_place_0002",
+ "fetched_at": "2026-11-21T12:40:00",
+ "response": {
+  "id": "FIXTURE_place_0002",
+  "displayName": {
+   "text": "Hachikō Memorial Statue",
+   "languageCode": "en"
+  },
+  "location": {
+   "latitude": 35.65905,
+   "longitude": 139.70062
+  },
+  "primaryType": "tourist_attraction",
+  "primaryTypeDisplayName": {
+   "text": "Tourist attraction",
+   "languageCode": "en"
+  },
+  "rating": 4.4,
+  "userRatingCount": 30100,
+  "formattedAddress": "2 Chome-1 Dogenzaka, Shibuya, Tokyo 150-0043, Japan",
+  "regularOpeningHours": {
+   "weekdayDescriptions": [
+    "Monday: Open 24 hours",
+    "Tuesday: Open 24 hours",
+    "Wednesday: Open 24 hours",
+    "Thursday: Open 24 hours",
+    "Friday: Open 24 hours",
+    "Saturday: Open 24 hours",
+    "Sunday: Open 24 hours"
+   ]
+  },
+  "accessibilityOptions": {
+   "wheelchairAccessibleEntrance": true
+  },
+  "googleMapsUri": "https://maps.google.com/?cid=9000000000000000002"
+ }
+}

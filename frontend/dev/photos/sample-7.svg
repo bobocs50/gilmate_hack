@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+<rect width="640" height="400" fill="#d8d2c6"/>
+<path d="M0 400 L239 150 L359 150 L640 400 Z" fill="#eef0f1"/>
+<rect x="59" y="70" width="150" height="190" fill="#9aa3ab"/>
+<rect x="416" y="40" width="170" height="230" fill="#aeb6bd"/>
+<text x="320" y="340" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#1d2125">Sample drawing 7, not a photo</text>
+</svg>

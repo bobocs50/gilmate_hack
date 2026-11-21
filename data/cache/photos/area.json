@@ -1,0 +1,28 @@
+{
+ "place": "area",
+ "name": "Shibuya",
+ "fetched_at": "2026-11-21T11:27:26",
+ "source": "Wikimedia Commons",
+ "asked": [
+  "Category:Shibuya Crossing"
+ ],
+ "photos": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Shibuya_2026-0807.jpg",
+   "thumb_url": "data/photos/area_shibuya.jpg",
+   "width": 4032,
+   "height": 3024,
+   "credit": "Kenkinau",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Shibuya_2026-0807.jpg",
+   "taken_at": "2026-08-07",
+   "title": "File:Shibuya 2026-0807.jpg",
+   "named": "File:Shibuya 2026-0807.jpg シーズン移行後初めてのJリーグ開幕に向けたプロモーション施策として、東京・渋谷エリア約30か所で大規模交通広告（OOH）を展開",
+   "about": "File:Shibuya 2026-0807.jpg シーズン移行後初めてのJリーグ開幕に向けたプロモーション施策として、東京・渋谷エリア約30か所で大規模交通広告（OOH）を展開 Shibuya Crossing|Self-published work",
+   "lat": 35.65941111,
+   "lon": 139.70028611,
+   "thumb_source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Shibuya_2026-0807.jpg/500px-Shibuya_2026-0807.jpg"
+  }
+ ]
+}

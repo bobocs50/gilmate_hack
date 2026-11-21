@@ -1,0 +1,28 @@
+{
+ "place": "area",
+ "name": "Hongdae",
+ "fetched_at": "2026-11-21T12:29:09",
+ "source": "Wikimedia Commons",
+ "asked": [
+  "Category:Hongdae"
+ ],
+ "photos": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/20260829_%EB%A7%88%ED%8F%AC%EA%B5%AC_%ED%99%8D%EB%8C%80%EB%A1%9C%EB%93%9C4.jpg",
+   "thumb_url": "data/hongdae/photos/area_hongdae.jpg",
+   "width": 4000,
+   "height": 2250,
+   "credit": "Striker9498",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "source_url": "https://commons.wikimedia.org/wiki/File:20260829_%EB%A7%88%ED%8F%AC%EA%B5%AC_%ED%99%8D%EB%8C%80%EB%A1%9C%EB%93%9C4.jpg",
+   "taken_at": "2026-08-29",
+   "title": "File:20260829 마포구 홍대로드4.jpg",
+   "named": "File:20260829 마포구 홍대로드4.jpg 마포구 홍대로드4",
+   "about": "File:20260829 마포구 홍대로드4.jpg 마포구 홍대로드4 CC-Zero|Hongdae|Self-published work|Streets in Mapo-gu, Seoul",
+   "lat": null,
+   "lon": null,
+   "thumb_source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/20260829_%EB%A7%88%ED%8F%AC%EA%B5%AC_%ED%99%8D%EB%8C%80%EB%A1%9C%EB%93%9C4.jpg/500px-20260829_%EB%A7%88%ED%8F%AC%EA%B5%AC_%ED%99%8D%EB%8C%80%EB%A1%9C%EB%93%9C4.jpg"
+  }
+ ]
+}

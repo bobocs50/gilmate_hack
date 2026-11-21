@@ -1,0 +1,31 @@
+{
+ "place": "node/861115501",
+ "name": "Taiseido Bookstore",
+ "fetched_at": "2026-11-21T11:26:26",
+ "source": "Wikimedia Commons",
+ "asked": [
+  "File:大盛堂書店.jpg",
+  "photos taken within 150 m that name the place",
+  "search: \"Taiseido Bookstore\" Shibuya"
+ ],
+ "photos": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/%E5%A4%A7%E7%9B%9B%E5%A0%82%E6%9B%B8%E5%BA%97.jpg",
+   "thumb_url": "data/photos/node_861115501_1.jpg",
+   "width": 4080,
+   "height": 3072,
+   "credit": "Syced",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "source_url": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E7%9B%9B%E5%A0%82%E6%9B%B8%E5%BA%97.jpg",
+   "taken_at": null,
+   "title": "File:大盛堂書店.jpg",
+   "named": "File:大盛堂書店.jpg 大盛堂書店 (شركة يابانية)",
+   "about": "File:大盛堂書店.jpg 大盛堂書店 (شركة يابانية) CC-Zero|Self-published work|Bookshops in Tokyo|Uploaded with Mobile/Android|Files with coordinates missing SDC location of creation|Shops in Shibuya|Bookshops in Japan photographed in 2024|Shibuya photographs taken on 2024-09-03|Buildings in Udagawa-chō|Bookshop magazine shelves in Japan|Transparent umbrellas displayed for sale in Japan",
+   "lat": 35.65969444,
+   "lon": 139.70014444,
+   "found_by": "depicts",
+   "thumb_source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/%E5%A4%A7%E7%9B%9B%E5%A0%82%E6%9B%B8%E5%BA%97.jpg/500px-%E5%A4%A7%E7%9B%9B%E5%A0%82%E6%9B%B8%E5%BA%97.jpg"
+  }
+ ]
+}

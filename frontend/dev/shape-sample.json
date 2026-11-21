@@ -1,0 +1,896 @@
+{
+ "_note": "Development sample for layout work, written by frontend/dev/make_samples.py. Names, texts, facts, quotes, ratings and audit rows are invented, and the pictures are drawings, not photos. Coordinates, lines, distances, steps and benches come from the map tools for places not named here. The memory is written by gilmate/memory.py from the sample's answers, picks and taps. Loaded only with ?dev=1 to ?dev=4.",
+ "_today": "2026-11-21",
+ "recorded_at": "2026-11-21T09:40:00",
+ "profile": {
+  "walk": "short",
+  "stairs": "avoid",
+  "rest": "often",
+  "food": "sushi",
+  "wish": null,
+  "language": "ko"
+ },
+ "area": {
+  "name": "Shibuya, Tokyo",
+  "bbox": [
+   35.657,
+   139.6975,
+   35.6632,
+   139.705
+  ],
+  "supported": true
+ },
+ "candidates": [
+  {
+   "id": "o1",
+   "category": "see",
+   "name": "Sample viewing deck",
+   "kind": {
+    "en": "Viewing deck",
+    "ko": "전망대"
+   },
+   "description": {
+    "en": "Sample text: this stands in for what the guide would say about sample viewing deck.",
+    "ko": "샘플 문장: 가이드가 이곳(Sample viewing deck)에 대해 들려줄 이야기 자리입니다."
+   },
+   "description_source": {
+    "url": "https://example.org/sample-1",
+    "quote": "Sample quote."
+   },
+   "rating": null,
+   "facts": [
+    {
+     "label": "Price",
+     "value": "1,000 yen",
+     "source_url": "https://example.org/sample-1",
+     "quote": "Sample quote: tickets are 1,000 yen for adults."
+    },
+    {
+     "label": "Hours",
+     "value": "10:00 to 22:00",
+     "source_url": "https://example.org/sample-1",
+     "quote": "Sample quote: open from 10:00 to 22:00."
+    }
+   ],
+   "place": {
+    "lat": 35.661394,
+    "lon": 139.70057,
+    "osm_id": "sample/o1",
+    "access": "yes"
+   },
+   "photos": [
+    {
+     "url": "dev/photos/sample-1.svg",
+     "thumb_url": "dev/photos/sample-1.svg",
+     "width": 640,
+     "height": 400,
+     "credit": "Drawn by frontend/dev/make_samples.py",
+     "licence": "sample drawing, not a photo",
+     "source_url": "frontend/dev/make_samples.py",
+     "taken_at": null
+    },
+    {
+     "url": "dev/photos/sample-2.svg",
+     "thumb_url": "dev/photos/sample-2.svg",
+     "width": 640,
+     "height": 400,
+     "credit": "Drawn by frontend/dev/make_samples.py",
+     "licence": "sample drawing, not a photo",
+     "source_url": "frontend/dev/make_samples.py",
+     "taken_at": null
+    },
+    {
+     "url": "dev/photos/sample-3.svg",
+     "thumb_url": "dev/photos/sample-3.svg",
+     "width": 640,
+     "height": 400,
+     "credit": "Drawn by frontend/dev/make_samples.py",
+     "licence": "sample drawing, not a photo",
+     "source_url": "frontend/dev/make_samples.py",
+     "taken_at": null
+    }
+   ]
+  },
+  {
+   "id": "o2",
+   "category": "see",
+   "name": "Sample crossing",
+   "kind": {
+    "en": "Statue",
+    "ko": "동상"
+   },
+   "description": {
+    "en": "Sample text: this stands in for what the guide would say about sample crossing.",
+    "ko": "샘플 문장: 가이드가 이곳(Sample crossing)에 대해 들려줄 이야기 자리입니다."
+   },
+   "description_source": {
+    "url": "https://example.org/sample-2",
+    "quote": "Sample quote."
+   },
+   "rating": null,
+   "facts": [
+    {
+     "label": "Price",
+     "value": "Free",
+     "source_url": "https://example.org/sample-2",
+     "quote": "Sample quote: free to visit at any time."
+    }
+   ],
+   "place": {
+    "lat": 35.65906,
+    "lon": 139.700628,
+    "osm_id": "sample/o2",
+    "access": "limited"
+   },
+   "photos": [
+    {
+     "url": "dev/photos/sample-4.svg",
+     "thumb_url": "dev/photos/sample-4.svg",
+     "width": 640,
+     "height": 400,
+     "credit": "Drawn by frontend/dev/make_samples.py",
+     "licence": "sample drawing, not a photo",
+     "source_url": "frontend/dev/make_samples.py",
+     "taken_at": null
+    }
+   ]
+  },
+  {
+   "id": "o3",
+   "category": "shop",
+   "name": "Sample rooftop mall",
+   "kind": {
+    "en": "Shopping centre",
+    "ko": "쇼핑센터"
+   },
+   "description": {
+    "en": "Sample text: this stands in for what the guide would say about sample rooftop mall.",
+    "ko": "샘플 문장: 가이드가 이곳(Sample rooftop mall)에 대해 들려줄 이야기 자리입니다."
+   },
+   "description_source": {
+    "url": "https://example.org/sample-3",
+    "quote": "Sample quote."
+   },
+   "rating": null,
+   "facts": [
+    {
+     "label": "Hours",
+     "value": "11:00 to 21:00",
+     "source_url": "https://example.org/sample-3",
+     "quote": "Sample quote: shops open 11:00 to 21:00."
+    }
+   ],
+   "place": {
+    "lat": 35.659798,
+    "lon": 139.702083,
+    "osm_id": "sample/o3",
+    "access": "unknown"
+   },
+   "photos": []
+  },
+  {
+   "id": "o4",
+   "category": "shop",
+   "name": "Sample souvenir store",
+   "kind": {
+    "en": "Souvenir shop",
+    "ko": "기념품 가게"
+   },
+   "description": {
+    "en": "Sample text: this stands in for what the guide would say about sample souvenir store.",
+    "ko": "샘플 문장: 가이드가 이곳(Sample souvenir store)에 대해 들려줄 이야기 자리입니다."
+   },
+   "description_source": {
+    "url": "https://example.org/sample-4",
+    "quote": "Sample quote."
+   },
+   "rating": null,
+   "facts": [],
+   "place": {
+    "lat": 35.659745,
+    "lon": 139.700121,
+    "osm_id": "sample/o4",
+    "access": "no"
+   },
+   "photos": [
+    {
+     "url": "dev/photos/sample-5.svg",
+     "thumb_url": "dev/photos/sample-5.svg",
+     "width": 640,
+     "height": 400,
+     "credit": "Drawn by frontend/dev/make_samples.py",
+     "licence": "sample drawing, not a photo",
+     "source_url": "frontend/dev/make_samples.py",
+     "taken_at": null
+    },
+    {
+     "url": "dev/photos/sample-6.svg",
+     "thumb_url": "dev/photos/sample-6.svg",
+     "width": 640,
+     "height": 400,
+     "credit": "Drawn by frontend/dev/make_samples.py",
+     "licence": "sample drawing, not a photo",
+     "source_url": "frontend/dev/make_samples.py",
+     "taken_at": null
+    }
+   ]
+  },
+  {
+   "id": "o5",
+   "category": "eat",
+   "name": "Sample sushi counter",
+   "kind": {
+    "en": "Sushi restaurant",
+    "ko": "초밥집"
+   },
+   "description": {
+    "en": "Sample text: this stands in for what the guide would say about sample sushi counter.",
+    "ko": "샘플 문장: 가이드가 이곳(Sample sushi counter)에 대해 들려줄 이야기 자리입니다."
+   },
+   "description_source": {
+    "url": "https://example.org/sample-5",
+    "quote": "Sample quote."
+   },
+   "rating": {
+    "value": "4.5 of 5",
+    "source_url": "https://example.org/sample-rating",
+    "quote": "Sample quote: rated 4.5 of 5 by visitors."
+   },
+   "facts": [
+    {
+     "label": "Lunch set",
+     "value": "2,000 yen",
+     "source_url": "https://example.org/sample-5",
+     "quote": "Sample quote: lunch sets from 2,000 yen."
+    }
+   ],
+   "place": {
+    "lat": 35.662299,
+    "lon": 139.701889,
+    "osm_id": "sample/o5",
+    "access": "yes"
+   },
+   "photos": [
+    {
+     "url": "dev/photos/sample-7.svg",
+     "thumb_url": "dev/photos/sample-7.svg",
+     "width": 640,
+     "height": 400,
+     "credit": "Drawn by frontend/dev/make_samples.py",
+     "licence": "sample drawing, not a photo",
+     "source_url": "frontend/dev/make_samples.py",
+     "taken_at": null
+    }
+   ]
+  },
+  {
+   "id": "o6",
+   "category": "eat",
+   "name": "Sample ramen shop",
+   "kind": {
+    "en": "Ramen shop",
+    "ko": "라멘집"
+   },
+   "description": {
+    "en": "Sample text: this stands in for what the guide would say about sample ramen shop.",
+    "ko": "샘플 문장: 가이드가 이곳(Sample ramen shop)에 대해 들려줄 이야기 자리입니다."
+   },
+   "description_source": {
+    "url": "https://example.org/sample-6",
+    "quote": "Sample quote."
+   },
+   "rating": null,
+   "facts": [
+    {
+     "label": "Bowl",
+     "value": "900 yen",
+     "source_url": "https://example.org/sample-6",
+     "quote": "Sample quote: a bowl costs 900 yen."
+    }
+   ],
+   "place": {
+    "lat": 35.659558,
+    "lon": 139.701349,
+    "osm_id": "sample/o6",
+    "access": "unknown"
+   },
+   "photos": []
+  },
+  {
+   "id": "o7",
+   "category": "eat",
+   "name": "Sample noodle bar",
+   "kind": {
+    "en": "Noodle bar",
+    "ko": "국숫집"
+   },
+   "description": {
+    "en": "Sample text: this stands in for what the guide would say about sample noodle bar.",
+    "ko": "샘플 문장: 가이드가 이곳(Sample noodle bar)에 대해 들려줄 이야기 자리입니다."
+   },
+   "description_source": {
+    "url": "https://example.org/sample-7",
+    "quote": "Sample quote."
+   },
+   "rating": null,
+   "facts": [],
+   "place": {
+    "lat": 35.660498,
+    "lon": 139.699441,
+    "osm_id": "sample/o7",
+    "access": "unknown"
+   },
+   "photos": [
+    {
+     "url": "dev/photos/sample-8.svg",
+     "thumb_url": "dev/photos/sample-8.svg",
+     "width": 640,
+     "height": 400,
+     "credit": "Drawn by frontend/dev/make_samples.py",
+     "licence": "sample drawing, not a photo",
+     "source_url": "frontend/dev/make_samples.py",
+     "taken_at": null
+    },
+    {
+     "url": "dev/photos/sample-9.svg",
+     "thumb_url": "dev/photos/sample-9.svg",
+     "width": 640,
+     "height": 400,
+     "credit": "Drawn by frontend/dev/make_samples.py",
+     "licence": "sample drawing, not a photo",
+     "source_url": "frontend/dev/make_samples.py",
+     "taken_at": null
+    }
+   ]
+  },
+  {
+   "id": "o8",
+   "category": "shop",
+   "name": "Sample record shop",
+   "kind": {
+    "en": "Record shop",
+    "ko": "음반 가게"
+   },
+   "description": {
+    "en": "Sample text: this stands in for what the guide would say about sample record shop.",
+    "ko": "샘플 문장: 가이드가 이곳(Sample record shop)에 대해 들려줄 이야기 자리입니다."
+   },
+   "description_source": {
+    "url": "https://example.org/sample-8",
+    "quote": "Sample quote."
+   },
+   "rating": null,
+   "facts": [],
+   "place": {
+    "lat": 35.661563,
+    "lon": 139.700602,
+    "osm_id": "sample/o8",
+    "access": "yes"
+   },
+   "photos": [
+    {
+     "url": "dev/photos/sample-10.svg",
+     "thumb_url": "dev/photos/sample-10.svg",
+     "width": 640,
+     "height": 400,
+     "credit": "Drawn by frontend/dev/make_samples.py",
+     "licence": "sample drawing, not a photo",
+     "source_url": "frontend/dev/make_samples.py",
+     "taken_at": null
+    }
+   ]
+  },
+  {
+   "id": "o9",
+   "category": "eat",
+   "name": "Sample grill",
+   "kind": {
+    "en": "Grill",
+    "ko": "구이집"
+   },
+   "description": {
+    "en": "Sample text: this stands in for what the guide would say about sample grill.",
+    "ko": "샘플 문장: 가이드가 이곳(Sample grill)에 대해 들려줄 이야기 자리입니다."
+   },
+   "description_source": {
+    "url": "https://example.org/sample-9",
+    "quote": "Sample quote."
+   },
+   "rating": null,
+   "facts": [],
+   "place": {
+    "lat": 35.659252,
+    "lon": 139.703696,
+    "osm_id": "sample/o9",
+    "access": "unknown"
+   },
+   "photos": []
+  }
+ ],
+ "street_photos": [],
+ "counts": {
+  "places_on_map": 786,
+  "places_shown": 9,
+  "photos_found": 10,
+  "street_photos": 0
+ },
+ "picks": [
+  "o1",
+  "o5",
+  "o3"
+ ],
+ "spatial_model": {
+  "area": {
+   "name": "Shibuya, Tokyo",
+   "bbox": [
+    35.657,
+    139.6975,
+    35.6632,
+    139.705
+   ]
+  },
+  "stops": [
+   {
+    "id": "s1",
+    "option_id": "o1",
+    "order": 1,
+    "category": "see",
+    "name": "Sample viewing deck",
+    "lat": 35.661394,
+    "lon": 139.70057,
+    "access": "yes",
+    "background": {
+     "en": "Sample text: this stands in for what the guide would say about sample viewing deck.",
+     "ko": "샘플 문장: 가이드가 이곳(Sample viewing deck)에 대해 들려줄 이야기 자리입니다."
+    },
+    "sources": [
+     "https://example.org/sample-1"
+    ]
+   },
+   {
+    "id": "s2",
+    "option_id": "o5",
+    "order": 2,
+    "category": "eat",
+    "name": "Sample sushi counter",
+    "lat": 35.662299,
+    "lon": 139.701889,
+    "access": "yes",
+    "background": {
+     "en": "Sample text: this stands in for what the guide would say about sample sushi counter.",
+     "ko": "샘플 문장: 가이드가 이곳(Sample sushi counter)에 대해 들려줄 이야기 자리입니다."
+    },
+    "sources": [
+     "https://example.org/sample-5"
+    ]
+   },
+   {
+    "id": "s3",
+    "option_id": "o3",
+    "order": 3,
+    "category": "shop",
+    "name": "Sample rooftop mall",
+    "lat": 35.659798,
+    "lon": 139.702083,
+    "access": "unknown",
+    "background": {
+     "en": "Sample text: this stands in for what the guide would say about sample rooftop mall.",
+     "ko": "샘플 문장: 가이드가 이곳(Sample rooftop mall)에 대해 들려줄 이야기 자리입니다."
+    },
+    "sources": [
+     "https://example.org/sample-3"
+    ]
+   }
+  ],
+  "legs": [
+   {
+    "id": "s1>s2",
+    "from": "s1",
+    "to": "s2",
+    "distance_m": 252,
+    "line": [
+     [
+      139.70057,
+      35.661394
+     ],
+     [
+      139.700624,
+      35.6612883
+     ],
+     [
+      139.7007023,
+      35.6612718
+     ],
+     [
+      139.7007084,
+      35.6612828
+     ],
+     [
+      139.7007128,
+      35.6612952
+     ],
+     [
+      139.700829,
+      35.6612941
+     ],
+     [
+      139.7009135,
+      35.6612933
+     ],
+     [
+      139.7009291,
+      35.6620438
+     ],
+     [
+      139.7009343,
+      35.6620657
+     ],
+     [
+      139.7009484,
+      35.6620812
+     ],
+     [
+      139.7009695,
+      35.6620923
+     ],
+     [
+      139.7009721,
+      35.6621809
+     ],
+     [
+      139.7009739,
+      35.6622421
+     ],
+     [
+      139.7016181,
+      35.6620857
+     ],
+     [
+      139.7016896,
+      35.6620683
+     ],
+     [
+      139.7017526,
+      35.6620511
+     ],
+     [
+      139.701889,
+      35.662299
+     ]
+    ],
+    "kind": "routed",
+    "stairs": "none_mapped",
+    "fits_profile": false,
+    "note": {
+     "en": "252 m on foot. No stairs mapped on this path.",
+     "ko": "걸어서 252m. 이 길에는 지도에 표시된 계단이 없습니다."
+    }
+   },
+   {
+    "id": "s2>s3",
+    "from": "s2",
+    "to": "s3",
+    "distance_m": 279,
+    "line": [
+     [
+      139.701889,
+      35.662299
+     ],
+     [
+      139.702083,
+      35.659798
+     ]
+    ],
+    "kind": "straight_line",
+    "stairs": "unknown",
+    "fits_profile": false,
+    "note": {
+     "en": "279 m on foot. Stairs unknown.",
+     "ko": "걸어서 279m. 계단 여부는 알 수 없습니다."
+    }
+   }
+  ],
+  "hazards": [
+   {
+    "id": "h1",
+    "leg_id": null,
+    "stop_id": "s3",
+    "kind": "unknown_access",
+    "lat": 35.659798,
+    "lon": 139.702083,
+    "detail": {
+     "en": "The map has no accessibility information for the entrance of Sample rooftop mall.",
+     "ko": "Sample rooftop mall 입구의 접근성 정보가 지도에 없습니다."
+    },
+    "source": "osm:sample/o3"
+   },
+   {
+    "id": "h2",
+    "leg_id": "s1>s2",
+    "stop_id": null,
+    "kind": "long_walk",
+    "lat": 35.6620657,
+    "lon": 139.7009343,
+    "detail": {
+     "en": "This walk is 252 m, longer than the 242 m limit set after you said a walk was too far.",
+     "ko": "이 구간은 252m로, 전에 너무 멀다고 하신 뒤 정한 기준 242m보다 깁니다."
+    },
+    "source": "computed"
+   },
+   {
+    "id": "h3",
+    "leg_id": "s2>s3",
+    "stop_id": null,
+    "kind": "unknown_access",
+    "lat": 35.662299,
+    "lon": 139.701889,
+    "detail": {
+     "en": "No mapped path. The distance is a straight line and stairs are unknown.",
+     "ko": "지도에 길이 없습니다. 거리는 직선 거리이며 계단 여부는 알 수 없습니다."
+    },
+    "source": "computed"
+   },
+   {
+    "id": "h4",
+    "leg_id": "s2>s3",
+    "stop_id": null,
+    "kind": "long_walk",
+    "lat": 35.659798,
+    "lon": 139.702083,
+    "detail": {
+     "en": "This walk is 279 m, longer than the 242 m limit set after you said a walk was too far.",
+     "ko": "이 구간은 279m로, 전에 너무 멀다고 하신 뒤 정한 기준 242m보다 깁니다."
+    },
+    "source": "computed"
+   }
+  ],
+  "benches": [
+   {
+    "id": "b1",
+    "leg_id": "s1>s2",
+    "lat": 35.6623609,
+    "lon": 139.701893,
+    "off_route_m": 7,
+    "source": "osm:node/9855737999"
+   },
+   {
+    "id": "b2",
+    "leg_id": "s1>s2",
+    "lat": 35.6623571,
+    "lon": 139.7017897,
+    "off_route_m": 11,
+    "source": "osm:node/9855738006"
+   },
+   {
+    "id": "b3",
+    "leg_id": "s1>s2",
+    "lat": 35.6622835,
+    "lon": 139.7017515,
+    "off_route_m": 13,
+    "source": "osm:node/9855738007"
+   },
+   {
+    "id": "b4",
+    "leg_id": "s2>s3",
+    "lat": 35.6623609,
+    "lon": 139.701893,
+    "off_route_m": 7,
+    "source": "osm:node/9855737999"
+   },
+   {
+    "id": "b5",
+    "leg_id": "s2>s3",
+    "lat": 35.6623571,
+    "lon": 139.7017897,
+    "off_route_m": 11,
+    "source": "osm:node/9855738006"
+   },
+   {
+    "id": "b6",
+    "leg_id": "s2>s3",
+    "lat": 35.6622835,
+    "lon": 139.7017515,
+    "off_route_m": 13,
+    "source": "osm:node/9855738007"
+   }
+  ],
+  "review": {
+   "status": "partly_unverified",
+   "rounds": 2,
+   "removed": [
+    {
+     "what": "Sample claim about a lift at the mall",
+     "why": "not confirmed within two rounds"
+    }
+   ]
+  },
+  "generated_at": "2026-11-21T09:39:00"
+ },
+ "user:memory": {
+  "facts": [
+   {
+    "id": "f1",
+    "key": "walk",
+    "value": "short",
+    "group": "answers",
+    "source": "answer",
+    "evidence": "You answered \"short\" when asked about how far you like to walk.",
+    "at": "10:02",
+    "effect": "Walks longer than 300 m are flagged, unless a limit learned from your taps replaces this.",
+    "status": "kept",
+    "changed_legs": []
+   },
+   {
+    "id": "f2",
+    "key": "stairs",
+    "value": "avoid",
+    "group": "answers",
+    "source": "answer",
+    "evidence": "You answered \"avoid\" when asked about stairs.",
+    "at": "10:02",
+    "effect": "Routes look for a way without mapped stairs first; a walk with stairs is flagged.",
+    "status": "kept",
+    "changed_legs": []
+   },
+   {
+    "id": "f3",
+    "key": "rest",
+    "value": "often",
+    "group": "answers",
+    "source": "answer",
+    "evidence": "You answered \"often\" when asked about how often you like to rest.",
+    "at": "10:02",
+    "effect": "Up to 3 benches from the map are shown for each walk.",
+    "status": "kept",
+    "changed_legs": []
+   },
+   {
+    "id": "f4",
+    "key": "food",
+    "value": "sushi",
+    "group": "answers",
+    "source": "answer",
+    "evidence": "You answered \"sushi\" when asked about what you like to eat.",
+    "at": "10:02",
+    "effect": "Places to eat are searched as: sushi omakase.",
+    "status": "kept",
+    "changed_legs": []
+   },
+   {
+    "id": "f5",
+    "key": "wish",
+    "value": null,
+    "group": "answers",
+    "source": "answer",
+    "evidence": "You left the wish empty.",
+    "at": "10:02",
+    "effect": "Nothing changes.",
+    "status": "kept",
+    "changed_legs": []
+   },
+   {
+    "id": "f6",
+    "key": "see",
+    "value": "Sample viewing deck",
+    "group": "picks",
+    "source": "pick",
+    "evidence": "You picked this from the two places to see.",
+    "at": "09:37",
+    "effect": "It is a stop on your route.",
+    "status": "kept",
+    "changed_legs": []
+   },
+   {
+    "id": "f7",
+    "key": "eat",
+    "value": "Sample sushi counter",
+    "group": "picks",
+    "source": "pick",
+    "evidence": "You picked this from the two places to eat.",
+    "at": "09:37",
+    "effect": "It is a stop on your route.",
+    "status": "kept",
+    "changed_legs": []
+   },
+   {
+    "id": "f8",
+    "key": "shop",
+    "value": "Sample rooftop mall",
+    "group": "picks",
+    "source": "pick",
+    "evidence": "You picked this from the two places to shop.",
+    "at": "09:37",
+    "effect": "It is a stop on your route.",
+    "status": "kept",
+    "changed_legs": []
+   },
+   {
+    "id": "f9",
+    "key": "walk_limit_m",
+    "value": 242,
+    "group": "day",
+    "source": "feedback",
+    "evidence": "You said: too far, after the 252 m walk from Sample viewing deck.",
+    "at": "11:15",
+    "effect": "Walks longer than 242 m are flagged.",
+    "status": "kept",
+    "changed_legs": [
+     "s1>s2",
+     "s2>s3"
+    ]
+   }
+  ],
+  "feedback": [
+   {
+    "leg_id": "s1>s2",
+    "distance_m": 252,
+    "verdict": "too_far",
+    "at": "2026-11-20T10:41:00"
+   },
+   {
+    "leg_id": "s2>s3",
+    "distance_m": 279,
+    "verdict": "too_far",
+    "at": "2026-11-20T11:15:00"
+   }
+  ]
+ },
+ "audit": [
+  {
+   "t": "09:36:02",
+   "agent": "scout",
+   "tool": "search_options",
+   "decision": "allowed",
+   "rule": "",
+   "detail": "Sample row: see: 5 results"
+  },
+  {
+   "t": "09:36:09",
+   "agent": "scout",
+   "tool": "search_options",
+   "decision": "withheld",
+   "rule": "injection_pattern",
+   "detail": "Sample row: one result held back, https://example.org/bad"
+  },
+  {
+   "t": "09:36:40",
+   "agent": "scout",
+   "tool": "save_options",
+   "decision": "blocked",
+   "rule": "quote_not_found",
+   "detail": "Sample row: an option whose quote is not in its source"
+  },
+  {
+   "t": "09:37:05",
+   "agent": "traveller",
+   "tool": "record_picks",
+   "decision": "allowed",
+   "rule": "human_decision",
+   "detail": "o1,o5,o3"
+  },
+  {
+   "t": "09:37:40",
+   "agent": "router",
+   "tool": "propose_route",
+   "decision": "blocked",
+   "rule": "stop_not_in_picks",
+   "detail": "Sample row: a stop that she did not pick"
+  },
+  {
+   "t": "09:38:20",
+   "agent": "critic",
+   "tool": "submit_review",
+   "decision": "blocked",
+   "rule": "sent_back_to_router",
+   "detail": "Sample row: round 1"
+  },
+  {
+   "t": "09:39:00",
+   "agent": "critic",
+   "tool": "submit_review",
+   "decision": "allowed",
+   "rule": "published:partly_unverified",
+   "detail": "round 2"
+  }
+ ]
+}

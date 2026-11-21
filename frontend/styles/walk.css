@@ -1,0 +1,188 @@
+/*
+  walk.css: the phone page (walk.html) and the handoff card on the final map (js/handoff.js).
+  Same tokens and font as the page (tokens.css). Every rule is under .walk or .handoff, so the card
+  can be shown on the main page without touching its styles.
+  The phone page is read outdoors with one hand: large type, one wide button at the thumb, no chrome.
+*/
+
+/* ---- The phone page ---- */
+body.walk {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: var(--font-l);
+  line-height: var(--leading);
+  -webkit-text-size-adjust: 100%;
+}
+/* The resets weigh nothing (:where), so every rule below wins over them */
+:where(.walk) *, :where(.walk) *::before, :where(.walk) *::after { box-sizing: border-box; }
+:where(.walk) :is(h1, p, ul, figure) { margin: 0; padding: 0; }
+:where(.walk) ul { list-style: none; }
+:where(.walk) button { margin: 0; padding: 0; border: 0; background: none; font: inherit; color: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.walk :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+#walk { display: flex; flex-direction: column; min-height: 100dvh; max-width: 520px; margin: 0 auto; }
+
+.walk-bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: calc(10px + env(safe-area-inset-top, 0px)) 16px 8px;
+}
+.walk-mark { font-size: 19px; letter-spacing: -0.05em; line-height: 1.15; }
+.walk-where { min-width: 0; font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.walk-screen { display: flex; flex: 1; flex-direction: column; }
+
+/* The photo, large, and nothing on it */
+.walk-photo {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 3 / 2;
+  margin: 0 16px;
+  overflow: hidden;
+  border-radius: var(--radius-panel);
+  background: var(--ground);
+  color: var(--muted);
+  font-size: var(--font-s);
+}
+.walk-photo img { width: 100%; height: 100%; object-fit: cover; animation: walk-in 220ms var(--ease-out) both; }
+@keyframes walk-in { from { opacity: 0; } }
+
+.walk-body { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px 16px; }
+.walk-meta { font-size: var(--font-xs); color: var(--muted); }
+.walk-name { font-size: 26px; font-weight: 500; letter-spacing: -0.02em; line-height: var(--leading-tight); text-wrap: balance; }
+.walk-what { color: var(--muted); font-size: var(--font-s); }
+.walk-last { margin-top: 12px; color: var(--muted); font-size: var(--font-s); }
+.walk-small { font-size: var(--font-xs); color: var(--muted); }
+
+/* The walk to the next stop: three short facts, a warning only when there is one, the strip */
+.walk-leg { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.walk-facts { border-top: var(--hair-width) solid var(--hairline-strong); }
+.walk-facts li { padding: 9px 0; border-bottom: var(--hair-width) solid var(--hairline); font-size: var(--font-l); line-height: 1.3; }
+.walk-facts li:first-child { font-weight: 500; }
+.walk-warn { color: var(--blocked); font-size: var(--font-s); line-height: 1.35; }
+
+.walk-strip { display: block; width: 100%; height: auto; border-radius: var(--radius-m); background: var(--ground); }
+.walk-strip path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.walk-strip-building { fill: rgb(var(--ink-rgb) / 0.06) !important; }
+.walk-strip-way { stroke: var(--map-way); }
+.walk-strip-way[data-kind="steps"] { stroke: var(--blocked); opacity: 0.55; }
+.walk-strip-other { stroke: var(--reachable); opacity: 0.22; }
+.walk-strip-line { stroke: var(--reachable); }
+.walk-strip-bench { fill: var(--mark-ring); stroke: var(--ink); }
+.walk-strip-stop circle { fill: var(--ink); stroke: var(--mark-ring); }
+.walk-strip-stop text { fill: var(--on-dark); font-weight: 600; }
+.walk-strip-stop[data-kind="to"] circle { fill: var(--mark-ring); stroke: var(--ink); }
+.walk-strip-stop[data-kind="to"] text { fill: var(--ink); }
+.walk-strip-osm { fill: var(--muted); opacity: 0.8; }
+
+/* The one thing to press, at the thumb */
+.walk-foot {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding: 10px 16px calc(14px + env(safe-area-inset-bottom, 0px));
+  background: linear-gradient(transparent, var(--paper) 14px);
+}
+.walk-ask { font-size: var(--font-s); line-height: 1.35; }
+.walk-ask[data-sent="no"] { color: var(--muted); }
+.walk-two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.walk-button {
+  width: 100%;
+  min-height: 56px;
+  padding: 0 18px;
+  border-radius: var(--radius-pill);
+  background: var(--glass-charcoal);
+  box-shadow: var(--glass-charcoal-edge), var(--shadow-float);
+  color: var(--on-dark);
+  font-size: var(--font-l);
+  font-weight: 500;
+  transition: transform var(--press-time) var(--ease-out);
+}
+.walk-button:active:not(:disabled) { transform: scale(var(--press-scale)); }
+.walk-button:disabled { opacity: 0.5; }
+
+/* The route note at the end: the sentences, the two languages, Copy */
+.walk-note { margin-top: 10px; border-radius: var(--radius-panel); background: var(--surface); box-shadow: var(--glass-light-edge), var(--shadow-float); }
+.walk-note-text { display: flex; flex-direction: column; gap: 6px; padding: 14px 14px 6px; font-size: var(--font-m); line-height: var(--leading-read); }
+.walk-note-foot { display: flex; align-items: center; justify-content: space-between; padding: 4px 8px 8px 6px; }
+.walk-langs { display: flex; }
+.walk-lang { min-width: 44px; height: 44px; padding: 0 10px; font-size: var(--font-s); font-weight: 500; color: var(--muted); }
+.walk-lang[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1.5px; }
+.walk-copy { min-height: 40px; padding: 0 16px; border-radius: var(--radius-pill); background: var(--ink); color: var(--on-dark); font-size: var(--font-s); font-weight: 500; transition: transform var(--press-time) var(--ease-out); }
+.walk-copy:active { transform: scale(var(--press-scale)); }
+.walk-note + .walk-small { margin-top: 10px; }
+
+.walk-plain { display: flex; flex-direction: column; gap: 6px; padding: 24px 16px; }
+
+/* ---- The handoff card on the final map ---- */
+.handoff {
+  position: fixed;
+  z-index: 20;
+  top: calc(72px + env(safe-area-inset-top, 0px));
+  right: calc(16px + env(safe-area-inset-right, 0px));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 316px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 88px);
+  overflow: auto;
+  padding: 12px 14px 14px;
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+  box-shadow: var(--glass-light-edge), var(--shadow-lift);
+  color: var(--ink);
+  font-size: var(--font-s);
+  line-height: var(--leading);
+  animation: handoff-in 220ms var(--ease-out) both;
+}
+@keyframes handoff-in { from { opacity: 0; transform: translateY(-6px) scale(0.98); } }
+:where(.handoff) *, :where(.handoff) *::before, :where(.handoff) *::after { box-sizing: border-box; }
+:where(.handoff) :is(h2, p) { margin: 0; padding: 0; }
+:where(.handoff) button { margin: 0; padding: 0; border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }
+.handoff :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.handoff-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.handoff-title { font-size: var(--font-s); font-weight: 500; line-height: 1.25; }
+.handoff-close { display: grid; place-items: center; flex: none; width: 32px; height: 32px; margin: -4px -6px -4px 0; border-radius: 50%; color: var(--muted); }
+.handoff-close svg { width: 18px; height: 18px; }
+.handoff-code svg { display: block; width: 100%; height: auto; border-radius: var(--radius-s); }
+.handoff-link {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+.handoff-note { font-size: var(--font-xs); color: var(--muted); }
+.handoff-note:empty { display: none; }
+.handoff-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--on-dark);
+  font-size: var(--font-s);
+  font-weight: 500;
+  transition: transform var(--press-time) var(--ease-out);
+}
+.handoff-copy svg { width: 16px; height: 16px; }
+.handoff-copy:active:not(:disabled) { transform: scale(var(--press-scale)); }
+.handoff-copy:disabled { opacity: 0.5; }
+
+@media (prefers-reduced-motion: reduce) {
+  .walk-photo img, .handoff { animation: none; }
+}

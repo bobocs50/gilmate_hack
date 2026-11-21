@@ -1,0 +1,82 @@
+{
+ "fixture": true,
+ "note": "FIXTURE, written by hand in the documented response shape of the Places API (New) Text Search. Not a real response: the ids, links, ratings, counts and hours are made up for the drill and are never shown as real.",
+ "query": "fixture: shop in Shibuya, Tokyo",
+ "area": "Shibuya, Tokyo",
+ "bbox": [
+  35.657,
+  139.6975,
+  35.6632,
+  139.705
+ ],
+ "fetched_at": "2026-11-21T12:40:00",
+ "response": {
+  "places": [
+   {
+    "id": "FIXTURE_place_0011",
+    "displayName": {
+     "text": "SHIBUYA109",
+     "languageCode": "en"
+    },
+    "location": {
+     "latitude": 35.65961,
+     "longitude": 139.69877
+    },
+    "primaryType": "shopping_mall",
+    "primaryTypeDisplayName": {
+     "text": "Shopping mall",
+     "languageCode": "en"
+    },
+    "rating": 4.0,
+    "userRatingCount": 15800,
+    "formattedAddress": "2 Chome-29-1 Dogenzaka, Shibuya, Tokyo 150-0043, Japan",
+    "regularOpeningHours": {
+     "weekdayDescriptions": [
+      "Monday: 10:00 AM – 9:00 PM",
+      "Tuesday: 10:00 AM – 9:00 PM",
+      "Wednesday: 10:00 AM – 9:00 PM",
+      "Thursday: 10:00 AM – 9:00 PM",
+      "Friday: 10:00 AM – 9:00 PM",
+      "Saturday: 10:00 AM – 9:00 PM",
+      "Sunday: 10:00 AM – 9:00 PM"
+     ]
+    },
+    "accessibilityOptions": {
+     "wheelchairAccessibleEntrance": true
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=9000000000000000011"
+   },
+   {
+    "id": "FIXTURE_place_0012",
+    "displayName": {
+     "text": "Pokémon Center Shibuya",
+     "languageCode": "en"
+    },
+    "location": {
+     "latitude": 35.66197,
+     "longitude": 139.69842
+    },
+    "primaryType": "toy_store",
+    "primaryTypeDisplayName": {
+     "text": "Toy store",
+     "languageCode": "en"
+    },
+    "rating": 4.4,
+    "userRatingCount": 9200,
+    "formattedAddress": "Shibuya PARCO 6F, 15-1 Udagawacho, Shibuya, Tokyo 150-8377, Japan",
+    "regularOpeningHours": {
+     "weekdayDescriptions": [
+      "Monday: 11:00 AM – 9:00 PM",
+      "Tuesday: 11:00 AM – 9:00 PM",
+      "Wednesday: 11:00 AM – 9:00 PM",
+      "Thursday: 11:00 AM – 9:00 PM",
+      "Friday: 11:00 AM – 9:00 PM",
+      "Saturday: 11:00 AM – 9:00 PM",
+      "Sunday: 11:00 AM – 9:00 PM"
+     ]
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=9000000000000000012"
+   }
+  ]
+ }
+}

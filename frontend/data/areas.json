@@ -1,0 +1,70 @@
+{
+ "default": "shibuya",
+ "areas": [
+  {
+   "key": "shibuya",
+   "name": "Shibuya, Tokyo",
+   "bbox": [
+    35.657,
+    139.6975,
+    35.6632,
+    139.705
+   ],
+   "words": [
+    "shibuya",
+    "渋谷",
+    "시부야"
+   ],
+   "example": "I want to visit Shibuya in Tokyo",
+   "map": "data/map.json",
+   "candidates": "data/candidates.json",
+   "run": "data/run.json",
+   "photos": "data/photos",
+   "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Shibuya_2026-0807.jpg",
+    "thumb_url": "data/photos/area_shibuya.jpg",
+    "width": 4032,
+    "height": 3024,
+    "credit": "Kenkinau",
+    "licence": "CC BY-SA 4.0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Shibuya_2026-0807.jpg",
+    "taken_at": "2026-08-07"
+   }
+  },
+  {
+   "key": "hongdae",
+   "name": "Hongdae, Seoul",
+   "bbox": [
+    37.5506,
+    126.9196,
+    37.5576,
+    126.9274
+   ],
+   "words": [
+    "hongdae",
+    "hong-dae",
+    "hong dae",
+    "hongik",
+    "홍대",
+    "홍익대",
+    "弘大",
+    "ホンデ"
+   ],
+   "example": "I want to visit Hongdae in Seoul",
+   "map": "data/hongdae/map.json",
+   "candidates": "data/hongdae/candidates.json",
+   "run": "data/hongdae/run.json",
+   "photos": "data/hongdae/photos",
+   "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/20260829_%EB%A7%88%ED%8F%AC%EA%B5%AC_%ED%99%8D%EB%8C%80%EB%A1%9C%EB%93%9C4.jpg",
+    "thumb_url": "data/hongdae/photos/area_hongdae.jpg",
+    "width": 4000,
+    "height": 2250,
+    "credit": "Striker9498",
+    "licence": "CC0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:20260829_%EB%A7%88%ED%8F%AC%EA%B5%AC_%ED%99%8D%EB%8C%80%EB%A1%9C%EB%93%9C4.jpg",
+    "taken_at": "2026-08-29"
+   }
+  }
+ ]
+}

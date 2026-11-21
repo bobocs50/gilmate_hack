@@ -1,0 +1,32 @@
+{
+ "place": "way/55895868",
+ "name": "Shibuya 109",
+ "fetched_at": "2026-11-21T11:26:00",
+ "source": "Wikimedia Commons",
+ "asked": [
+  "File:Shibuya 109 - 3.jpg",
+  "Category:109 (department stores)",
+  "photos taken within 150 m that name the place",
+  "search: \"Shibuya 109\" Shibuya"
+ ],
+ "photos": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Shibuya_109_-_3.jpg",
+   "thumb_url": "data/photos/way_55895868_1.jpg",
+   "width": 1890,
+   "height": 2500,
+   "credit": "Kakidai",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Shibuya_109_-_3.jpg",
+   "taken_at": "2019-07",
+   "title": "File:Shibuya 109 - 3.jpg",
+   "named": "File:Shibuya 109 - 3.jpg 渋谷109",
+   "about": "File:Shibuya 109 - 3.jpg 渋谷109 IPhone XR|Self-published work|Shibuya 109",
+   "lat": null,
+   "lon": null,
+   "found_by": "depicts",
+   "thumb_source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Shibuya_109_-_3.jpg/500px-Shibuya_109_-_3.jpg"
+  }
+ ]
+}

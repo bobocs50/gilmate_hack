@@ -1,0 +1,71 @@
+{
+ "fixture": true,
+ "note": "FIXTURE, written by hand in the documented response shape of the Places API (New) Text Search. Not a real response: the ids, links, ratings, counts and hours are made up for the drill and are never shown as real.",
+ "query": "fixture: eat in Shibuya, Tokyo",
+ "area": "Shibuya, Tokyo",
+ "bbox": [
+  35.657,
+  139.6975,
+  35.6632,
+  139.705
+ ],
+ "fetched_at": "2026-11-21T12:40:00",
+ "response": {
+  "places": [
+   {
+    "id": "FIXTURE_place_0021",
+    "displayName": {
+     "text": "Sushiro Shibuya Ekimae",
+     "languageCode": "en"
+    },
+    "location": {
+     "latitude": 35.65989,
+     "longitude": 139.69926
+    },
+    "primaryType": "sushi_restaurant",
+    "primaryTypeDisplayName": {
+     "text": "Sushi restaurant",
+     "languageCode": "en"
+    },
+    "rating": 3.9,
+    "userRatingCount": 2100,
+    "formattedAddress": "Shibuya, Tokyo, Japan",
+    "regularOpeningHours": {
+     "weekdayDescriptions": [
+      "Monday: 11:00 AM – 11:00 PM",
+      "Tuesday: 11:00 AM – 11:00 PM",
+      "Wednesday: 11:00 AM – 11:00 PM",
+      "Thursday: 11:00 AM – 11:00 PM",
+      "Friday: 11:00 AM – 11:00 PM",
+      "Saturday: 11:00 AM – 11:00 PM",
+      "Sunday: 11:00 AM – 11:00 PM"
+     ]
+    },
+    "accessibilityOptions": {
+     "wheelchairAccessibleEntrance": false
+    },
+    "googleMapsUri": "https://maps.google.com/?cid=9000000000000000021"
+   },
+   {
+    "id": "FIXTURE_place_0022",
+    "displayName": {
+     "text": "Ootoya",
+     "languageCode": "en"
+    },
+    "location": {
+     "latitude": 35.659,
+     "longitude": 139.7035
+    },
+    "primaryType": "japanese_restaurant",
+    "primaryTypeDisplayName": {
+     "text": "Japanese restaurant",
+     "languageCode": "en"
+    },
+    "rating": 3.8,
+    "userRatingCount": 640,
+    "formattedAddress": "Shibuya, Tokyo, Japan",
+    "googleMapsUri": "https://maps.google.com/?cid=9000000000000000022"
+   }
+  ]
+ }
+}

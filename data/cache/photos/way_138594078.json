@@ -1,0 +1,31 @@
+{
+ "place": "way/138594078",
+ "name": "Metro Plaza",
+ "fetched_at": "2026-11-21T11:27:07",
+ "source": "Wikimedia Commons",
+ "asked": [
+  "File:Metro-Plaza-Shibuya.jpg",
+  "photos taken within 150 m that name the place",
+  "search: \"Metro Plaza\" Shibuya"
+ ],
+ "photos": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Metro-Plaza-Shibuya.jpg",
+   "thumb_url": "data/photos/way_138594078_1.jpg",
+   "width": 900,
+   "height": 1200,
+   "credit": "Rs1421",
+   "licence": "CC BY-SA 3.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Metro-Plaza-Shibuya.jpg",
+   "taken_at": "2011-09",
+   "title": "File:Metro-Plaza-Shibuya.jpg",
+   "named": "File:Metro-Plaza-Shibuya.jpg 渋谷地下鉄ビル（メトロプラザ）。東京都渋谷区渋谷1丁目。",
+   "about": "File:Metro-Plaza-Shibuya.jpg 渋谷地下鉄ビル（メトロプラザ）。東京都渋谷区渋谷1丁目。 Taken with Panasonic Lumix DMC-GF2|Tokyo Metro|Shibuya (district)|Buildings in Shibuya|Self-published work",
+   "lat": null,
+   "lon": null,
+   "found_by": "depicts",
+   "thumb_source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Metro-Plaza-Shibuya.jpg/500px-Metro-Plaza-Shibuya.jpg"
+  }
+ ]
+}

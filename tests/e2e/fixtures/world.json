@@ -1,0 +1,56 @@
+{
+  "note": "Written by the Gilmate team for the free end-to-end check. The search results are not real web pages: the .example domain cannot resolve and every text says it is a fixture. The place names are real names from data/shibuya_osm.json so the map lookup works. Never copy any of this into data/cache or frontend/data.",
+  "search": {
+    "see": [
+      {"title": "FIXTURE: Shibuya Sky", "url": "https://fixture-sights.example/shibuya-sky",
+       "content": "Fixture text for tests, not a real page. Shibuya Sky is an open-air observation deck. Fixture opening hours: 10:00 to 22:30. Fixture ticket price: 2,200 yen for adults."},
+      {"title": "FIXTURE: Hachiko", "url": "https://fixture-sights.example/hachiko",
+       "content": "Fixture text for tests, not a real page. The Hachiko Memorial Statue stands in front of the station and is a meeting point. Fixture price: free, open at all hours."}
+    ],
+    "shop": [
+      {"title": "FIXTURE: Loft", "url": "https://fixture-shops.example/loft",
+       "content": "Fixture text for tests, not a real page. Loft is a variety store with stationery and gifts on seven floors. Fixture opening hours: 11:00 to 21:00."},
+      {"title": "FIXTURE: Shibuya Parco", "url": "https://fixture-shops.example/parco",
+       "content": "Fixture text for tests, not a real page. Shibuya Parco is a shopping building with fashion and character shops. Fixture opening hours: 11:00 to 21:00."}
+    ],
+    "eat": [
+      {"title": "FIXTURE: Kura Sushi", "url": "https://fixture-food.example/kura-sushi",
+       "content": "Fixture text for tests, not a real page. Kura Sushi is a conveyor belt sushi restaurant. Fixture price: plates from 150 yen."},
+      {"title": "FIXTURE: Uobei", "url": "https://fixture-food.example/uobei",
+       "content": "Fixture text for tests, not a real page. Uobei sends sushi to the seat on a fast lane. Fixture price: plates from 120 yen."}
+    ]
+  },
+  "options": [
+    {"category": "see", "name": "Shibuya Sky",
+     "summary_en": "Fixture summary. An open-air observation deck above the crossing.",
+     "summary_ko": "시험용 요약입니다. 교차로 위에 있는 야외 전망대입니다.",
+     "facts": [
+       {"label": "Opening hours", "value": "10:00 to 22:30", "source_url": "https://fixture-sights.example/shibuya-sky", "quote": "Fixture opening hours: 10:00 to 22:30."},
+       {"label": "Ticket", "value": "2,200 yen", "source_url": "https://fixture-sights.example/shibuya-sky", "quote": "Fixture ticket price: 2,200 yen for adults."}]},
+    {"category": "see", "name": "Hachiko Memorial Statue",
+     "summary_en": "Fixture summary. The statue of the dog Hachiko in front of the station, a meeting point.",
+     "summary_ko": "시험용 요약입니다. 역 앞에 있는 충견 하치코 동상으로, 만남의 장소입니다.",
+     "facts": [
+       {"label": "Price", "value": "free", "source_url": "https://fixture-sights.example/hachiko", "quote": "Fixture price: free, open at all hours."}]},
+    {"category": "shop", "name": "Loft",
+     "summary_en": "Fixture summary. A variety store with stationery and gifts on seven floors.",
+     "summary_ko": "시험용 요약입니다. 문구와 선물을 파는 7층짜리 잡화점입니다.",
+     "facts": [
+       {"label": "Opening hours", "value": "11:00 to 21:00", "source_url": "https://fixture-shops.example/loft", "quote": "Fixture opening hours: 11:00 to 21:00."}]},
+    {"category": "shop", "name": "Shibuya Parco",
+     "summary_en": "Fixture summary. A shopping building with fashion and character shops.",
+     "summary_ko": "시험용 요약입니다. 패션과 캐릭터 가게가 있는 쇼핑 건물입니다.",
+     "facts": [
+       {"label": "Opening hours", "value": "11:00 to 21:00", "source_url": "https://fixture-shops.example/parco", "quote": "Fixture opening hours: 11:00 to 21:00."}]},
+    {"category": "eat", "name": "Kura Sushi",
+     "summary_en": "Fixture summary. A conveyor belt sushi restaurant.",
+     "summary_ko": "시험용 요약입니다. 회전초밥집입니다.",
+     "facts": [
+       {"label": "Price", "value": "from 150 yen a plate", "source_url": "https://fixture-food.example/kura-sushi", "quote": "Fixture price: plates from 150 yen."}]},
+    {"category": "eat", "name": "Uobei",
+     "summary_en": "Fixture summary. Sushi arrives at the seat on a fast lane.",
+     "summary_ko": "시험용 요약입니다. 초밥이 빠른 레인으로 자리까지 옵니다.",
+     "facts": [
+       {"label": "Price", "value": "from 120 yen a plate", "source_url": "https://fixture-food.example/uobei", "quote": "Fixture price: plates from 120 yen."}]}
+  ]
+}

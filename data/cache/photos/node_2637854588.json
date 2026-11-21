@@ -1,0 +1,48 @@
+{
+ "place": "node/2637854588",
+ "name": "Starbucks",
+ "fetched_at": "2026-11-21T11:27:22",
+ "source": "Wikimedia Commons",
+ "asked": [
+  "photos taken within 150 m that name the place",
+  "search: \"Starbucks\" Shibuya"
+ ],
+ "photos": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Shibuya_Crossing_2010_%284268936086%29.jpg",
+   "thumb_url": "data/photos/node_2637854588_1.jpg",
+   "width": 1500,
+   "height": 998,
+   "credit": "davidgsteadman This photo was taken with Canon EOS 7D",
+   "licence": "CC BY 2.0",
+   "licence_url": "https://creativecommons.org/licenses/by/2.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Shibuya_Crossing_2010_(4268936086).jpg",
+   "taken_at": null,
+   "title": "File:Shibuya Crossing 2010 (4268936086).jpg",
+   "named": "File:Shibuya Crossing 2010 (4268936086).jpg View from the Starbucks overlooking Tokyo's iconic pedestrian crossing.",
+   "about": "File:Shibuya Crossing 2010 (4268936086).jpg View from the Starbucks overlooking Tokyo's iconic pedestrian crossing. Taken with Canon EOS 7D|Flickr images reviewed by FlickreviewR|January 2010 in Tokyo|Shibuya Crossing in 2010|Nippon Television advertisements|Files with coordinates missing SDC location of creation|Japan photographs taken on 2010-01-12|Building billboards in Tokyo|SoftBank Mobile advertisements|Tokyu Department Store Toyoko Store West Building|Rain in Shibuya",
+   "lat": 35.65883,
+   "lon": 139.70129,
+   "found_by": "nearby",
+   "thumb_source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Shibuya_Crossing_2010_%284268936086%29.jpg/500px-Shibuya_Crossing_2010_%284268936086%29.jpg"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Shibuya_Starbucks.jpg",
+   "thumb_url": "data/photos/node_2637854588_2.jpg",
+   "width": 4080,
+   "height": 3072,
+   "credit": "Takipoint123",
+   "licence": "CC BY-SA 4.0",
+   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Shibuya_Starbucks.jpg",
+   "taken_at": "2026-06-10",
+   "title": "File:Shibuya Starbucks.jpg",
+   "named": "File:Shibuya Starbucks.jpg A picture of the Starbucks sign at Shibuya Starbucks.",
+   "about": "File:Shibuya Starbucks.jpg A picture of the Starbucks sign at Shibuya Starbucks. Self-published work|Files with coordinates missing SDC location of creation|Shibuya Scramble Square at night",
+   "lat": 35.659714,
+   "lon": 139.70025,
+   "found_by": "search",
+   "thumb_source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Shibuya_Starbucks.jpg/500px-Shibuya_Starbucks.jpg"
+  }
+ ]
+}

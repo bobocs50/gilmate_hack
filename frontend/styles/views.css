@@ -1,0 +1,250 @@
+/* Parts adapted from Mercature by Glendon Chin (MIT), github.com/glendonC/mercature, src/guide/guide-screen.css, src/home/Home.css, src/home/search.css, src/ui/chat.css, src/preparation/reveal.css: see THIRD_PARTY.md. */
+/*
+  views.css: where things sit. One screen: the map fills it, the guide is docked at its bottom, and what the
+  guide's line is about (a place, a list, the route note) opens just above the line with her numbered choices
+  beside it. The room around the panels lets presses through to the map. One breakpoint: 700 px.
+*/
+.stage { position: relative; height: 100svh; min-height: 420px; overflow: clip; isolation: isolate; --bar-h: 64px; --edge: clamp(16px, 4vw, 67px); }
+.content { position: absolute; z-index: 5; inset: 0; pointer-events: none; }
+.screen { position: absolute; inset: 0; pointer-events: none; }
+.screen > * { pointer-events: auto; }
+
+/* ---- The dock: the guide's bubble at the bottom, her choices directly above it ---- */
+.dock {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  --dock-w: min(440px, 100vw - 24px);
+  width: var(--dock-w);
+  margin-inline: auto;
+  padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+  pointer-events: none;
+}
+.dock > * { pointer-events: auto; }
+.work { display: flex; flex: 0 1 auto; flex-direction: column; min-height: 0; pointer-events: none; }
+.work > * { pointer-events: auto; }
+/* Her choices wait until the guide has said its sentence, then rise once */
+.dock:not([data-ready]) .work-actions { visibility: hidden; }
+.dock[data-ready] .work-actions { animation: rise var(--motion-panel) var(--ease-out) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+/* What the line is about (a place, the list, the note): a narrow column at the left edge, from under the top
+   bar to above the bottom, scrolling inside. Nothing is ever put over the middle of the map. */
+.work-content {
+  position: fixed;
+  left: calc(16px + env(safe-area-inset-left, 0px));
+  top: calc(var(--bar-h) + 10px);
+  width: 348px;
+  max-height: calc(100svh - var(--bar-h) - 46px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  border-radius: var(--radius-panel);
+  animation: rise var(--motion-panel) var(--ease-out) both;
+}
+.work-content::-webkit-scrollbar { display: none; }
+/* The guide beside its bubble; her field in the row under it */
+.dialogue { flex: none; display: grid; grid-template-columns: var(--companion) minmax(0, 1fr); gap: 8px 10px; align-items: end; }
+.dialogue > .guide-avatar { grid-column: 1; grid-row: 1; justify-self: center; }
+.dialogue > .guide-line { grid-column: 2; grid-row: 1; justify-self: start; min-width: min(240px, 100%); animation: rise var(--motion-panel) var(--ease-out) both; }
+.dialogue > .composer, .dialogue > .step-dots { grid-column: 2; grid-row: 2; }
+/* A wide screen: the bubble is as wide as its words and stands on the screen's centre line, the guide just
+   left of it and not counted in the centring; the choices are a narrow stack on the same line */
+@media (min-width: 700px) {
+  .dock { --dock-w: min(816px, 100vw - 24px); padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)); }
+  /* With a card in the left column the dock stays clear of it */
+  .dock:has(.work-content) { --dock-w: min(816px, 100vw - 776px); }
+  .dialogue { grid-template-columns: 1fr auto 1fr; gap: 8px 12px; }
+  .dialogue > .guide-avatar { grid-column: 1; justify-self: end; }
+  .dialogue > .guide-line { grid-column: 2; justify-self: center; min-width: min(280px, 100%); max-width: min(640px, var(--dock-w) - 2 * (var(--companion) + 12px)); }
+  .dialogue > .composer { grid-column: 2; justify-self: center; width: 100%; min-width: min(320px, var(--dock-w) - 2 * (var(--companion) + 12px)); }
+  .dialogue > .step-dots { grid-column: 2; }
+  .work-actions { width: min(320px, 100%); margin-inline: auto; }
+}
+/* A window too narrow for the column and the centred guide: guide and bubble move right of the column */
+@media (min-width: 700px) and (max-width: 1239px) {
+  .dock:has(.work-content) { --dock-w: min(440px, 100vw - 396px); --companion: 44px; left: 380px; right: 16px; margin-inline: 0; }
+  .dock:has(.work-content) .dialogue { grid-template-columns: var(--companion) minmax(0, 1fr); }
+  .dock:has(.work-content) .dialogue > .guide-avatar { justify-self: center; }
+  .dock:has(.work-content) .dialogue > .guide-line { justify-self: start; min-width: 0; max-width: none; }
+  .dock:has(.work-content) .dialogue > .composer { min-width: 0; }
+  .dock:has(.work-content) .work-actions { width: auto; margin-inline: 0; }
+}
+
+/* ---- 1. Landing: the words on the left, the map on the right ---- */
+/* One left edge for the wordmark and the column; one big thing, then the field, then the last run */
+.landing-main { position: absolute; left: var(--edge); top: 50%; display: grid; justify-items: start; gap: 0; width: min(560px, 46vw); transform: translateY(-58%); }
+.landing h1 { font-size: clamp(34px, 3.9vw, 56px); font-weight: 300; letter-spacing: -0.05em; line-height: 1.05; text-wrap: balance; }
+.landing h1 span { display: inline; }
+.landing h1:lang(ko) { letter-spacing: -0.03em; word-break: keep-all; }
+/* The field is 48 high; its button is a glass circle of its own beside it */
+/* It holds a sentence or three and grows with them; the button stands at its bottom right */
+.search { position: relative; align-items: stretch; width: min(504px, 100% - 56px); min-height: 48px; margin-top: 26px; padding: 0 12px 0 18px; border-radius: 14px; }
+.search textarea { flex: 1; min-width: 0; min-height: 48px; margin: 0; padding: 13px 0; border: 0; background: none; outline: none; resize: none; overflow: hidden; font-size: 15px; line-height: 1.45; letter-spacing: -0.005em; caret-color: var(--on-dark); }
+.search textarea::placeholder { color: rgb(var(--on-dark-rgb) / 0.72); opacity: 1; }
+.search textarea:lang(ko) { word-break: keep-all; }
+.search .composer-send { position: absolute; left: calc(100% + 8px); bottom: 0; width: 48px; height: 48px; color: var(--on-dark); }
+.search .composer-send:disabled { color: var(--on-dark); }
+.search .composer-send::before, .search .composer-send:disabled::before { inset: 0; background: var(--glass-charcoal); -webkit-backdrop-filter: var(--glass-filter); backdrop-filter: var(--glass-filter); box-shadow: var(--glass-charcoal-edge), var(--shadow-float); }
+.search .composer-send:focus-visible::before { outline-color: var(--ink); }
+.search:focus-within .composer-send:disabled { color: var(--on-dark); }
+.search:focus-within .composer-send:disabled::before { background: var(--glass-charcoal); }
+.start-label { margin: 56px 0 10px 4px; font-size: var(--font-xs); font-weight: 500; color: var(--muted); }
+/* A run that can be opened: its photo with no box, a soft rounded shape that fades into the ground, washed
+   until she reaches for it, and only the small dark label crisp on it */
+.ready-card { position: relative; display: block; width: 273px; max-width: 100%; text-align: start; transition: translate var(--hover-time) var(--ease-out), transform var(--press-time) var(--ease-out); }
+.ready-card[data-photo] { aspect-ratio: 1.9; }
+.ready-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* The shape is drawn here: a rounded rectangle through a blur. No image file. */
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 190 100' preserveAspectRatio='none'%3E%3Cfilter id='f' x='-20%25' y='-20%25' width='140%25' height='140%25'%3E%3CfeGaussianBlur stdDeviation='5 3'/%3E%3C/filter%3E%3Crect x='12' y='7.5' width='166' height='85' rx='26' filter='url(%23f)'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 190 100' preserveAspectRatio='none'%3E%3Cfilter id='f' x='-20%25' y='-20%25' width='140%25' height='140%25'%3E%3CfeGaussianBlur stdDeviation='5 3'/%3E%3C/filter%3E%3Crect x='12' y='7.5' width='166' height='85' rx='26' filter='url(%23f)'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  opacity: 0.52;
+  filter: saturate(0.7);
+  transition: opacity 240ms var(--ease-out), filter 240ms var(--ease-out);
+}
+.ready-card:focus-visible img { opacity: 0.95; filter: saturate(1); }
+.ready-label { position: relative; display: inline-grid; gap: 1px; margin: 0; padding: 8px 12px; border-radius: 12px; background: var(--glass-charcoal); -webkit-backdrop-filter: var(--glass-filter); backdrop-filter: var(--glass-filter); box-shadow: var(--glass-charcoal-edge); color: var(--on-dark); transition: background-color var(--hover-time) var(--ease-out); }
+.ready-card[data-photo] .ready-label { position: absolute; left: 12px; bottom: 12px; }
+.ready-name { font-size: 14px; font-weight: 500; line-height: 1.2; }
+.ready-sub { font-size: var(--font-xs); line-height: 1.2; opacity: 0.72; }
+/* One card per area, side by side */
+.ready-row { display: flex; gap: 8px; width: 100%; min-width: 0; }
+.ready-row .ready-card { min-width: 0; }
+.ready-card:active:not(:disabled) { transform: scale(var(--press-scale)); }
+.ready-card:disabled { opacity: 0.5; }
+.ready-card:focus-visible { outline-color: var(--ink); outline-offset: 4px; border-radius: 12px; }
+/* The map shows on the right; on the left the ground stays plain for the words */
+.stage[data-step="landing"] .stage-map::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--ground) 32%, color-mix(in srgb, var(--ground) 70%, transparent) 46%, transparent 58%); pointer-events: none; }
+
+/* ---- 2. The map being made: the title above the map, the guide telling one step at a time ---- */
+.making-head { position: absolute; top: calc(30px + env(safe-area-inset-top, 0px)); left: 50%; display: grid; justify-items: center; gap: 2px; width: max-content; max-width: calc(100% - 32px); transform: translateX(-50%); text-align: center; pointer-events: none; }
+.making-head h1 { font-size: 26px; font-weight: 500; letter-spacing: 0.14em; line-height: 1.1; text-transform: uppercase; margin-right: -0.14em; }
+.making-where { font-size: 14px; color: var(--muted); }
+.making-counts { margin-top: 2px; font-size: var(--font-xs); font-variant-numeric: tabular-nums; }
+/* The ground stays plain behind the title: the map begins under it */
+.stage[data-step="making"] .stage-map::after { content: ""; position: absolute; inset: 0 0 auto; height: 190px; background: linear-gradient(var(--ground) 62%, transparent); pointer-events: none; }
+.stage[data-step="making"] .bar { background: none; }
+.stage[data-step="making"] .map-credit { display: none; }
+/* Skip: a quiet link at the bottom right */
+.making-skip { position: absolute; right: calc(12px + env(safe-area-inset-right, 0px)); bottom: calc(34px + env(safe-area-inset-bottom, 0px)); color: var(--ink); }
+.making-skip:focus-visible { outline-color: var(--ink); }
+.dialogue > .step-dots { align-self: start; }
+/* While the agents work the bubble holds exactly one line */
+.guide-line:has(.line-words[data-working]) { max-width: none; white-space: nowrap; }
+/* One small dot per step under the bubble: done, now, still to come */
+.step-dots { grid-column: 2; grid-row: 2; display: flex; gap: 6px; padding: 0 18px; }
+.step-dots i { width: 6px; height: 6px; border-radius: 50%; background: rgb(var(--ink-rgb) / 0.2); }
+.step-dots i[data-state="done"] { background: var(--ink); }
+.step-dots i[data-state="now"] { background: var(--ground); box-shadow: inset 0 0 0 1.5px var(--ink); }
+
+/* ---- 3. A place: its photos first, then what it is ---- */
+.spot { display: grid; gap: 8px; padding: 10px 12px 12px; font-size: var(--font-s); line-height: 1.4; }
+.spot .title { font-size: var(--font-l); letter-spacing: -0.02em; }
+.spot-kind { display: flex; flex-wrap: wrap; align-items: center; gap: 0 5px; font-size: var(--font-xs); color: var(--ui-muted); }
+.spot-kind .chip { color: var(--ui-muted); font-weight: 400; }
+/* Its rating as one short line, when a source gave one */
+.spot-rating { font-size: var(--font-xs); line-height: 1.3; color: var(--ui-ink); font-variant-numeric: tabular-nums; }
+.spot .rule { height: 0; margin: 2px 0; border: 0; border-top: var(--hair-width) solid var(--ui-hair-strong); }
+/* The photos: one at a time and crisp inside the card, no feather and no wash; next and previous on it */
+.photos { display: grid; }
+.photo-frame { position: relative; margin: -2px -4px 0; }
+.photo-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+.photo-track::-webkit-scrollbar { display: none; }
+.photo-track:focus-visible { outline: 2px solid var(--ui-focus); outline-offset: -2px; }
+.photo { flex: 0 0 100%; aspect-ratio: 16 / 10; scroll-snap-align: start; scroll-snap-stop: always; }
+.photo img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-s); -webkit-user-drag: none; user-select: none; }
+.photo-broken, .photo-none { display: flex; align-items: center; gap: 8px; font-size: var(--font-s); color: var(--ui-muted); }
+.photo-broken { justify-content: center; height: 100%; }
+.photo-none { padding: 12px 2px 4px; }
+.photo-broken svg, .photo-none svg { width: 18px; height: 18px; flex: none; }
+.photo-nav { position: absolute; top: 50%; isolation: isolate; display: grid; place-items: center; width: 44px; height: 44px; margin-top: -22px; color: var(--ui-ink); transition: transform var(--press-time) var(--ease-out), opacity 150ms ease; }
+.photo-nav::before { content: ""; position: absolute; z-index: -1; inset: 7px; border-radius: 50%; background: var(--glass-charcoal); box-shadow: var(--glass-charcoal-edge); }
+.photo-nav[data-side="prev"] { left: 6px; }
+.photo-nav[data-side="next"] { right: 6px; }
+.photo-nav svg { width: 17px; height: 17px; }
+.photo-nav:disabled { opacity: 0; pointer-events: none; }
+.photo-nav:active { transform: scale(var(--press-scale)); }
+.photo-nav:focus-visible { outline-color: var(--ui-focus); outline-offset: -6px; }
+.photo-count { position: absolute; right: 8px; bottom: 8px; padding: 1px 8px; border-radius: 999px; background: var(--glass-charcoal); color: var(--ui-ink); font-size: var(--font-xs); font-variant-numeric: tabular-nums; }
+.spot-head { display: grid; gap: 3px; }
+.spot-text { font-size: 14px; line-height: 1.4; overflow-wrap: anywhere; }
+.spot-text[data-none] { color: var(--ui-muted); }
+/* "Still true?": what is remembered, as a short list */
+.dock .remembered { display: grid; gap: 0; padding: 10px 14px; }
+.dock .remembered > div { display: grid; grid-template-columns: 104px 1fr; gap: 2px 12px; align-items: baseline; padding: 7px 0; border-top: var(--hair-width) solid var(--ui-hair); }
+.dock .remembered dt { font-size: var(--font-xs); color: var(--ui-muted); }
+.dock .remembered dd { font-size: var(--font-s); font-weight: 500; line-height: 1.3; overflow-wrap: anywhere; }
+.dock .remembered dd small { display: block; font-size: var(--font-xs); font-weight: 400; color: var(--ui-muted); }
+.dock .remembered > .meta { padding-bottom: 6px; }
+
+/* ---- 4. The route: its note, its list, and one stop at a time ---- */
+/* The note is light, as paper: the sentences, the two languages under them, and Copy */
+.note { display: grid; border-radius: var(--radius-m); background: var(--glass-light); -webkit-backdrop-filter: var(--glass-filter); backdrop-filter: var(--glass-filter); box-shadow: var(--glass-light-edge), var(--shadow-lift); color: var(--ink); --ui-focus: var(--ink); }
+/* About eight lines; the rest fades out at the bottom and scrolls. The fade lifts at the end of the text. */
+.note-text { display: grid; gap: 4px; max-height: 190px; padding: 12px 14px 0; overflow-y: auto; overscroll-behavior: contain; font-size: 15px; line-height: 1.5; overflow-wrap: anywhere; user-select: text; scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent); }
+.note-text::-webkit-scrollbar { display: none; }
+.note-text[data-end] { -webkit-mask-image: none; mask-image: none; }
+.note-text > :last-child { padding-bottom: 10px; }
+.note-text:lang(ko) { word-break: keep-all; }
+.note-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 8px 4px 6px; }
+.note-langs { display: flex; }
+.note-lang { min-width: 44px; min-height: 44px; padding: 0 8px; border-radius: var(--radius-s); color: var(--muted); font-size: var(--font-xs); font-weight: 500; }
+.note-lang[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1.5px; }
+.note-copy { display: inline-flex; align-items: center; gap: 7px; min-height: 36px; padding: 0 14px; border-radius: 999px; background: var(--ink); color: var(--on-dark); font-size: var(--font-s); font-weight: 500; transition: transform var(--press-time) var(--ease-out); }
+.note-copy svg { width: 16px; height: 16px; }
+.note-copy:active { transform: scale(var(--press-scale)); }
+
+@media (hover: hover) and (pointer: fine) {
+  .note-lang:hover { background: rgb(var(--ink-rgb) / 0.05); }
+  .ready-card:hover:not(:disabled) { translate: 0 -3px; }
+  .ready-card:hover:not(:disabled) img { opacity: 0.95; filter: saturate(1); }
+  .ready-card:hover:not(:disabled) .ready-label { background: var(--glass-hover); }
+  .search .composer-send:hover::before, .search .composer-send:hover:not(:disabled)::before { background: var(--glass-hover); translate: 0 var(--lift); box-shadow: var(--glass-charcoal-edge), var(--shadow-lift); }
+}
+
+/* ---- Phone: the same parts, one under the other; the map keeps a strip above them ---- */
+@media (max-width: 699px) {
+  .bar { min-height: 56px; gap: 6px; padding-left: calc(12px + env(safe-area-inset-left, 0px)); padding-right: calc(8px + env(safe-area-inset-right, 0px)); }
+  .bar > .wordmark { font-size: 19px; }
+  .bar > .seg#view-tabs { position: static; translate: none; }
+  .seg-item { min-width: 36px; padding: 0 8px; font-size: 13px; }
+  .dock { padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)); }
+  .dock { width: calc(100% - 20px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px)); gap: 6px; }
+  /* On a phone the column is a sheet at the bottom, at most half the screen with what stands under it */
+  .work { gap: 6px; }
+  .work-content { position: static; width: auto; max-height: 46svh; }
+  /* Yes and No side by side, so the photo keeps its room */
+  .choices[data-row] { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .choices[data-row] .choice { padding: 0 8px 0 6px; gap: 6px; font-size: var(--font-xs); }
+  .dialogue { gap: 6px 8px; }
+  .dialogue > .guide-line { padding: 11px 14px; justify-self: stretch; }
+  .photo { aspect-ratio: 2 / 1; }
+  .landing-main { inset: calc(var(--bar-h) + 30px) 16px auto; width: auto; transform: none; }
+  .landing h1 { font-size: clamp(30px, 7.8vw, 40px); }
+  .search { margin-top: 18px; }
+  .search textarea { font-size: 16px; }
+  .start-label { margin-top: 28px; }
+  .ready-card { width: min(286px, 80%); }
+  /* The map lies behind the card here, so the photo is not washed: a washed photo would let it show through */
+  .ready-card img { opacity: 0.92; filter: saturate(0.85); }
+  .stage[data-step="landing"] .stage-map::after { background: linear-gradient(var(--ground) 56%, color-mix(in srgb, var(--ground) 55%, transparent) 62%, transparent 68%); }
+  /* Skip stands in the free top corner, clear of the guide's bubble */
+  .making-skip { top: calc(46px + env(safe-area-inset-top, 0px)); bottom: auto; }
+  .making-head { top: calc(56px + env(safe-area-inset-top, 0px)); }
+  .making-head h1 { font-size: 22px; }
+  .note-text { max-height: min(190px, 46svh - 56px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work, .dialogue > .guide-line, .dock[data-ready] .work-actions { animation: none; }
+  .ready-card, .ready-card img { transition: none; }
+}

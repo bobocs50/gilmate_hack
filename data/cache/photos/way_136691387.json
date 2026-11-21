@@ -1,0 +1,30 @@
+{
+ "place": "way/136691387",
+ "name": "Mega Don Quijote",
+ "fetched_at": "2026-11-21T11:33:19",
+ "source": "Wikimedia Commons",
+ "asked": [
+  "photos taken within 150 m that name the place",
+  "search: \"Mega Don Quijote\" Shibuya"
+ ],
+ "photos": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Shibuyamegadonkihonten.jpg",
+   "thumb_url": "data/photos/way_136691387_1.jpg",
+   "width": 3456,
+   "height": 4608,
+   "credit": "WhisperToMe",
+   "licence": "CC0",
+   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Shibuyamegadonkihonten.jpg",
+   "taken_at": null,
+   "title": "File:Shibuyamegadonkihonten.jpg",
+   "named": "File:Shibuyamegadonkihonten.jpg Shibuya Mega Don Quijote HQ",
+   "about": "File:Shibuyamegadonkihonten.jpg Shibuya Mega Don Quijote HQ Taken with Samsung Galaxy A8 Star|CC-Zero|Self-published work|Uploaded with Mobile/Android|Uploaded with Mobile/Android (Nov 2017-Aug 2019)|Files with coordinates missing SDC location of creation|Mega Don Quijote Shibuya Honten Store",
+   "lat": 35.66041733,
+   "lon": 139.69799694,
+   "found_by": "nearby",
+   "thumb_source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Shibuyamegadonkihonten.jpg/500px-Shibuyamegadonkihonten.jpg"
+  }
+ ]
+}

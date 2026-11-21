@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Knowledge graph · development sample</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/know.css">
+  <style>
+    /* The knowledge graph alone, on a development sample, for layout work and for frontend/dev/know-check.py.
+       know-lab.html?dev=1 to ?dev=4 are the page's samples; &lang=ko turns it Korean.
+       "Forget this" is SIMULATED here: the fact is taken out of the sample in this tab, nothing is sent anywhere. */
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; }
+    body { display: grid; grid-template-rows: auto minmax(0, 1fr); background: var(--paper); color: var(--ink); font-size: 13px; }
+    .lab-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 6px 12px; border-bottom: 0.5px solid rgb(var(--ink-rgb) / 0.14); }
+    .lab-bar b { font-weight: 550; }
+    .lab-bar span { color: var(--muted); font-size: 12px; }
+    .lab-bar a { padding: 2px 8px; border-radius: 999px; color: inherit; font-size: 12px; text-decoration: none; box-shadow: inset 0 0 0 0.5px rgb(var(--ink-rgb) / 0.3); }
+    .lab-bar a[aria-current] { background: var(--ink); color: var(--on-dark); }
+    #lab-host { position: relative; min-height: 0; display: flex; }
+  </style>
+</head>
+<body>
+  <div class="lab-bar">
+    <b>Knowledge graph</b>
+    <span id="lab-note">Development sample, not a real person. Forgetting is simulated in this tab only.</span>
+    <span id="lab-links"></span>
+  </div>
+  <div id="lab-host"></div>
+  <script type="module">
+    import { createKnow } from "../js/know.js";
+    import { readMemory, findFact, factName, localDay, LIMIT } from "../js/memory.js";
+    import { setLang } from "../js/words.js";
+
+    const params = new URLSearchParams(location.search);
+    const dev = ["1", "2", "3", "4"].includes(params.get("dev")) ? params.get("dev") : "1";
+    let lang = params.get("lang") === "ko" ? "ko" : "en";
+    const file = dev === "1" ? "shape-sample.json" : `shape-sample-${dev}.json`;
+
+    const links = document.getElementById("lab-links");
+    for (const n of ["1", "2", "3", "4"]) {
+      const a = document.createElement("a");
+      a.href = `?dev=${n}${lang === "ko" ? "&lang=ko" : ""}`;
+      a.textContent = `sample ${n}`;
+      if (n === dev) a.setAttribute("aria-current", "true");
+      links.append(a, " ");
+    }
+    const other = document.createElement("a");
+    other.id = "lab-lang";
+    other.href = `?dev=${dev}${lang === "ko" ? "" : "&lang=ko"}`;
+    other.textContent = lang === "ko" ? "EN" : "한국어";
+    links.append(other);
+
+    const run = await (await fetch(file)).json();
+    const app = { memory: readMemory(run), selected: null, confirm: null, busy: false, message: null };
+    const today = /^\d{4}-\d{2}-\d{2}$/.test(run._today ?? "") ? run._today : localDay();
+
+    const know = createKnow(document.getElementById("lab-host"), null, {
+      select(id) { Object.assign(app, { selected: id, confirm: null, message: null }); draw(); },
+      askForget(id) { app.confirm = id; draw(); },
+      // Simulated: the real page sends {"step": "forget"} to the agent and draws what the agent's memory says after it.
+      forget(id) {
+        const fact = findFact(app.memory, id);
+        if (!fact) return;
+        app.memory = {
+          facts: app.memory.facts.filter((row) => row.id !== id),
+          feedback: fact.key === LIMIT ? app.memory.feedback.filter((row) => row.verdict !== "too_far") : app.memory.feedback,
+        };
+        Object.assign(app, { selected: null, confirm: null, message: { kind: "done", text: `Simulated in this sample: ${factName(fact)} is taken out.` } });
+        draw();
+      },
+    });
+
+    function draw() {
+      setLang(lang);
+      document.documentElement.lang = lang;
+      know.render({
+        memory: app.memory, memoryNote: "This development sample holds no memory.", today, lang, source: { kind: "dev" }, model: run.spatial_model ?? null,
+        selected: app.selected, confirm: app.confirm, busy: app.busy, message: app.message, canForget: true, forgetOff: "",
+      });
+    }
+    draw();
+  </script>
+</body>
+</html>
