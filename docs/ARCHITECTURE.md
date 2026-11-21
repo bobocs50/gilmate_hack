@@ -218,3 +218,65 @@ An area is one row in `gilmate/areas.py`. Every tool first switches to the area 
 ## The phone handoff
 
 The final map offers a QR code (`js/handoff.js`). Its link opens `walk.html` with the route in the link itself, after the `#`, cut down to what the walk needs and deflated (`js/walk/link.js`). So the phone needs only the page folder, which `scripts/demo.sh --phone` serves to the Wi-Fi as static files. "Fine" / "Too far" are kept on the phone, and reach the agents only when the agent server listens on the network too (`--phone-live`).
+
+## Moved from the README
+
+The README was cut to a one-minute read on 21 Nov 2026. These parts of it are kept here word for word.
+
+### What you do, in full
+
+1. **Type where you want to go.** The text field comes filled in with the demo's sentence: "My mom wants to visit Shibuya in Tokyo. She loves sushi. Stairs and steep hills are hard for her, and she can walk about 1 km before she needs to sit down. Show us the sights and the best-rated sushi places." Python reads three things from these words: the area; the food you named, so the search for places to eat asks for it and those places come first; and how you walk, here stairs avoided, a walking limit of 1000 m and sitting often. Hills it cannot check, and the guide says so. For a place without map data it says so and offers nothing.
+2. **Watch the map being made.** One line tells you what the agents are doing: searching the web, looking places up on the map, fetching photos, checking each fact against its source.
+3. **Choose places.** One place at a time on a tilted street map, with real photos, what it is, its facts with their sources and how its entrance is tagged. Yes or No. Two to five Yes places make a route.
+4. **Tell the guide about yourself.** One free text in your own words: how far you walk, stairs, how often you need to sit. Only what your words left open is asked again. When your first sentence already said it, nothing is asked and the guide shows what it understood.
+5. **Read the route.** The order, each walk with its distance, stairs and benches, and each warning, written out in sentences, then drawn on the map.
+6. **Take it with you.** A QR code on the final map opens the route on your phone, one stop at a time. After each walk you answer "Fine" or "Too far".
+7. **See what it remembers.** The Knowledge graph tab fills as you decide. Every fact shows where it came from and what it changes, and you can forget any of them.
+
+### What was checked
+
+| Check | Result |
+| --- | --- |
+| `scripts/drills.sh`: eighteen drills, one per behaviour of the guards, the plain Python and the page's list of areas. No network, no key, no model | All passed |
+| `python3 scripts/demo_check.py`: the demo script under bash and zsh | All passed |
+| `tests/e2e/check.py --map-first`, with and without `--context`: every turn on the real agent server, real tools and guards, a scripted stand-in for the model | All passed |
+| The same turns against the real model, earlier today: four runs for Shibuya, one for Hongdae, 26 to 38 model calls each, no search | Three routes published as verified, two as partly unverified |
+| A full live run through the page with the real model, Google Places and Open-Meteo, 13:02 to 13:07, on main at `e20eabd` | Passed, with no errors |
+| The demo's sentence typed live after the last merge | Worked: about 65 s to the places, 29 s to the route |
+| `frontend/dev/check_page.py`, `know-check.py`, `walk-check.py`: the page, the knowledge graph and the phone walk in a real browser at phone and desktop size | All passed: the page check on main at 13:20 (171 steps), the other two on main at 13:25 |
+
+The free checks were run for this file on main as it was at 13:25 on 2026-11-21. The live runs are the operator's.
+
+The saved runs, counted from the files:
+
+| | Shibuya | Hongdae |
+| --- | --- | --- |
+| Places offered | 12: 4 sights, 4 shops, 4 places to eat | 10: 3 sights, 4 shops, 3 places to eat |
+| Photos of the places themselves | 26 | 0 |
+| Photos taken in the area | 1381: 418 street-level, 963 from Wikimedia Commons | 139: 23 street-level, 116 from Wikimedia Commons |
+| Benches on the map | 11 | 19 |
+| Route | 4 stops; walks of 345 m, 450 m and 375 m, all flagged as longer than the 300 m asked for | 4 stops; walks of 457 m, 135 m and 340 m, two flagged |
+| Review | Partly unverified after two reviews, two open points | Verified after two reviews |
+| Ratings shown | None: recorded before Google Places was merged, and no web page stated one | None, for the same reason |
+
+### Limits
+
+- The full live run through the page was made on main at `e20eabd`. The merges after it (the security pass, the knowledge graph that starts empty, Hongdae on the page, the panel look with the weather mark) were checked with the free drills. After the last merge, which lets the typed sentence shape the visit, the demo's sentence was typed live once more and worked.
+- The Shibuya card under "Last runs" replays the run saved at 12:21, which was made with a shorter sentence ("I want to visit Shibuya in Tokyo") and before the typed sentence shaped the visit. It was not replaced: it shows no sushi-first order, no rating and no weather of its own.
+- Hongdae on the page was walked in a browser on its saved run only, never against the live agents.
+- Hongdae's data is thin: no photo of a place itself, street-level photos all from 2019, nearly every entrance "access unknown", 5 of 10 places without a description.
+- The saved runs were recorded before the weather and Google Places were merged, so they hold no weather and no rating. With a Google key the place card shows Google's rating line ("4.9 · 17,274 ratings on Google") when Google returned one. The free checks cover the weather with made-up forecasts and Google Places with hand-written fixtures; the live run above used both for real.
+- The weather mark on a saved run is not from that run: the page reads today's forecast for the area straight from Open-Meteo in your browser (only the area's coordinates are sent), and shows nothing when that does not answer.
+- The page starts every visit with an empty knowledge graph and does not ask "Still true?" for answers remembered from an earlier visit. The server still keeps them.
+- The companion and typed Yes / No answers work on the server. The page has no field that sends them.
+- The climb on each walk is built and switched off: the heights it reads include buildings and were wrong on flat walks in Shibuya.
+- Two sessions of different areas whose tool calls run at the very same moment are not protected from each other.
+- The Korean the scout writes is a translation nobody proofread.
+- Mapillary's photo links expire after some days.
+- Nothing was measured on site. "No stairs mapped" means the map shows none on that path.
+
+### Weather and Google Places
+
+**Weather.** When a route is built, Python turns Open-Meteo's forecast into a fixed list of dangers: rain, thunderstorm, heat, UV, wind, cold, snow, ice, darkness, bad air. No model judges the weather. Rain likely or great heat lowers your walking limit by a quarter for this route, walks over it and walks that would end after sunset are flagged, and the route note says one line about it with its source. When the source does not answer, the route is built as without it and the log says so. The page shows the day's weather as a small mark in the top bar ("18° · Sunny") and as a step of the guide's narration.
+
+**Google Places.** `gilmate/places_server.py` is a small MCP server over stdio that wraps the Places API (New) and only reads. The scout gets it through ADK's `McpToolset` when `GOOGLE_API_KEY` is set. A record is attached to a place only when the names agree and the points are at most 80 m apart; the map stays the truth for name, coordinates, access and routing. Without the key nothing changes.
