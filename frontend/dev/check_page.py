@@ -578,6 +578,17 @@ def main():
             check(0 < drawn < in_data / 2, f"saved run: only the buildings near the route are drawn ({drawn} of {in_data})")
             check(page.locator(".map-haze").count() == 1 and page.locator(".map-haze").is_visible(), "saved run: the far part of the final map fades into the ground")
             shots.take("final-map")
+            # Pressing a bench, a stop or a walk on the final map opens one card with the photo taken nearest to it, or says there is none.
+            for what, selector, words in (("a bench", '.map-pill[data-kind="bench"][data-shown]', "Bench"), ("a stop", ".map-stop[data-look]", None), ("a walk", '.map-pill[data-kind="long"][data-shown], .map-pill[data-kind="leg"][data-shown]', "Walk to")):
+                page.locator(selector).first.click()
+                card = page.locator(".map-look")
+                shown = card.count() == 1 and (card.locator(".map-look-photo").count() == 1 or "No photo found" in card.inner_text())
+                box = card.bounding_box() if card.count() else None
+                check(shown and (words is None or words in card.inner_text()) and box and box["x"] < 40, f"saved run: pressing {what} on the final map opens one card at the left with its photo ({card.inner_text() if card.count() else 'no card'!r})")
+                if what == "a bench":
+                    shots.take("bench-card")
+            page.keyboard.press("Escape")
+            check(page.locator(".map-look").count() == 0 and pressable(page) == ["start-walk"], "saved run: Escape closes the card and the final map is as it was")
         print("4b. the dangers of the day, made up in sample 2")
         weather_walk(browser, base, folder, errors)
         print("5. the live path against a stand-in")

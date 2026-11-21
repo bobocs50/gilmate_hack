@@ -153,3 +153,15 @@
 /* The landing backdrop is the saved route, still: no words, the stops as small dots */
 .stage[data-step="landing"] .map-pill, .stage[data-step="landing"] .map-dot { display: none; }
 .stage[data-step="landing"] .map-stop { width: 14px; height: 14px; margin: -7px 0 0 -7px; background: var(--mark); font-size: 0; box-shadow: 0 0 0 1.5px var(--mark-ring), 0 1px 4px rgb(var(--shade-rgb) / 0.22); }
+
+/* A mark on the route can be pressed: it opens one small card in the left column with the real photo taken nearest to it. */
+.map-pill[data-look], .map-dot[data-look], .map-stop[data-look] { pointer-events: auto; cursor: pointer; transition: scale var(--press-time) var(--ease-out); }
+.map-pill[data-look]:active, .map-dot[data-look]:active, .map-stop[data-look]:active { scale: var(--press-scale); }
+.map-look { position: absolute; z-index: 5; top: 84px; left: 16px; width: min(360px, calc(100% - 32px)); padding: 10px; border-radius: 16px; background: var(--panel-dark); color: var(--on-dark); box-shadow: 0 4px 16px rgb(var(--shade-rgb) / 0.24); cursor: default; }
+.map-look-photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; background: rgb(255 255 255 / 0.08); }
+.map-look-none { margin: 0; padding: 40px 8px; text-align: center; border-radius: 10px; background: rgb(255 255 255 / 0.08); }
+.map-look-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; font-size: 13px; }
+.map-look-step { min-width: 44px; min-height: 44px; border: 0; border-radius: 10px; background: none; color: inherit; font-size: 24px; cursor: pointer; transition: transform var(--press-time) var(--ease-out); }
+.map-look-step:active { transform: scale(var(--press-scale)); }
+.map-look-title { margin: 8px 2px 2px; font-size: 16px; }
+.map-look-facts { margin: 2px; font-size: 13px; opacity: 0.75; }

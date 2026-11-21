@@ -14,7 +14,7 @@ import { el, svg, clear } from "./dom.js";
 import { hazardWord, metres } from "./text.js";
 import { t } from "./words.js";
 import { icon } from "./parts.js";
-import { orderedStops, legFrom, legLine } from "./model.js";
+import { orderedStops, legFrom, legLine, legBenches, stopHazards } from "./model.js";
 
 const SQUASH = 0.6;        // vertical axis, gives the leaning look
 const HEIGHT_FACTOR = 1.15;
@@ -226,6 +226,7 @@ export function createMap(host) {
     }
     clear(routeLayer);
     clear(routeLabels);
+    closeLook();
     routeMarks = [];
     marks = [...spotMarks, ...placeMarks];
     legBoxes = new Map();
@@ -233,6 +234,22 @@ export function createMap(host) {
     routeM = [];
     if (!project || !model) { if (project) { keepNear(); apply(true); } return; }
     const addMark = (mark) => routeMarks.push(newMark(routeLabels, mark));
+    // What pressing a mark on the route shows: the real photos taken near it, and the facts the route has. Nothing made up.
+    const stopLook = (stop) => {
+      const facts = [];
+      const access = stopHazards(model, stop).some((hazard) => hazard.kind === "unknown_access") ? t("Access unknown") : stop.access === "yes" ? t("Step-free entrance mapped") : null;
+      if (access) facts.push(access);
+      return { title: [stop.name ?? t("Name unknown"), stop.category ? t(stop.category) : null].filter(Boolean).join(" · "), facts, photos: stop.photos };
+    };
+    const legLook = (leg) => {
+      if (!leg) return null;
+      const to = stops.find((item) => item.id === leg.to);
+      const facts = [];
+      if (leg.stairs) facts.push(leg.stairs === "none_mapped" ? t("No stairs mapped") : leg.stairs === "unknown" ? t("Stairs unknown") : `${t("Stairs")}: ${leg.stairs}`);
+      facts.push(`${legBenches(model, leg).length} ${t("benches on the walk")}`);
+      const title = `${t("Walk to")} ${to?.name ?? t("Name unknown")}` + (Number.isFinite(Number(leg.distance_m)) && leg.distance_m !== null ? ` · ${metres(leg.distance_m)}` : "");
+      return { title, facts, photos: leg.photos };
+    };
 
     const stops = orderedStops(model);
     const place = (lon, lat) => {
@@ -264,12 +281,12 @@ export function createMap(host) {
           if (straight) {
             const first = points[0];
             const last = points[points.length - 1];
-            addMark({ at: [(first[0] + last[0]) / 2, (first[1] + last[1]) / 2], stopId: stop.id, rank: 2, kind: "straight", dot: false, reach: 0, text: t("Not routed") });
+            addMark({ look: legLook(leg), at: [(first[0] + last[0]) / 2, (first[1] + last[1]) / 2], stopId: stop.id, rank: 2, kind: "straight", dot: false, reach: 0, text: t("Not routed") });
           } else if (Number.isFinite(Number(leg.distance_m)) && leg.distance_m !== null
             && !(model.hazards ?? []).some((hazard) => hazard.leg_id === leg.id && hazard.kind === "long_walk")) {
             // The leg's own distance, as the route tool returned it, written half-way along the line.
             // A long walk's warning already carries that distance, so it is not written twice.
-            addMark({ at: halfWay(points), stopId: stop.id, rank: 2, kind: "leg", dot: false, reach: 0, text: metres(leg.distance_m) });
+            addMark({ look: legLook(leg), at: halfWay(points), stopId: stop.id, rank: 2, kind: "leg", dot: false, reach: 0, text: metres(leg.distance_m) });
           }
         }
       }
@@ -279,7 +296,7 @@ export function createMap(host) {
     stops.forEach((stop, index) => {
       const at = place(stop.lon, stop.lat);
       if (!at) return;
-      addMark({ at, stopId: stop.id, rank: 1, kind: "stop", reach: 16, marker: el("span", { class: "map-stop" }, String(index + 1)), text: stop.name ?? "Name unknown" });
+      addMark({ look: stopLook(stop), at, stopId: stop.id, rank: 1, kind: "stop", reach: 16, marker: el("span", { class: "map-stop" }, String(index + 1)), text: stop.name ?? "Name unknown" });
     });
     for (const hazard of model.hazards ?? []) {
       const leg = (model.legs ?? []).find((item) => item.id === hazard.leg_id);
@@ -293,8 +310,8 @@ export function createMap(host) {
       if (hazard.kind === "long_walk" && leg) text += ` · ${metres(leg.distance_m)}`;
       const kind = hazard.kind === "steps" ? "steps" : hazard.kind === "long_walk" ? "long" : "unknown";
       // A warning about a stop sits at the stop: it needs no dot of its own, its words go beside the stop's.
-      if (stop) addMark({ at, stopId: stop.id, rank: 2, kind, dot: false, reach: 16, text });
-      else addMark({ at, stopId: leg?.from ?? null, rank: 2, kind, text });
+      if (stop) addMark({ look: stopLook(stop), at, stopId: stop.id, rank: 2, kind, dot: false, reach: 16, text });
+      else addMark({ look: legLook(leg), at, stopId: leg?.from ?? null, rank: 2, kind, text });
     }
     // The same bench can be listed for two legs; it is one bench on the map.
     const seen = new Set();
@@ -305,16 +322,24 @@ export function createMap(host) {
       if (seen.has(key)) continue;
       seen.add(key);
       const leg = (model.legs ?? []).find((item) => item.id === bench.leg_id);
-      addMark({ at, stopId: leg?.from ?? null, rank: 3, kind: "bench", text: t("Bench") });
+      const off = Number.isFinite(Number(bench.off_route_m)) && bench.off_route_m !== null ? [`${metres(bench.off_route_m)} ${t("from the route")}`] : [];
+      addMark({ look: { title: t("Bench"), facts: off, photos: bench.photos }, at, stopId: leg?.from ?? null, rank: 3, kind: "bench", text: t("Bench") });
     }
     marks = [...spotMarks, ...placeMarks, ...routeMarks];
     keepNear();
     apply(true);
   }
 
-  function newMark(layer, { at, stopId = null, rank, kind, marker, dot = true, reach = 12, text, pill = null }) {
+  function newMark(layer, { at, stopId = null, rank, kind, marker, dot = true, reach = 12, text, pill = null, look = null }) {
     const point = marker ?? (dot ? el("span", { class: "map-dot", "data-kind": kind }) : null);
     const words = pill ?? el("span", { class: "map-pill", "data-kind": kind }, kind === "stop" ? null : el("i", { class: "map-pill-dot", "data-kind": kind }), text);
+    if (look) {
+      for (const node of [point, words]) {
+        if (!node) continue;
+        node.dataset.look = "true";
+        node.addEventListener("click", (event) => { event.stopPropagation(); showLook(look); });
+      }
+    }
     if (point) layer.append(point);
     layer.append(words);
     return { at, stopId, rank, kind, dot: point, pill: words, reach, width: 0 };
@@ -406,6 +431,46 @@ export function createMap(host) {
       dotsLayer.append(svg("circle", { class: "map-photo-dot", cx: x.toFixed(1), cy: y.toFixed(1), r: "1.1" }));
     }
   }
+
+  // One small card in the left column: the real photo taken nearest to the pressed mark, what it is, and its facts.
+  let lookCard = null;
+  let lookShown = null;
+  function closeLook() { lookCard?.remove(); lookCard = null; lookShown = null; }
+  function showLook(look) {
+    if (lookShown === look) { closeLook(); return; }
+    closeLook();
+    lookShown = look;
+    const photos = (Array.isArray(look.photos) ? [...look.photos] : []).filter((photo) => photo?.thumb_url)
+      .sort((a, b) => (Number(a.distance_m) || 0) - (Number(b.distance_m) || 0));
+    let index = 0;
+    const img = el("img", { class: "map-look-photo", alt: "" });
+    const count = el("span", { class: "map-look-count" });
+    const credit = el("p", { class: "map-look-facts" });
+    const facts = el("p", { class: "map-look-facts" });
+    const draw = () => {
+      const photo = photos[index];
+      img.src = photo.thumb_url;
+      img.alt = look.title;
+      count.textContent = photos.length > 1 ? `${index + 1} / ${photos.length}` : "";
+      const near = Number.isFinite(Number(photo.distance_m)) ? `${t("Photo")} ${metres(photo.distance_m)} ${t("from here")}` : null;
+      facts.textContent = [...look.facts, near].filter(Boolean).join(" · ");
+      credit.textContent = [photo.credit, photo.source].filter(Boolean).join(" · ");
+    };
+    const step = (by) => (event) => { event.stopPropagation(); index = (index + by + photos.length) % photos.length; draw(); };
+    lookCard = el("aside", { class: "map-look", "aria-live": "polite", on: { click: (event) => event.stopPropagation(), pointerdown: (event) => event.stopPropagation() } },
+      photos.length ? img : el("p", { class: "map-look-none" }, t("No photo found")),
+      photos.length > 1 ? el("div", { class: "map-look-nav" },
+        el("button", { type: "button", class: "map-look-step", "aria-label": t("Previous photo"), on: { click: step(-1) } }, "‹"),
+        count,
+        el("button", { type: "button", class: "map-look-step", "aria-label": t("Next photo"), on: { click: step(1) } }, "›")) : null,
+      el("p", { class: "map-look-title" }, look.title),
+      facts,
+      photos.length ? credit : null);
+    if (photos.length) draw(); else facts.textContent = look.facts.join(" · ");
+    host.append(lookCard);
+  }
+  host.addEventListener("click", () => { if (lookCard) closeLook(); });
+  document.addEventListener("keydown", (event) => { if (event.key === "Escape" && lookCard) closeLook(); });
 
   // Dragging moves the map. A press that does not move stays a press, so the place buttons keep working.
   function drag() {
