@@ -10,7 +10,7 @@ const SAMPLES = { 1: "dev/shape-sample.json", 2: "dev/shape-sample-2.json", 3: "
 
 export function readSource() {
   const params = new URLSearchParams(location.search);
-  const api = params.get("api");
+  const api = null;   // published copy: saved runs only, never an agent server
   if (api) {
     let url = null;
     try { url = new URL(api); } catch { /* handled below */ }

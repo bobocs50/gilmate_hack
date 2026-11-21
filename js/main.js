@@ -86,7 +86,7 @@ const app = {
 };
 let timer = 0;          // the one pending step of a replay, or the pause before the route is built
 // For the page check only: ?pace=20 tells a saved run's steps twenty times faster than they really took.
-const PACE = Math.max(1, Number(new URLSearchParams(location.search).get("pace")) || 1);
+const PACE = Math.max(1, Number(new URLSearchParams(location.search).get("pace")) || 8);   // published copy: fast replay by default
 
 const act = {
   search(text) { startArea(text); },
