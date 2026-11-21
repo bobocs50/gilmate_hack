@@ -150,4 +150,4 @@ Keys in `.env`: `ANTHROPIC_API_KEY`, `TAVILY_API_KEY`; optional `GOOGLE_API_KEY`
 
 ## Built with
 
-Google ADK with Claude as the model; Gemini is not used. Map drawing and styling ported from Mercature by Glendon Chin (MIT), see [THIRD_PARTY.md](THIRD_PARTY.md). Photo credits: [CREDITS.md](CREDITS.md). Licence: MIT.
+Google ADK with Claude as the model; Gemini is not used. Map drawing and styling ported from Mercature by Glendon Chin (MIT), see [THIRD_PARTY.md](THIRD_PARTY.md). Photo credits: [CREDITS.md](CREDITS.md).
