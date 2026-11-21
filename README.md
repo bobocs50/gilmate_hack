@@ -1,10 +1,35 @@
-<p align="center">
-  <img src="docs/gilmate-icon.svg" width="120" alt="Gilmate">
-</p>
-<h1 align="center">Gilmate</h1>
-<p align="center">
-  A tour guide that plans around you, not the city.
-</p>
+<div align="center">
+
+<img src="docs/gilmate-icon.svg" width="120" alt="Gilmate">
+
+# Gilmate | 4th Place | DevFest Münster 2026 Agentic AI Hackathon
+
+**A tour guide that plans around you, not the city.**
+
+Built in three hours by one person directing AI coding agents.
+
+<br/>
+
+![DevFest Münster 2026](https://img.shields.io/badge/DevFest_M%C3%BCnster-2026-172548?style=for-the-badge)
+![4th Place](https://img.shields.io/badge/4th_Place-Agentic_AI_Hackathon-b9472a?style=for-the-badge)
+![Built in 3 hours](https://img.shields.io/badge/Built_in-3_hours-172548?style=for-the-badge)
+
+<br/>
+
+![Google ADK](https://img.shields.io/badge/Google_ADK-4285F4?style=flat-square&logo=google&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-000000?style=flat-square)
+![Google Places](https://img.shields.io/badge/Google_Places-34A853?style=flat-square&logo=googlemaps&logoColor=white)
+![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-7EBC6F?style=flat-square&logo=openstreetmap&logoColor=white)
+![Open-Meteo](https://img.shields.io/badge/Open--Meteo-FF8800?style=flat-square)
+![Tavily](https://img.shields.io/badge/Tavily-1A1A1A?style=flat-square)
+![Mapillary](https://img.shields.io/badge/Mapillary-05CB63?style=flat-square&logo=mapillary&logoColor=white)
+![Python](https://img.shields.io/badge/Python_3.13-3776AB?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+
+</div>
+
+---
 
 Gilmate is a tour guide for people who find walking hard, and for those who plan for them.
 It asks what you can manage, then builds one walk for the places you chose.
