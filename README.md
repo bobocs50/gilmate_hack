@@ -8,6 +8,8 @@
 
 Built in three hours by one person directing AI coding agents.
 
+### [▶ Try it live](https://bobocs50.github.io/gilmate_hack/)
+
 <br/>
 
 ![Google Developer Group Münster](https://img.shields.io/badge/Google_Developer_Group-M%C3%BCnster-4285F4?style=for-the-badge&logo=google&logoColor=white)
